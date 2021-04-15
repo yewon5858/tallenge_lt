@@ -31,25 +31,40 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="548dp">
+        android:layout_height="500dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:orientation="vertical">
 
-            <ListView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="500dp" />
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="350dp"
+                    android:layout_height="60dp"
+                    android:text="C언어"
+                    android:gravity="center"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"/>
 
-            <Button
-                android:layout_width="76dp"
-                android:layout_height="wrap_content"
+            </LinearLayout>
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="3dp"/>
 
-                android:layout_gravity="end" />
         </LinearLayout>
-
     </ScrollView>
+
+    <Button
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="+"
+        app:backgroundTint="#B3B2B2" />
     <view
         android:layout_width="match_parent"
         android:layout_height="3dp"/>
