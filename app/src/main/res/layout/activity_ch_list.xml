@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal">
+
         <Button
             android:layout_width="60dp"
             android:layout_height="70dp"
@@ -19,6 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>
+        <!--상단버튼        -->
         <Button
             android:layout_width="180dp"
             android:layout_height="70dp"
@@ -40,18 +42,43 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        >
+        android:layout_height="500dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:orientation="vertical">
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="500dp" />
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="65dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
+                    android:text="C언어"
+                    android:gravity="center"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="65dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
+                    android:text="교환 과목"
+                    android:gravity="center"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -61,7 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"/>
     <Button
-        android:layout_width="180dp"
+        android:layout_width="250dp"
         android:layout_height="50dp"
         android:text="선택완료"
         android:textSize="16sp"
