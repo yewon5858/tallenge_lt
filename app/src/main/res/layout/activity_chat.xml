@@ -18,7 +18,7 @@
             android:background="@drawable/ic_baseline_arrow_back_24"
             app:backgroundTint="@color/black" />
 
-        <view
+        <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
@@ -33,9 +33,10 @@
 
     </LinearLayout>
 
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp" />
+        android:layout_height="3dp"
+        android:background="@color/black"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,10 +57,11 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp" />
-
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+    <!--채팅 레이아웃-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="486dp"
@@ -67,11 +69,15 @@
         android:orientation="vertical">
 
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
+
 
         <EditText
             android:layout_width="350dp"
@@ -86,7 +92,10 @@
             app:backgroundTint="@color/black" />
 
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"

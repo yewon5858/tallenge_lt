@@ -15,23 +15,26 @@
             android:layout_height="70dp"
             android:background="@drawable/ic_baseline_arrow_back_24" />
     </LinearLayout>
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="교환 체크리스트 설정"
         android:textSize="25sp"
         android:gravity="center"/>
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
 
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="500dp"
+        android:background="@color/tallengblue">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,28 +49,33 @@
                     android:layout_width="350dp"
                     android:layout_height="60dp"
                     android:text="C언어"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:background="@color/white"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"/>
 
             </LinearLayout>
-            <view
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"/>
 
         </LinearLayout>
     </ScrollView>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <Button
         android:layout_width="76dp"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:text="+"
         app:backgroundTint="#B3B2B2" />
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"

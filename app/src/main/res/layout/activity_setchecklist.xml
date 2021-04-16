@@ -4,35 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SetCheckListActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SetCheckListActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal">
+
         <Button
             android:layout_width="60dp"
             android:layout_height="70dp"
             android:background="@drawable/ic_baseline_arrow_back_24" />
     </LinearLayout>
-    <view
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:gravity="center"
         android:text="체크리스트 설정"
-        android:textSize="25sp"
-        android:gravity="center"/>
-    <view
+        android:textSize="25sp" />
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black" />
 
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:background="C9DAF8">
+        android:background="#C9DAF8">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,29 +49,37 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:layout_width="350dp"
+                    android:layout_width="330dp"
                     android:layout_height="60dp"
-                    android:text="C언어"
-                    android:gravity="center"/>
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="C언어" />
 
 
             </LinearLayout>
-            <view
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"/>
+                android:layout_height="3dp"
+                android:background="@color/black"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:layout_width="300dp"
+                    android:layout_width="280dp"
                     android:layout_height="60dp"
-                    android:text="C언어 사용법"
-                    android:gravity="center"/>
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="C언어 사용법" />
+
                 <Button
                     android:layout_width="55dp"
                     android:layout_height="50dp"
@@ -78,52 +93,60 @@
             <Button
                 android:layout_width="55dp"
                 android:layout_height="50dp"
-                android:layout_gravity="end" />
+                android:layout_gravity="end"
+                android:text="+"
+                android:textSize="16sp" />
 
 
         </LinearLayout>
     </ScrollView>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <Button
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:text="선택완료"
         app:backgroundTint="#B3B2B2" />
-    <view
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:orientation="horizontal">
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1"
 
-            style="?android:attr/borderlessButtonStyle" />
+            android:layout_weight="1" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+            android:layout_weight="1" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+            android:layout_weight="1" />
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
