@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tallenge_lt"
         tools:ignore="AllowBackup">
+        <activity android:name=".SignActivity"></activity>
         <activity android:name=".SetAlarmActivity" />
         <activity android:name=".ChatListActivity" />
         <activity android:name=".CertifyExpActivity" />
@@ -18,13 +19,15 @@
         <activity android:name=".ModifyInfoActivity" />
         <activity android:name=".MyInfoActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".ChatActivity"/>
+        <activity android:name=".ChatActivity" />
         <activity android:name=".AddCheckList" />
         <activity android:name=".SetCheckListActivity" />
         <activity android:name=".ListAndAlarmActivity" />
         <activity android:name=".ChooseListActivity" />
         <activity android:name=".ListSetActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".InterestActivity"/>
+        <activity android:name=".ExpActivity"/>
+            <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

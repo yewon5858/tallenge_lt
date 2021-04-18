@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tallengeblue"
+    tools:context=".SignActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/tallenge_text_image" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/tallenge_icon"
+            android:layout_width="81dp"
+            android:layout_height="105dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="85dp"
+            android:src="@drawable/tallenge_icon"
+            />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="10dp"
+            android:text="회원가입"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/nicname"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_baseline_perm_identity_24"
+                android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                android:hint="닉네임"
+                android:padding="15dp"
+                android:textColor="@color/tallengeblue"
+                android:textColorHint="@color/tallengeblue" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/ta_blue_dark"
+                android:text="중복확인"></Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/idText"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_baseline_perm_identity_24"
+                android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                android:hint="아이디"
+                android:padding="15dp"
+                android:textColor="@color/tallengeblue"
+                android:textColorHint="@color/tallengeblue" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/ta_blue_dark"
+                android:text="중복확인"></Button>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+            android:hint="비밀번호"
+            android:padding="15dp"
+            android:textColor="@color/tallengeblue"
+            android:textColorHint="@color/tallengeblue" />
+
+        <Spinner
+            android:id="@+id/add_spinner"
+            android:layout_width="280dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/ta_blue_dark"
+            android:popupBackground="@color/ta_blue_dark"
+            android:entries="@array/address_item">
+        </Spinner>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="드롭다운 결과"></TextView>
+
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/tallengeblue"
+            android:text="로그인"
+            android:textColor="@color/ta_blue_dark"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/tallengeblue"
+            android:text="회원가입"
+            android:textColor="@color/ta_blue_dark"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -45,7 +45,7 @@
         android:id="@+id/linearLayout5"
         android:layout_width="0dp"
         android:layout_height="584dp"
-        android:background="@color/tallengblue"
+        android:background="@color/tallengeblue"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="address_item">
+        <item>가좌동</item>
+        <item>대안동</item>
+        <item>동성동</item>
+        <item>봉곡동</item>
+
+    </string-array>
+    <string-array name="exp_item">
+        <item>컴퓨터</item>
+        <item>주식</item>
+        <item>역사</item>
+        <item>수학</item>
+    </string-array>
+    <string-array name="hob_item">
+        <item>음악</item>
+        <item>타로</item>
+        <item>레진공예</item>
+        <item>그림</item>
+
+    </string-array>
+    <string-array name="lan_item">
+        <item>영어</item>
+        <item>중국어</item>
+        <item>일본어</item>
+        <item>스페인어</item>
+
+    </string-array>
+
+    <string-array name="spo_item">
+        <item>수영</item>
+        <item>필라테스</item>
+        <item>홈트</item>
+        <item>배드민턴</item>
+
+    </string-array>
+
+</resources>

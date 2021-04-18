@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tallengeblue"
+    tools:context=".InterestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="관심분야를 선택하세요!"
+            android:textSize="15pt"
+            android:textStyle="bold"
+            android:textColor="@color/ta_text_main"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="전문분야"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:textColor="@color/ta_text_main"
+            ></TextView>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:entries="@array/exp_item"
+            android:listSelector="@color/ta_blue_dark"
+            android:background="@color/ta_bar"></ListView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="취미"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:textColor="@color/ta_text_main"></TextView>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:entries="@array/hob_item"
+            android:listSelector="@color/ta_blue_dark"
+            android:background="@color/ta_bar"></ListView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="언어"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:textColor="@color/ta_text_main"></TextView>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:entries="@array/lan_item"
+            android:listSelector="@color/ta_blue_dark"
+            android:background="@color/ta_bar"></ListView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="스포츠"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:textColor="@color/ta_text_main"></TextView>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:entries="@array/spo_item"
+            android:listSelector="@color/ta_blue_dark"
+            android:background="@color/ta_bar"></ListView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="완료"
+            android:textColor="@color/ta_text_main"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

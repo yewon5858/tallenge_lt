@@ -31,7 +31,7 @@
         android:id="@+id/linearLayout4"
         android:layout_width="416dp"
         android:layout_height="666dp"
-        android:background="@color/tallengblue"
+        android:background="@color/tallengeblue"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
