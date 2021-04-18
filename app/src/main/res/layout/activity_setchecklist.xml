@@ -4,35 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SetCheckListActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SetCheckListActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal">
+
         <Button
             android:layout_width="60dp"
             android:layout_height="70dp"
+            app:backgroundTint="@color/black"
             android:background="@drawable/ic_baseline_arrow_back_24" />
     </LinearLayout>
-    <view
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:gravity="center"
         android:text="체크리스트 설정"
-        android:textSize="25sp"
-        android:gravity="center"/>
-    <view
+        android:textSize="25sp" />
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black" />
 
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="500dp"
         android:background="@color/tallengeblue">
+=======
+        android:layout_height="485dp"
+        android:background="#C9DAF8">
+>>>>>>> 1dd3a9f57a6a08805dc053ecd14f570d5587c96c
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,34 +55,45 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:layout_width="350dp"
+                    android:layout_width="330dp"
                     android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center"
                     android:text="C언어"
-                    android:gravity="center"/>
+                    android:textSize="20sp"/>
 
 
             </LinearLayout>
-            <view
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"/>
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:layout_width="300dp"
+                    android:layout_width="272dp"
                     android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center"
                     android:text="C언어 사용법"
-                    android:gravity="center"/>
+                    android:textSize="16sp" />
+
                 <Button
                     android:layout_width="55dp"
-                    android:layout_height="50dp"
+                    android:layout_height="65dp"
                     android:layout_gravity="center"
                     android:text="-"
+                    android:textSize="25sp"
                     app:backgroundTint="#B3B2B2" />
 
 
@@ -78,52 +102,74 @@
             <Button
                 android:layout_width="55dp"
                 android:layout_height="50dp"
-                android:layout_gravity="end" />
+                android:layout_gravity="end"
+                android:background="#B3B2B2"
+                android:text="+"
+                android:textSize="16sp"
+                app:backgroundTint="#BCB8B8"
+                android:layout_marginRight="40dp" />
 
 
         </LinearLayout>
     </ScrollView>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <Button
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:text="선택완료"
         app:backgroundTint="#B3B2B2" />
-    <view
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:orientation="horizontal">
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
 
-            style="?android:attr/borderlessButtonStyle" />
+            android:background="@drawable/ic_baseline_home_24"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengblue"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengblue" />
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_person_outline_24"
+            app:backgroundTint="@color/tallengblue" />
 
     </LinearLayout>
 

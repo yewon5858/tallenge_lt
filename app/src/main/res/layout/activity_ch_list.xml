@@ -16,7 +16,7 @@
             android:layout_width="60dp"
             android:layout_height="70dp"
             android:background="@drawable/ic_baseline_arrow_back_24" />
-        <view
+        <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>
@@ -26,23 +26,26 @@
             android:layout_height="70dp"
             android:text="교환체크리스트 설정" />
     </LinearLayout>
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="교환 리스트 선택"
         android:textSize="25sp"
         android:gravity="center"/>
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
 
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="495dp"
+        android:background="@color/tallengblue">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,31 +55,43 @@
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="65dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="250dp"
                     android:layout_height="65dp"
-                    android:text="C언어"
-                    android:gravity="center"/>
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="C언어" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#9C9999" />
+
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="65dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="250dp"
                     android:layout_height="65dp"
-                    android:text="교환 과목"
-                    android:gravity="center"/>
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="교환 과목" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
@@ -84,46 +99,62 @@
 
     </ScrollView>
 
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <Button
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:text="선택완료"
         android:textSize="16sp"
         android:layout_gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:orientation="horizontal">
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
 
-            style="?android:attr/borderlessButtonStyle" />
+            android:background="@drawable/ic_baseline_home_24"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengblue"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengblue" />
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_person_outline_24"
+            app:backgroundTint="@color/tallengblue" />
 
     </LinearLayout>
 
