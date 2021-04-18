@@ -44,7 +44,7 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="495dp"
         android:background="@color/tallengblue">
 
         <LinearLayout
@@ -75,6 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="#9C9999" />
+
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="65dp"
@@ -118,31 +119,42 @@
         android:orientation="horizontal">
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
 
-            style="?android:attr/borderlessButtonStyle" />
+            android:background="@drawable/ic_baseline_home_24"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengblue"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengblue" />
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_person_outline_24"
+            app:backgroundTint="@color/tallengblue" />
 
     </LinearLayout>
 

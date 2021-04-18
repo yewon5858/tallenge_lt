@@ -18,14 +18,17 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>
+
         <Button
             android:layout_width="180dp"
             android:layout_height="70dp"
-            android:text="재능교환 완료" />
+            android:text="재능교환 완료"
+            app:backgroundTint="#C5C1C1" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -34,7 +37,8 @@
         android:gravity="center"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"/>
+        android:layout_height="3dp"
+        android:background="@color/black"/>
 
 
     <View
@@ -43,128 +47,204 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp" >
+        android:layout_height="486dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:orientation="vertical"
-            android:gravity="">
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:gravity="center"
                 android:text="과목명"
-                android:textSize="30sp"
-                android:gravity="center"/>
+                android:textSize="30sp" />
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"/>
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
             <CheckBox
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@color/tallengblue" />
+
             <CheckBox
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@color/tallengblue" />
+
             <CheckBox
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:text="과목명"
-                android:textSize="30sp"
-                android:gravity="center"/>
+                android:layout_height="wrap_content"
+                android:background="@color/tallengblue" />
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:gravity="center"
+                android:text="과목명"
+                android:textSize="30sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/tallengblue" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/tallengblue" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/tallengblue" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
                 android:text="알림설정"
-                android:textSize="30sp"
-                android:gravity="center"/>
+                android:textSize="30sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:gravity="center"
                 android:text="월  화  수  목  금  토  일"
-                android:textSize="30sp"
-                android:gravity="center"/>
+                android:textSize="30sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:background="@color/tallengblue"
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-                <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:background="@color/tallengblue" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:background="@color/tallengblue" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:background="@color/tallengblue" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:background="@color/tallengblue" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:background="@color/tallengblue" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tallengblue" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tallengblue" />
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <Button
         android:layout_width="180dp"
         android:layout_height="50dp"
+        android:layout_gravity="center"
         android:text="알림설정"
         android:textSize="16sp"
-        android:layout_gravity="center"/>
+        app:backgroundTint="#F4DA99"
+        app:iconTint="#CCB06D" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:orientation="horizontal">
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
 
-            style="?android:attr/borderlessButtonStyle" />
+            android:background="@drawable/ic_baseline_home_24"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengblue"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengblue" />
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_person_outline_24"
+            app:backgroundTint="@color/tallengblue" />
 
     </LinearLayout>
-
 </LinearLayout>

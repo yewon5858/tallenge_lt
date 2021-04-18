@@ -39,7 +39,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="483dp"
         android:background="@color/tallengblue">
 
         <LinearLayout
@@ -51,9 +51,9 @@
                 android:layout_width="300dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
+                android:background="@color/white"
                 android:gravity="center"
-                android:hint="제목을 입력하세요"
-                android:background="@color/white"/>
+                android:hint="제목을 입력하세요" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,10 +64,10 @@
                     android:layout_width="300dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
+                    android:background="@color/white"
                     android:gravity="center"
                     android:text="리스트를 추가해주세요"
-                    android:textSize="20sp"
-                    android:background="@color/white"/>
+                    android:textSize="20sp" />
 
                 <Button
                     android:layout_width="wrap_content"
@@ -98,30 +98,42 @@
         android:orientation="horizontal">
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_home_24"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengblue"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengblue" />
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            style="?android:attr/borderlessButtonStyle" />
+
+            android:background="@drawable/ic_baseline_person_outline_24"
+            app:backgroundTint="@color/tallengblue" />
 
     </LinearLayout>
 

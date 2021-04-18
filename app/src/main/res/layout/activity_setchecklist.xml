@@ -15,6 +15,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="70dp"
+            app:backgroundTint="@color/black"
             android:background="@drawable/ic_baseline_arrow_back_24" />
     </LinearLayout>
 
@@ -38,7 +39,7 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="485dp"
         android:background="#C9DAF8">
 
         <LinearLayout
@@ -57,7 +58,8 @@
                     android:layout_height="60dp"
                     android:background="@color/white"
                     android:gravity="center"
-                    android:text="C언어" />
+                    android:text="C언어"
+                    android:textSize="20sp"/>
 
 
             </LinearLayout>
@@ -65,7 +67,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/black"/>
+                android:background="@color/black" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -74,17 +76,19 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="280dp"
+                    android:layout_width="272dp"
                     android:layout_height="60dp"
                     android:background="@color/white"
                     android:gravity="center"
-                    android:text="C언어 사용법" />
+                    android:text="C언어 사용법"
+                    android:textSize="16sp" />
 
                 <Button
                     android:layout_width="55dp"
-                    android:layout_height="50dp"
+                    android:layout_height="65dp"
                     android:layout_gravity="center"
                     android:text="-"
+                    android:textSize="25sp"
                     app:backgroundTint="#B3B2B2" />
 
 
@@ -94,8 +98,11 @@
                 android:layout_width="55dp"
                 android:layout_height="50dp"
                 android:layout_gravity="end"
+                android:background="#B3B2B2"
                 android:text="+"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                app:backgroundTint="#BCB8B8"
+                android:layout_marginRight="40dp" />
 
 
         </LinearLayout>
@@ -125,28 +132,39 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
+            android:layout_weight="1"
 
-            android:layout_weight="1" />
-
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1" />
+            android:background="@drawable/ic_baseline_home_24"
+            app:backgroundTint="@color/tallengblue" />
 
 
         <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengblue"
+            app:backgroundTint="@color/tallengblue" />
+
 
         <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengblue" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+
+            android:background="@drawable/ic_baseline_person_outline_24"
+            app:backgroundTint="@color/tallengblue" />
 
     </LinearLayout>
 
