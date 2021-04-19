@@ -69,17 +69,17 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/tallengblue" />
+                android:background="@color/tallengeblue" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/tallengblue" />
+                android:background="@color/tallengeblue" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/tallengblue" />
+                android:background="@color/tallengeblue" />
 
             <View
                 android:layout_width="match_parent"
@@ -101,17 +101,17 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/tallengblue" />
+                android:background="@color/tallengeblue" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/tallengblue" />
+                android:background="@color/tallengeblue" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/tallengblue" />
+                android:background="@color/tallengeblue" />
 
             <View
                 android:layout_width="match_parent"
@@ -145,44 +145,44 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@color/tallengblue"
+                android:background="@color/tallengeblue"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/tallengblue" />
+                    android:background="@color/tallengeblue" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/tallengblue" />
+                    android:background="@color/tallengeblue" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/tallengblue" />
+                    android:background="@color/tallengeblue" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/tallengblue" />
+                    android:background="@color/tallengeblue" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/tallengblue" />
+                    android:background="@color/tallengeblue" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/tallengblue" />
+                    android:background="@color/tallengeblue" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/tallengblue" />
+                    android:background="@color/tallengeblue" />
             </LinearLayout>
 
         </LinearLayout>
@@ -215,7 +215,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
 
         <Button
@@ -224,8 +224,8 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengblue"
-            app:backgroundTint="@color/tallengblue" />
+            android:backgroundTint="@color/tallengeblue"
+            app:backgroundTint="@color/tallengeblue" />
 
 
         <Button
@@ -235,7 +235,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
             style="?android:attr/borderlessButtonStyle"
@@ -244,7 +244,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
     </LinearLayout>
 </LinearLayout>

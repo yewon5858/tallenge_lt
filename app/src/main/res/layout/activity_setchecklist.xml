@@ -39,13 +39,17 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-<<<<<<< HEAD
+        android:layout_height="0dp" />
+
+
+    <HEAD
         android:layout_height="500dp"
-        android:background="@color/tallengeblue">
-=======
+        android:background="@color/tallengeblue"
+        android:layout_width="match_parent">
+        =======
         android:layout_height="485dp"
         android:background="#C9DAF8">
->>>>>>> 1dd3a9f57a6a08805dc053ecd14f570d5587c96c
+        >>>>>>> 1dd3a9f57a6a08805dc053ecd14f570d5587c96c
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,7 +68,7 @@
                     android:background="@color/white"
                     android:gravity="center"
                     android:text="C언어"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
@@ -111,7 +115,7 @@
 
 
         </LinearLayout>
-    </ScrollView>
+    </HEAD>
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
@@ -140,7 +144,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
 
         <Button
@@ -149,8 +153,8 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengblue"
-            app:backgroundTint="@color/tallengblue" />
+            android:backgroundTint="@color/tallengeblue"
+            app:backgroundTint="@color/tallengeblue" />
 
 
         <Button
@@ -160,7 +164,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
             style="?android:attr/borderlessButtonStyle"
@@ -169,7 +173,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
     </LinearLayout>
 

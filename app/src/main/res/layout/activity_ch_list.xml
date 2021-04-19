@@ -45,7 +45,7 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="495dp"
-        android:background="@color/tallengblue">
+        android:background="@color/tallengeblue">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -125,7 +125,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
 
         <Button
@@ -134,8 +134,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengblue"
-            app:backgroundTint="@color/tallengblue" />
+             />
 
 
         <Button
@@ -145,7 +144,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
             style="?android:attr/borderlessButtonStyle"
@@ -154,7 +153,7 @@
             android:layout_weight="1"
 
             android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/tallengeblue" />
 
     </LinearLayout>
 

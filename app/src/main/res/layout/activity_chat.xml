@@ -62,43 +62,13 @@
         android:layout_height="3dp"
         android:background="@color/black"/>
     <!--채팅 레이아웃-->
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="483dp"
-        android:background="@color/tallengblue"
-        android:backgroundTint="@color/tallengblue">
+        android:layout_height="486dp"
+        android:background="#C9DAF8"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="486dp"
-            android:background="#C9DAF8"
-            android:orientation="vertical">
-            <!-- 상대방채팅-->
-            <!-- 자신채팅-->
-            <TextView
-                android:layout_width="208dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/chat_you"
-                android:gravity="center"
-                android:text="안녕하세요!"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/chat_me"
-                android:gravity="center"
-                android:text="반갑습니다!"
-                android:textSize="20sp" />/>
-
-
-        </LinearLayout>
-    </ScrollView>
-
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
@@ -132,42 +102,33 @@
         android:orientation="horizontal">
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-
             android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengblue" />
+            app:backgroundTint="@color/black" />
 
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengblue"
-            app:backgroundTint="@color/tallengblue" />
+            android:background="@color/black"
+            app:backgroundTint="#FFFFFF"
+            app:icon="@android:drawable/sym_action_chat"
+            app:iconSize="70dp"
+            app:iconTint="#000000" />
 
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengblue" />
+            android:layout_weight="1"/>
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengblue" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 

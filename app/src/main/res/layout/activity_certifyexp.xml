@@ -5,7 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="@color/white"
     tools:context=".CertifyExpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
 
     <TextView
         android:id="@+id/textView10"
@@ -15,7 +21,8 @@
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:text="전문 자격증 인증"
-        android:textColorLink="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorLink="#000000"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,10 +41,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button11"
-            android:layout_width="73dp"
-            android:layout_height="71dp"
-            android:background="@drawable/ic_baseline_arrow_back_24" />
+            android:id="@+id/button18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            android:text="Button" />
 
     </LinearLayout>
 
@@ -148,6 +156,7 @@
                         android:id="@+id/textView12"
                         android:layout_width="292dp"
                         android:layout_height="match_parent"
+                        android:background="@drawable/textview_border"
                         android:text="TextView" />
 
                     <Button
@@ -155,7 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:text="-" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -165,7 +174,7 @@
                 android:layout_width="217dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Button" />
+                android:text="+" />
         </LinearLayout>
 
     </LinearLayout>
