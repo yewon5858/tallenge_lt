@@ -112,9 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            app:icon="@android:drawable/sym_action_chat"
-            app:iconSize="70dp"
-            app:iconTint="@color/tallengeblue" />
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengeblue"
+            app:backgroundTint="@color/tallengeblue" />
 
 
         <Button
