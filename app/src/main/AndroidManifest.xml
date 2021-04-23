@@ -11,8 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="AllowBackup">
-        <activity android:name=".SignActivity"></activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignActivity" />
         <activity android:name=".SetAlarmActivity" />
+        <activity android:name=".LoginActivity">
+        </activity>
         <activity android:name=".ChatListActivity" />
         <activity android:name=".CertifyExpActivity" />
         <activity android:name=".ChooseExpActivity" />
@@ -25,15 +34,9 @@
         <activity android:name=".ListAndAlarmActivity" />
         <activity android:name=".ChooseListActivity" />
         <activity android:name=".ListSetActivity" />
-        <activity android:name=".InterestActivity"/>
-        <activity android:name=".ExpActivity"/>
-            <activity android:name=".MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".InterestActivity" />
+        <activity android:name=".ExpActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
