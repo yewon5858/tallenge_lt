@@ -35,7 +35,7 @@
         <activity android:name=".ListSetActivity" />
         <activity android:name=".InterestActivity" />
         <activity android:name=".ExpActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
