@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".ChatActivity">
 
     <LinearLayout
@@ -108,29 +109,36 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/black" />
+            app:backgroundTint="@color/tallengeblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:background="@color/black"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@android:drawable/sym_action_chat"
-            app:iconSize="70dp"
-            app:iconTint="#000000" />
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengeblue"
+            app:backgroundTint="@color/tallengeblue" />
 
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+
+            android:background="@drawable/ic_baseline_person_outline_24"
+            app:backgroundTint="@color/tallengeblue" />
 
     </LinearLayout>
 

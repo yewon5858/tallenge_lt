@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListSetActivity"
-    android:orientation="vertical">
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ListSetActivity">
     //체크리스트 분야설정 UI
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:background="@color/white"
         android:orientation="horizontal">
 
         <Button
@@ -19,20 +22,25 @@
             android:background="@drawable/ic_baseline_arrow_back_24"
             app:backgroundTint="@color/black" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/black" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center"
         android:text="교환 체크리스트 설정"
-        android:textSize="25sp"
-        android:gravity="center"/>
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/black" />
 
     <ScrollView
         android:id="@+id/scroll"
@@ -44,46 +52,43 @@
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:orientation="vertical">
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="30dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal">
+            <ListView
+                android:layout_width="350dp"
+                android:layout_height="454dp"
+                android:layout_gravity="center"
+                android:background="@color/ta_blue_dark"></ListView>
 
-                <TextView
-                    android:layout_width="350dp"
-                    android:layout_height="60dp"
-                    android:background="@color/white"
-                    android:gravity="center"
-                    android:text="C언어" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    app:backgroundTint="#C3B2B2" />
-
-            </LinearLayout>
-
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp" />
 
         </LinearLayout>
     </ScrollView>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/white" />
+
     <Button
         android:layout_width="76dp"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:text="+"
         app:backgroundTint="#B3B2B2" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/ta_bar" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"
