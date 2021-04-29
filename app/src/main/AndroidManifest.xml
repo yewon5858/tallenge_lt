@@ -22,13 +22,13 @@
         <activity android:name=".LoginActivity">
         </activity>
         <activity android:name=".ExecutionActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".ChatListActivity" />
         <activity android:name=".CertifyExpActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".ChooseExpActivity" >
 
@@ -45,10 +45,7 @@
         <activity android:name=".InterestActivity" />
         <activity android:name=".ExpActivity" />
         <activity android:name=".MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN"/>
-            <category android:name="android.intent.category.LAUNCHER"/>
-        </intent-filter>
+
         </activity>
     </application>
 

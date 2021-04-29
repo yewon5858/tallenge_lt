@@ -62,12 +62,12 @@ public class CertifyExpActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent in = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                //startActivityForResult(in, REQUEST_IMAGE_CODE);
+                Intent in = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(in, REQUEST_IMAGE_CODE);
 
-                CertifyExpData certifyExpData = new CertifyExpData(R.mipmap.ic_launcher,"카테고리","세부 카테고리");
-                arrayList.add(certifyExpData);
-                certifyExpAdapter.notifyDataSetChanged();
+                //CertifyExpData certifyExpData = new CertifyExpData(R.mipmap.ic_launcher,"카테고리","세부 카테고리");
+                //arrayList.add(certifyExpData);
+                //certifyExpAdapter.notifyDataSetChanged();
             }
         });
 
@@ -79,6 +79,10 @@ public class CertifyExpActivity extends AppCompatActivity {
             Uri image = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),image);
+                //image1.setImageBitmap(bitmap);
+                CertifyExpData certifyExpData = new CertifyExpData(bitmap,"카테고리","세부 카테고리");
+                arrayList.add(certifyExpData);
+                certifyExpAdapter.notifyDataSetChanged();
             } catch (IOException e) {
                 e.printStackTrace();
             }

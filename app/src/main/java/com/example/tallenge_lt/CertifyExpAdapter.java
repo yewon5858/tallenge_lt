@@ -32,7 +32,7 @@ public class CertifyExpAdapter extends RecyclerView.Adapter<CertifyExpAdapter.Cu
 
     @Override
     public void onBindViewHolder(@NonNull CertifyExpAdapter.CustomViewHolder holder, int position) {
-        holder.iv_profile.setImageResource(arrayList.get(position).getIv_profile());
+        holder.iv_profile.setImageBitmap(arrayList.get(position).getIv_profile());
 
         holder.tv_name.setText(arrayList.get(position).getTv_name());
         holder.tv_content.setText(arrayList.get(position).getTv_content());
