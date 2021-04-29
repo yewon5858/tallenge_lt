@@ -5,15 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddCheckList"
+    android:background="@color/tallengeblue"
     android:orientation="vertical">
     //새로운 체크리스트 추가 UI
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/white">
         <Button
             android:layout_width="60dp"
             android:layout_height="70dp"
+            android:backgroundTint="@color/black"
             android:background="@drawable/ic_baseline_arrow_back_24" />
 
 
@@ -26,7 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="체크리스트 설정"
+        android:background="@color/white"
         android:textSize="25sp"
+        android:textColor="@color/black"
         android:gravity="center"/>
     <View
         android:layout_width="match_parent"
@@ -37,11 +42,15 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/black"/>
+    <Space
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="483dp"
-        android:background="@color/tallengeblue">
+        android:layout_width="350dp"
+        android:layout_height="454dp"
+        android:layout_gravity="center"
+        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,31 +63,39 @@
                 android:layout_gravity="center"
                 android:background="@color/white"
                 android:gravity="center"
-                android:hint="제목을 입력하세요" />
+                android:hint="제목을 입력하세요"
+                android:textColorHint="@color/ta_bar" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="300dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
+                <EditText
+                    android:layout_width="240dp"
+                    android:layout_height="80dp"
                     android:background="@color/white"
                     android:gravity="center"
-                    android:text="리스트를 추가해주세요"
+                    android:hint="리스트를 추가해주세요"
+                    android:textColorHint="@color/ta_bar"
                     android:textSize="20sp" />
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="66dp"
                     android:layout_height="70dp"
+                    android:gravity="center"
                     android:text="+"
                     android:textSize="32sp" />
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
@@ -96,14 +113,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/white">
 
         <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_weight="1"
-
             android:background="@drawable/ic_baseline_home_24"
             app:backgroundTint="@color/tallengeblue" />
 
