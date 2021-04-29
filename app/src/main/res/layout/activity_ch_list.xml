@@ -64,6 +64,7 @@
                 android:id="@+id/listview1"
                 android:layout_width="350dp"
                 android:layout_height="490dp"
+                android:dividerHeight="4dp"
                 android:background="@color/ta_blue_dark"
                 android:choiceMode="singleChoice" />
 

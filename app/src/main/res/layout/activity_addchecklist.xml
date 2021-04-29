@@ -68,7 +68,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp" />
+                android:layout_height="3dp"
+                android:background="@color/ta_bar"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,6 +93,10 @@
                     android:text="+"
                     android:textSize="32sp" />
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/ta_bar"/>
 
         </LinearLayout>
     </ScrollView>
