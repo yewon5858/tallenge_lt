@@ -4,180 +4,184 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ChooseExpActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/textview_border"
+        android:background="@color/tallengeblue"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="73dp"
-            android:layout_height="71dp"
-            android:background="@drawable/ic_baseline_arrow_back_24" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="581dp"
-        android:background="@drawable/textview_border"
-        android:gravity="center"
-        android:text="전문 자격증 선택"
-        android:textColorLink="#FFFFFF"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="523dp"
-        android:background="@color/tallengeblue"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <Space
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="41dp" />
-
-        <ScrollView
-            android:layout_width="364dp"
-            android:layout_height="410dp"
-            android:layout_gravity="center"
-            android:background="#FFFFFF">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="410dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="300dp"
-                        android:layout_height="63dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/textview_border"
-                        android:text="TextView" />
-
-                    <Button
-                        android:id="@+id/button5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:text="-" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="242dp"
-                        android:layout_height="63dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/textview_border"
-                        android:text="TextView" />
-
-                    <Button
-                        android:id="@+id/button20"
-                        android:layout_width="79dp"
-                        android:layout_height="match_parent"
-                        android:text="-" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </ScrollView>
-
-        <Button
-            android:id="@+id/button23"
-            android:layout_width="118dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="확인" />
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_move"
+                android:layout_width="73dp"
+                android:layout_height="71dp"
+                android:background="@drawable/ic_baseline_arrow_back_24"
+                android:backgroundTint="@color/black"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="411dp"
+            android:layout_height="70dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="전문 자격증 선택"
+            android:textColor="#000000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="543dp"
+
+            android:layout_marginBottom="147dp"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="41dp" />
+
+            <ScrollView
+                android:layout_width="364dp"
+                android:layout_height="284dp"
+                android:layout_gravity="center"
+                android:background="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="410dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="300dp"
+                            android:layout_height="63dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/textview_border"
+                            android:text="TextView" />
+
+                        <Button
+                            android:id="@+id/button5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="-" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="93dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="242dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/textview_border"
+                            android:text="TextView" />
+
+                        <Button
+                            android:id="@+id/button20"
+                            android:layout_width="79dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="-" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="확인" />
+
+            <ImageView
+                android:id="@+id/ex_image"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                app:srcCompat="@android:drawable/star_big_off" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout13"
-        android:layout_width="413dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
+        android:layout_width="414dp"
+        android:layout_height="60dp"
+
+        android:background="@color/white"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_home"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="47dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/textview_border"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@drawable/ic_baseline_home_24"
-            app:iconSize="60dp"
-            app:iconTint="@color/tallengeblue" />
+            android:background="@drawable/ic_baseline_home_24"
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
-            android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:id="@+id/btn_chatlist"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="66dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@android:drawable/sym_action_chat"
-            app:iconSize="60dp"
-            app:iconTint="@color/tallengeblue" />
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengeblue"
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/btn_alarm"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@drawable/ic_baseline_notifications_none_24"
-            app:iconSize="60dp"
-            app:iconTint="@color/tallengeblue" />
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
-            android:id="@+id/button10"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_myinfo"
+            android:layout_width="45dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/ic_baseline_person_outline_24"
+            android:gravity="right"
             android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@drawable/ic_baseline_person_outline_24"
-            app:iconSize="60dp"
-            app:iconTint="@color/tallengeblue" />
+            android:backgroundTint="@color/tallengeblue"/>
 
     </LinearLayout>
 

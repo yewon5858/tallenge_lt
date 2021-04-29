@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/tallengeblue"
     tools:context=".MyInfoActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="71dp"
-        android:background="@drawable/textview_border"
+        android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,7 +22,10 @@
             android:id="@+id/button11"
             android:layout_width="73dp"
             android:layout_height="71dp"
-            android:background="@drawable/ic_baseline_arrow_back_24" />
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            android:backgroundTint="@color/black" />
+
 
     </LinearLayout>
 
@@ -32,11 +37,8 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="28dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -153,61 +155,52 @@
 
     <LinearLayout
         android:id="@+id/linearLayout13"
-        android:layout_width="413dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
+        android:layout_width="414dp"
+        android:layout_height="60dp"
+
+        android:background="@color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_home"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="47dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/textview_border"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@drawable/ic_baseline_home_24"
-            app:iconSize="60dp"
-            app:iconTint="@color/tallengeblue" />
+            android:background="@drawable/ic_baseline_home_24"
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="66dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@android:drawable/sym_action_chat"
-            app:iconSize="60dp"
-            app:iconTint="@color/tallengeblue" />
+            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+            android:backgroundTint="@color/tallengeblue"
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
             android:id="@+id/button9"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@drawable/ic_baseline_notifications_none_24"
-            app:iconSize="60dp"
-            app:iconTint="@color/tallengeblue" />
+            android:background="@drawable/ic_baseline_notifications_none_24"
+            app:backgroundTint="@color/tallengeblue" />
 
         <Button
             android:id="@+id/button10"
-            android:layout_width="wrap_content"
+            android:layout_width="45dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"
-            app:icon="@drawable/ic_baseline_person_outline_24"
-            app:iconSize="60dp"
-            app:iconTint="@color/tallengeblue" />
+            android:background="@drawable/ic_baseline_person_outline_24"
+            android:backgroundTint="@color/tallengeblue"
+            android:gravity="right"
+            android:textColor="#000000" />
 
     </LinearLayout>
 

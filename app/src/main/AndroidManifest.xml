@@ -2,9 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.tallenge_lt">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STAT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,23 +19,24 @@
         tools:ignore="AllowBackup">
         <activity android:name=".SignActivity" />
         <activity android:name=".SetAlarmActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity">
+        </activity>
         <activity android:name=".ExecutionActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ChatListActivity" >
+        <activity android:name=".ChatListActivity" />
+        <activity android:name=".CertifyExpActivity">
         </activity>
-        <activity android:name=".CertifyExpActivity" />
-        <activity android:name=".ChooseExpActivity" />
+        <activity android:name=".ChooseExpActivity" >
+
+        </activity>
         <activity android:name=".ModifyInfoActivity" />
         <activity android:name=".MyInfoActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".ChatActivity" >
-        </activity>
+        <activity android:name=".ChatActivity" />
         <activity android:name=".AddCheckList" />
         <activity android:name=".SetCheckListActivity" />
         <activity android:name=".ListAndAlarmActivity" />
@@ -39,7 +44,9 @@
         <activity android:name=".ListSetActivity" />
         <activity android:name=".InterestActivity" />
         <activity android:name=".ExpActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+
+        </activity>
     </application>
 
 </manifest>

@@ -3,12 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="main_fragment.lanFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="언어" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lan 프래그먼트"
+        android:layout_gravity="center"
+        android:textColor="@color/purple_700">
+    </TextView>
 
 </FrameLayout>

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     tools:context=".SetCheckListActivity">
-//체크리스트 세부항목추가 UI
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -27,7 +27,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="60dp"
         android:gravity="center"
         android:text="체크리스트 설정"
         android:textColor="@color/black"
