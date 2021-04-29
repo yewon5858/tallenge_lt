@@ -55,7 +55,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <EditText
-                android:id="@+id/idText"
+                android:id="@+id/input_id"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -69,7 +69,7 @@
                 android:textColorHint="@color/tallengeblue" />
 
             <EditText
-                android:id="@+id/passwordText"
+                android:id="@+id/input_password"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
