@@ -21,7 +21,7 @@ public class ChooseListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_list);
-
+        //교환리스트 구현
         exchangeListView = (ListView) findViewById(R.id.listview1);
         exchangeList=new ArrayList<ExchangeList>();
         exchangeList.add(new ExchangeList("C언어"));

@@ -59,7 +59,7 @@
             <Space
                 android:layout_width="30dp"
                 android:layout_height="40dp"/>
-
+            //교환리스트
             <ListView
                 android:id="@+id/listview1"
                 android:layout_width="350dp"

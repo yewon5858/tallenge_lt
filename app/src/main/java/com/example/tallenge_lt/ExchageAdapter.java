@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.List;
-
+//교환리스트 선택 어댑터
 public class ExchageAdapter extends BaseAdapter {
 
     private Context context;
