@@ -57,14 +57,12 @@
                 android:layout_height="30dp"/>
 
             <ListView
-                android:layout_width="350dp"
-                android:layout_height="454dp"
+                android:id="@+id/listview2"
+                android:layout_width="365dp"
+                android:layout_height="441dp"
                 android:layout_gravity="center"
                 android:background="@color/ta_blue_dark"></ListView>
 
-            <Space
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp" />
@@ -81,8 +79,13 @@
         android:layout_width="76dp"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+        android:id="@+id/add_list"
         android:text="+"
         app:backgroundTint="#B3B2B2" />
+
+    <Space
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
 
     <View
         android:layout_width="match_parent"

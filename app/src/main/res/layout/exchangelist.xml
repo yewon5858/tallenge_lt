@@ -9,6 +9,7 @@
         android:gravity="center"
         android:text="교환리스트"
         android:textColor="@color/white"
+        android:textSize="18sp"
         android:id="@+id/exchange"
         />
     <CheckBox
