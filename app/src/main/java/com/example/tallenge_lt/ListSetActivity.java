@@ -1,5 +1,5 @@
 package com.example.tallenge_lt;
-
+//사용 xml settitlelist.xml 자바 Listset -class LsitSetAdapter 어댑터
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;

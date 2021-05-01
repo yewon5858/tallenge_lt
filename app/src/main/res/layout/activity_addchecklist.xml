@@ -28,7 +28,7 @@
         android:background="@color/black"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:text="체크리스트 설정"
         android:background="@color/white"
         android:textSize="25sp"
@@ -49,7 +49,7 @@
 
     <ScrollView
         android:layout_width="350dp"
-        android:layout_height="454dp"
+        android:layout_height="350dp"
         android:layout_gravity="center"
         android:background="@color/white">
 
@@ -60,66 +60,93 @@
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@color/white"
                 android:gravity="center"
+                android:id="@+id/title"
                 android:hint="제목을 입력하세요"
+                android:textColor="@color/black"
                 android:textColorHint="@color/ta_bar" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/ta_bar"/>
+                android:background="@color/ta_bar" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:orientation="horizontal">
 
-                <EditText
-                    android:layout_width="240dp"
-                    android:layout_height="80dp"
-                    android:background="@color/white"
-                    android:gravity="center"
-                    android:hint="리스트를 추가해주세요"
-                    android:textColorHint="@color/ta_bar"
-                    android:textSize="20sp" />
+            <ListView
+                android:id="@+id/listview3"
+                android:layout_width="wrap_content"
+                android:layout_height="373dp"
+                android:background="@color/white">
 
-                <Button
-                    android:layout_width="66dp"
-                    android:layout_height="70dp"
-                    android:gravity="center"
-                    android:text="+"
-                    android:textSize="32sp" />
-            </LinearLayout>
+            </ListView>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/ta_bar"/>
+                android:background="@color/ta_bar" />
 
         </LinearLayout>
     </ScrollView>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
-    <Button
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:text="설정완료"
-        android:id="@+id/complt"
-        android:textSize="20sp"
-        android:layout_gravity="center"/>
+        android:background="@color/ta_bar" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="세부체크리스틑 입력하세요"
+        android:id="@+id/btn_check"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/ta_bar"
+        android:inputType="textPersonName"
+        android:gravity="center"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="61dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="추가"
+            android:id="@+id/add_btn"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="삭제"
+            android:id="@+id/remove"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="설정완료"
+            android:id="@+id/complt"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="@color/white">
 

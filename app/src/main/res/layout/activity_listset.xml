@@ -61,6 +61,7 @@
                 android:layout_width="365dp"
                 android:layout_height="441dp"
                 android:layout_gravity="center"
+                android:dividerHeight="4dp"
                 android:background="@color/ta_blue_dark"></ListView>
 
             <View
@@ -83,9 +84,6 @@
         android:text="+"
         app:backgroundTint="#B3B2B2" />
 
-    <Space
-        android:layout_width="30dp"
-        android:layout_height="30dp" />
 
     <View
         android:layout_width="match_parent"
