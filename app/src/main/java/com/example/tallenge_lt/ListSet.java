@@ -1,14 +1,10 @@
 package com.example.tallenge_lt;
 
-public class ListSet {
-    String listset;
-
-    public ListSet(String listset)
-    {
-        this.listset=listset;
+class Set{
+    String title="";
+    public Set(String title){
+        super();
+        this.title=title;
     }
-
-    public String setListset() {
-        return listset;
-    }
+    public Set(){}
 }

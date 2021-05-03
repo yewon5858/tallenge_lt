@@ -69,7 +69,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvmessage"
         android:layout_width="match_parent"
-        android:layout_height="470dp"
+        android:layout_height="489dp"
         android:background="@color/tallengeblue">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -103,48 +103,35 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/black"/>
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+        android:background="@color/tallengeblue"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengeblue" />
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_home_24" />
 
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/chat"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengeblue"
-            app:backgroundTint="@color/tallengeblue" />
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_chat_bubble_outline_24" />
 
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/alarm"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_notifications_none_24" />
 
-            android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mypage"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_person_outline_24" />
+    </com.google.android.material.tabs.TabLayout>
 
 </LinearLayout>
 

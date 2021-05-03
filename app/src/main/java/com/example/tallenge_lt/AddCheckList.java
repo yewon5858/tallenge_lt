@@ -39,14 +39,14 @@ public class AddCheckList extends AppCompatActivity {
             {
                 View view=super.getView(position,convertView,parent);
                 TextView tv= (TextView)view.findViewById(android.R.id.text1);
-                tv.setTextColor(Color.BLACK);
+                tv.setTextColor(Color.BLACK);//검정
                 return view;
             }
         };
 
-        listView=(ListView) findViewById(R.id.listview3);
-        listView.setAdapter(Adapter);
-        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        listView=(ListView) findViewById(R.id.listview3);//체크리스트 들어갈 리스트뷰
+        listView.setAdapter(Adapter);//어댑터 선언
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);//체크 하나만 되도록
 
         editText=(EditText) findViewById(R.id.btn_check);
         btnAdd=(Button)findViewById(R.id.add_btn);

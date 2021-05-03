@@ -29,7 +29,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="체크리스트 설정"
+        android:text="체크리스트 추가"
         android:background="@color/white"
         android:textSize="25sp"
         android:textColor="@color/black"
@@ -49,14 +49,15 @@
 
     <ScrollView
         android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_height="440dp"
         android:layout_gravity="center"
         android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/tallengeblue">
 
             <EditText
                 android:layout_width="300dp"
@@ -72,14 +73,19 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/ta_bar" />
+                android:background="@color/black"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                />
 
 
             <ListView
                 android:id="@+id/listview3"
                 android:layout_width="wrap_content"
                 android:layout_height="373dp"
-                android:background="@color/white">
+                android:background="@color/ta_bar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
             </ListView>
 
@@ -118,7 +124,7 @@
             android:layout_height="40dp"
             android:text="추가"
             android:id="@+id/add_btn"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:layout_weight="1"
             />
         <Button
@@ -126,7 +132,7 @@
             android:layout_height="40dp"
             android:text="삭제"
             android:id="@+id/remove"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:layout_weight="1"
             />
         <Button
@@ -134,7 +140,7 @@
             android:layout_height="40dp"
             android:text="설정완료"
             android:id="@+id/complt"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:layout_weight="1"
             />
 
@@ -144,50 +150,35 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/black"/>
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+        android:background="@color/tallengeblue"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:background="@color/white">
+        android:layout_height="wrap_content">
 
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengeblue" />
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_home_24" />
 
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/chat"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengeblue"
-            app:backgroundTint="@color/tallengeblue" />
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_chat_bubble_outline_24" />
 
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/alarm"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_notifications_none_24" />
 
-            android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mypage"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_person_outline_24" />
+    </com.google.android.material.tabs.TabLayout>
 
 
 </LinearLayout>

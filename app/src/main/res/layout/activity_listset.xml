@@ -45,24 +45,25 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="489dp"
+        android:layout_height="491dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="400dp"
             android:orientation="vertical">
+
             <Space
                 android:layout_width="40dp"
-                android:layout_height="30dp"/>
+                android:layout_height="30dp" />
 
             <ListView
                 android:id="@+id/listview2"
                 android:layout_width="365dp"
-                android:layout_height="441dp"
+                android:layout_height="420dp"
                 android:layout_gravity="center"
-                android:dividerHeight="4dp"
-                android:background="@color/ta_blue_dark"></ListView>
+                android:background="@color/ta_blue_dark"
+                android:dividerHeight="4dp"></ListView>
 
             <View
                 android:layout_width="match_parent"
@@ -73,7 +74,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="11dp"
         android:background="@color/white" />
 
     <Button
@@ -90,49 +91,33 @@
         android:layout_height="3dp"
         android:background="@color/ta_bar" />
 
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+        android:background="@color/tallengeblue"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_home_24" />
 
-            android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/chat"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengeblue"
-            app:backgroundTint="@color/tallengeblue" />
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_chat_bubble_outline_24" />
 
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/alarm"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_notifications_none_24" />
 
-            android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mypage"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-    </LinearLayout>
-
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_person_outline_24" />
+    </com.google.android.material.tabs.TabLayout>
 </LinearLayout>

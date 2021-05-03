@@ -1,32 +1,37 @@
 package com.example.tallenge_lt;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListSetAdapter extends BaseAdapter {
     private Context context;
-    private  List<ListSet> listSet;
+    int layout;
+    private ArrayList<Set> set;
+    LayoutInflater inf;
 
-    public ListSetAdapter(Context context,List<ListSet> listSet){
+    public ListSetAdapter(Context context,int layout,ArrayList<Set> set){
         this.context=context;
-        this.listSet=listSet;
+        this.set =set;
+        this.layout=layout;
+        inf =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
 
     @Override
     public int getCount() {
-        return listSet.size();
+        return set.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return listSet.get(i);
+        return set.get(i);
     }
 
     @Override
@@ -36,9 +41,13 @@ public class ListSetAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        View v=View.inflate(context,R.layout.settitlelist,null);
-        Button btn_chatitem=(Button) v.findViewById(R.id.btn_chatitem);
-        btn_chatitem.setText(listSet.get(i).setListset());
-        return v;
+        if (view==null) {
+            view = inf.inflate(layout, null);
+        }
+        TextView chatitem = (TextView)view.findViewById(R.id.btn_chatitem);
+        Set m = set.get(i);
+        chatitem.setText(m.title);
+        return view;
     }
+
 }
