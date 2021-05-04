@@ -42,7 +42,7 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
 
-        android:layout_height="470dp"
+        android:layout_height="495dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout
@@ -58,7 +58,10 @@
 
                 <TextView
                     android:layout_width="330dp"
+                    android:id="@+id/btn_chatitem"
                     android:layout_height="60dp"
+                    android:textColor="@color/black"
+                    android:text="제목"
                     android:background="@color/white"
                     android:gravity="center"
                     android:textSize="20sp" />
@@ -124,50 +127,35 @@
         android:layout_height="3dp"
         android:background="@color/black"/>
 
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+        android:background="@color/tallengeblue"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="114dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengeblue"
-            app:backgroundTint="@color/tallengeblue" />
-
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_home_24" />
 
-            android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/chat"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_chat_bubble_outline_24" />
 
-            android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengeblue" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_notifications_none_24" />
 
-    </LinearLayout>
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mypage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_person_outline_24" />
+    </com.google.android.material.tabs.TabLayout>
 
 
 </LinearLayout>

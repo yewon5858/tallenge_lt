@@ -58,24 +58,24 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="486dp"
+        android:layout_height="491dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout
             android:layout_width="350dp"
             android:layout_height="500dp"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:background="@color/ta_blue_dark">
+            android:background="@color/ta_blue_dark"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
                 android:gravity="center"
                 android:text="과목명"
                 android:textColor="@color/black"
-                android:background="@color/white"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -85,8 +85,8 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:background="@color/tallengeblue" />
+                android:background="@color/tallengeblue"
+                android:text="" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -105,12 +105,12 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
                 android:gravity="center"
                 android:text="과목명"
-                android:background="@color/white"
                 android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -139,12 +139,12 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
                 android:gravity="center"
                 android:text="알림설정"
                 android:textColor="@color/black"
-                android:background="@color/white"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -154,11 +154,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="@color/black"
                 android:background="@color/white"
-                android:text="월  화  수  목  금  토  일"
-                android:textSize="30sp" />
+                android:gravity="center"
+                android:text="월      화      수      목      금      토      일"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -176,49 +176,55 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
+
                 <Space
                     android:layout_width="15dp"
-                    android:layout_height="1dp"/>
+                    android:layout_height="1dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
+
                 <Space
                     android:layout_width="15dp"
-                    android:layout_height="1dp"/>
+                    android:layout_height="1dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
+
                 <Space
                     android:layout_width="15dp"
-                    android:layout_height="1dp"/>
+                    android:layout_height="1dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
+
                 <Space
                     android:layout_width="15dp"
-                    android:layout_height="1dp"/>
+                    android:layout_height="1dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
+
                 <Space
                     android:layout_width="15dp"
-                    android:layout_height="1dp"/>
+                    android:layout_height="1dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
+
                 <Space
                     android:layout_width="15dp"
-                    android:layout_height="1dp"/>
+                    android:layout_height="1dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
@@ -245,49 +251,33 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/black"/>
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+        android:background="@color/tallengeblue"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:orientation="horizontal"
-        android:background="@color/white">
+        android:layout_height="wrap_content">
 
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/home"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_home_24" />
 
-            android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/chat"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengeblue"
-            app:backgroundTint="@color/tallengeblue" />
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_chat_bubble_outline_24" />
 
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/alarm"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_notifications_none_24" />
 
-            android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mypage"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/ic_baseline_person_outline_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_person_outline_24" />
+    </com.google.android.material.tabs.TabLayout>
 </LinearLayout>
