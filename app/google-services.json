@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "989841766788",
+    "project_id": "tallenge-lt",
+    "storage_bucket": "tallenge-lt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989841766788:android:206060aca8f62ea59a05d1",
+        "android_client_info": {
+          "package_name": "com.example.tallenge_lt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989841766788-a1rks3lu7onk8c0v02e5j9c77h5ik6b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkR8nPMbTq6J8k3QMwPFnCPbsD3LyfFdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989841766788-a1rks3lu7onk8c0v02e5j9c77h5ik6b3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

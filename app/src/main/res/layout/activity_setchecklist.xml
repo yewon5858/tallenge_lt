@@ -131,7 +131,7 @@
 
         <Button
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="103dp"
             android:layout_height="60dp"
             android:layout_weight="1"
 
@@ -141,7 +141,7 @@
 
         <Button
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="114dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/ic_baseline_chat_bubble_outline_24"
