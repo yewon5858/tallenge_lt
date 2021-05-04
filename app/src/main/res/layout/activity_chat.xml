@@ -49,13 +49,17 @@
         <TextView
             android:id="@+id/tier"
             android:layout_width="227dp"
+            android:text="등급: "
+            android:textColor="@color/black"
             android:layout_height="match_parent"
             android:textSize="20sp" />
         //닉네임
         <TextView
             android:layout_width="180dp"
             android:layout_height="match_parent"
-            android:gravity="end"
+            android:text="상대방 닉네임:"
+            android:gravity="left"
+            android:textColor="@color/black"
             android:id="@+id/nickname"
             android:textSize="20sp" />
     </LinearLayout>
@@ -89,6 +93,7 @@
             android:hint="채팅내용"
             android:textSize="16sp"
             android:layout_height="50dp"
+            android:textColor="@color/black"
             android:id="@+id/inputText"/>
 
         <Button
@@ -96,7 +101,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/ic_baseline_send_24"
             app:backgroundTint="@color/black"
-            android:id="@+id/pushText"/>
+            android:id="@+id/push_btn"/>
 
     </LinearLayout>
     <View

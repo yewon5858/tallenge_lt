@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_nickname"
+        android:textSize="16sp"
+        android:background="@color/tallengeblue"
+        android:textColor="@color/black"
+        android:text="이름"
+        />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tallengeblue"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="@color/black" />
+
+
+</LinearLayout>

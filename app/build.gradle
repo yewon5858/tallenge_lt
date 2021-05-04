@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.tallenge_lt"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -45,5 +45,6 @@ dependencies {
 
 
     implementation platform('com.google.firebase:firebase-bom:27.0.0')
+    implementation 'com.google.firebase:firebase-database:19.7.0'
     implementation 'com.google.firebase:firebase-database'
 }
