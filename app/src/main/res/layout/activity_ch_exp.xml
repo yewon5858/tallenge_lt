@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".ChooseExpActivity">
+    tools:context=".ChooseExpActivity"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@color/tallengeblue"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +31,7 @@
                 android:layout_width="73dp"
                 android:layout_height="71dp"
                 android:background="@drawable/ic_baseline_arrow_back_24"
-                android:backgroundTint="@color/black"/>
+                android:backgroundTint="@color/black" />
 
         </LinearLayout>
 
@@ -49,7 +50,7 @@
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="543dp"
-
+            android:layout_gravity="center"
             android:layout_marginBottom="147dp"
             android:orientation="vertical">
 
@@ -57,132 +58,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="41dp" />
 
-            <ScrollView
-                android:layout_width="364dp"
-                android:layout_height="284dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ch_exp_rv"
+                android:layout_width="362dp"
+                android:layout_height="363dp"
                 android:layout_gravity="center"
-                android:background="#FFFFFF">
+                android:background="@color/white"
+                android:scrollbarFadeDuration="0"
+                android:scrollbarSize="5dp"
+                android:scrollbarThumbVertical="@android:color/darker_gray"
+                android:scrollbars="vertical"
+                />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="410dp"
-                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="300dp"
-                            android:layout_height="63dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/textview_border"
-                            android:text="TextView" />
-
-                        <Button
-                            android:id="@+id/button5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:text="-" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="93dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="242dp"
-                            android:layout_height="63dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:background="@drawable/textview_border"
-                            android:text="TextView" />
-
-                        <Button
-                            android:id="@+id/button20"
-                            android:layout_width="79dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="-" />
-                    </LinearLayout>
-
-                </LinearLayout>
-            </ScrollView>
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/btn_ch_exp_add"
                 android:layout_width="118dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="확인" />
-
-            <ImageView
-                android:id="@+id/ex_image"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                app:srcCompat="@android:drawable/star_big_off" />
+                android:text="추가버튼" />
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout13"
-        android:layout_width="414dp"
-        android:layout_height="60dp"
-
-        android:background="@color/white"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/btn_home"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="47dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-        <Button
-            android:id="@+id/btn_chatlist"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="66dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengeblue"
-            app:backgroundTint="@color/tallengeblue" />
-
-        <Button
-            android:id="@+id/btn_alarm"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengeblue" />
-
-        <Button
-            android:id="@+id/btn_myinfo"
-            android:layout_width="45dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_person_outline_24"
-            android:gravity="right"
-            android:textColor="#000000"
-            android:backgroundTint="@color/tallengeblue"/>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
