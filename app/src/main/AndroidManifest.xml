@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="AllowBackup">
-        <activity android:name=".SignActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".SetAlarmActivity" />
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".ExecutionActivity">
@@ -45,7 +46,7 @@
         <activity android:name=".ListSetActivity" />
         <activity android:name=".InterestActivity" />
         <activity android:name=".ExpActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

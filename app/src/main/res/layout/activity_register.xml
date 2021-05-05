@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tallengeblue"
-    tools:context=".SignActivity"
+    tools:context=".RegisterActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -63,7 +63,51 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/nicname"
+                android:id="@+id/et_email"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_baseline_perm_identity_24"
+                android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                android:hint="이메일"
+                android:padding="15dp"
+                android:textColor="@color/tallengeblue"
+                android:textColorHint="@color/tallengeblue" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/ta_blue_dark"
+                android:text="중복확인"></Button>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/tallengeblue"
+            android:textColorHint="@color/tallengeblue" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_nicname"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -84,51 +128,8 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/idText"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/white"
-                android:drawableStart="@drawable/ic_baseline_perm_identity_24"
-                android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
-                android:hint="아이디"
-                android:padding="15dp"
-                android:textColor="@color/tallengeblue"
-                android:textColorHint="@color/tallengeblue" />
-
-            <Button
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="@color/ta_blue_dark"
-                android:text="중복확인"></Button>
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/passwordText"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
-            android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
-            android:hint="비밀번호"
-            android:padding="15dp"
-            android:textColor="@color/tallengeblue"
-            android:textColorHint="@color/tallengeblue" />
-
         <Spinner
-            android:id="@+id/add_spinner"
+            android:id="@+id/et_address"
             android:layout_width="280dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
@@ -147,6 +148,7 @@
 
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -159,6 +161,7 @@
             app:backgroundTint="@color/white" />
 
         <Button
+            android:id="@+id/btn_register"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

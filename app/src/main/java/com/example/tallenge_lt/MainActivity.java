@@ -1,8 +1,11 @@
 package com.example.tallenge_lt;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -16,7 +19,13 @@ import main_fragment.hobFragment;
 import main_fragment.lanFragment;
 import main_fragment.spoFragment;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
+    // 하단 버튼 클릭으로 엑티비티 이동
+    ImageButton bt_home;
+    ImageButton bt_chat;
+    ImageButton  bt_alarm;
+    ImageButton bt_mypage;
+    String str;
 
     private final String TAG = this.getClass().getSimpleName();
     Context mContext;
@@ -32,6 +41,8 @@ public class MainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // fragment 이동
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
         mContext = MainActivity.this;
@@ -59,6 +70,46 @@ public class MainActivity extends AppCompatActivity  {
 
         //displaying tabs
         new TabLayoutMediator(tabLayout, mViewPager, (tab, position) -> tab.setText(titles[position])).attach();
+
+
+
+
+        // MainActivity로 이동
+        bt_home = (ImageButton) findViewById(R.id.home);
+        bt_chat = (ImageButton) findViewById(R.id.chat);
+        bt_alarm = (ImageButton) findViewById(R.id.alarm);
+        bt_mypage = (ImageButton) findViewById(R.id.mypage);
+
+        bt_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MainActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), ChatActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), SetAlarmActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MyInfoActivity.class );
+                startActivity( intent );
+            }
+        });
+
+
     }
 
 }
