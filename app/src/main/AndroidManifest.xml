@@ -23,16 +23,16 @@
         <activity android:name=".SetAlarmActivity" />
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".ExecutionActivity">
-
-        </activity>
-        <activity android:name=".ChatListActivity" />
-        <activity android:name=".CertifyExpActivity"></activity>
-        <activity android:name=".ChooseExpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ChatListActivity" />
+        <activity android:name=".CertifyExpActivity"></activity>
+        <activity android:name=".ChooseExpActivity">
+
         </activity>
         <activity android:name=".ModifyInfoActivity" />
         <activity android:name=".MyInfoActivity" />
