@@ -29,7 +29,7 @@
         <Button
             android:id="@+id/Fin"
             android:layout_width="180dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:text="재능교환 완료"
             app:backgroundTint="#C5C1C1" />
     </LinearLayout>
@@ -51,24 +51,22 @@
         android:layout_height="3dp"
         android:background="@color/black"/>
 
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"/>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="491dp"
+        android:layout_height="415dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout
             android:layout_width="350dp"
-            android:layout_height="500dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:background="@color/ta_blue_dark"
             android:orientation="vertical">
-
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
             <TextView
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/white"
@@ -80,66 +78,21 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/black" />
+                android:background="@color/ta_bar" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/tallengeblue"
-                android:text="" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/tallengeblue" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/tallengeblue" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/black" />
+                android:background="@color/ta_bar" />
+
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:text="과목명"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/black" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/tallengeblue" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/tallengeblue" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="28dp"
-                android:background="@color/tallengeblue" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/black" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:background="@color/white"
                 android:gravity="center"
                 android:text="알림설정"
@@ -153,7 +106,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:background="@color/white"
                 android:gravity="center"
                 android:text="월      화      수      목      금      토      일"
@@ -167,7 +120,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:background="@color/ta_blue_dark"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -234,6 +187,7 @@
 
         </LinearLayout>
     </ScrollView>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"

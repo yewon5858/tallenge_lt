@@ -5,6 +5,8 @@ public class ChatData {
     private String msg;
     private String nickname;
 
+    public ChatData(){ }
+
     public String getMsg() {
         return msg;
     }

@@ -2,27 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="45dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_nickname"
         android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:background="@color/tallengeblue"
         android:textColor="@color/black"
+        android:layout_marginStart="5dp"
         android:text="이름"
         />
 
     <TextView
         android:id="@+id/tv_msg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/tallengeblue"
-        android:text=""
-        android:textSize="20sp"
-        android:textColor="@color/black" />
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/chat_bubble"
+        android:text="채팅내용"
 
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 </LinearLayout>

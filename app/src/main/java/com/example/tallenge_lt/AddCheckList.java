@@ -1,5 +1,7 @@
 package com.example.tallenge_lt;
-
+//액티비티입니다!
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,91 +16,70 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 //새로운 체크리스트 추가 UI
 public class AddCheckList extends AppCompatActivity {
-    ArrayList<String> Items;
-    ArrayAdapter<String> Adapter;
-    ListView listView;
-    Button btnAdd;
-    Button btnDel;
-    EditText editText;
+
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = database.getReference();
+    Button complt;
+    EditText title, edit1, edit2, edit3, edit4, edit5;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addchecklist);
-        Items= new ArrayList<String>();
 
+        complt = findViewById(R.id.complt);
+        title=findViewById(R.id.title);
+        edit1 = findViewById(R.id.edit1);
+        edit2 = findViewById(R.id.edit2);
+        edit3 = findViewById(R.id.edit3);
+        edit4 = findViewById(R.id.edit4);
+        edit5 = findViewById(R.id.edit5);
 
-        Adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice,Items)
-        {
+        complt.setOnClickListener(new View.OnClickListener() {
             @Override
-            //글자 색 변경
-            public View getView(int position, View convertView, ViewGroup parent)
-            {
-                View view=super.getView(position,convertView,parent);
-                TextView tv= (TextView)view.findViewById(android.R.id.text1);
-                tv.setTextColor(Color.BLACK);//검정
-                return view;
+            public void onClick(View v) {
+                AddCheck(title.getText().toString(), edit1.getText().toString(), edit2.getText().toString(), edit3.getText().toString(), edit4.getText().toString(), edit5.getText().toString());
+                Toast.makeText(AddCheckList.this, "저장되었습니다!", Toast.LENGTH_LONG).show();
             }
-        };
+        });
 
-        listView=(ListView) findViewById(R.id.listview3);//체크리스트 들어갈 리스트뷰
-        listView.setAdapter(Adapter);//어댑터 선언
-        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);//체크 하나만 되도록
-
-        editText=(EditText) findViewById(R.id.btn_check);
-        btnAdd=(Button)findViewById(R.id.add_btn);
-        btnDel=(Button)findViewById(R.id.remove);
-
-        btnAdd.setOnClickListener(listener);
-        btnDel.setOnClickListener(listener);
-
+        Button end=(Button) findViewById(R.id.end);
+        end.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),ListSetActivity.class);
+                startActivity(intent);
+            }
+        });
         //뒤로가기 버튼
         Button btn_back2 = (Button) findViewById(R.id.bck_btn2);
         btn_back2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ListSetActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ListSetActivity.class);
                 startActivity(intent);
             }
         });
-        // 작성 완료 버튼
-        Button btn_complt = (Button) findViewById(R.id.complt);
-        btn_complt.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ListSetActivity.class);
-                startActivity(intent);
-            }
-        });
     }
-    private  View.OnClickListener listener=new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()){
-                case R.id.add_btn:
-                    String text =editText.getText().toString();
-                    if (text.length()!=0){
-                        Items.add(text);
-                        editText.setText("");
-                        Adapter.notifyDataSetChanged();
-                    }
-                    break;
-                case R.id.remove:
-                    int pos;
-                    pos=listView.getCheckedItemPosition();
-                    if(pos!=ListView.INVALID_POSITION){
-                        Items.remove(pos);
-                        listView.clearChoices();
-                        Adapter.notifyDataSetChanged();
-                    }
-                    break;
-            }
-        }
-    };
 
+    public void AddCheck(String CheckTitle,String checkitem1,String checkitem2,String checkitem3,String checkitem4,String checkitem5){
+        if(CheckTitle!=null &&checkitem1!=null&&checkitem2!=null&&checkitem3!=null&&checkitem4!=null&&checkitem5!=null) {
+            AddCheckData checkData = new AddCheckData(CheckTitle, checkitem1, checkitem2, checkitem3, checkitem4, checkitem5);
+            databaseReference.child("tallenge").child("checklist").child(CheckTitle).setValue(checkData);
+        }
+    }
 }
+

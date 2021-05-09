@@ -1,3 +1,5 @@
+
+
 package com.example.tallenge_lt;
 
 import android.content.Context;
@@ -20,15 +22,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         public TextView TextView_nickname;
         public TextView TextView_msg;
-        public TextView nickname;
-
 
         public MyViewHolder(View v){
             super(v);
             TextView_nickname=v.findViewById(R.id.tv_nickname);
             TextView_msg=v.findViewById(R.id.tv_msg);
-            nickname=v.findViewById(R.id.nickname);
-
         }
     }
     public ChatAdapter(List<ChatData> myDataset, Context context, String myNickName){
@@ -51,7 +49,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
         ChatData chat=mDataset.get(position);
         holder.TextView_nickname.setText(chat.getNickname());
         holder.TextView_msg.setText(chat.getMsg());
-        if(chat.getNickname().equals(this.myNickName)) {
+        if(chat.getNickname()!=null &&this.myNickName!=null && chat.getNickname().equals(this.myNickName)) {
             holder.TextView_msg.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
             holder.TextView_nickname.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
         }
