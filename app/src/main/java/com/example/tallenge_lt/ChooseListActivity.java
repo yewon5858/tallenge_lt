@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -24,6 +27,7 @@ public class ChooseListActivity extends AppCompatActivity {
     private ListView exchangeListView;
     private ExchageAdapter adapter;
     private List<ExchangeList> exchangelist;
+    private DatabaseReference myRef;
 
 
     @Override
@@ -31,14 +35,6 @@ public class ChooseListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_list);
         //교환리스트 구현
-        exchangeListView = (ListView) findViewById(R.id.listview1);
-        exchangelist=new ArrayList<ExchangeList>();
-        exchangelist.add(new ExchangeList("중국어"));
-        exchangelist.add(new ExchangeList("C언어"));
-        exchangelist.add(new ExchangeList("영어"));
-        exchangelist.add(new ExchangeList("일본어"));
-        adapter=new ExchageAdapter(getApplicationContext(),exchangelist);
-        exchangeListView.setAdapter(adapter);
 
 
 
@@ -73,64 +69,16 @@ public class ChooseListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        //프로그램실행
-//        new BackgoundTask().execute();
-    }
-    //php 서버 불러오기 class
-    class BackgoundTask extends AsyncTask<Void, Void, String>
-    {
-        String target;
+//        FirebaseDatabase database=FirebaseDatabase.getInstance();
+//        myRef=database.getReference("tallenge").child("checklist");
+        exchangeListView = (ListView) findViewById(R.id.listview1);
+        exchangelist=new ArrayList<ExchangeList>();
+        exchangelist.add(new ExchangeList("중국어"));
+        exchangelist.add(new ExchangeList("C언어"));
+        exchangelist.add(new ExchangeList("영어"));
+        exchangelist.add(new ExchangeList("일본어"));
+        adapter=new ExchageAdapter(getApplicationContext(),exchangelist);
+        exchangeListView.setAdapter(adapter);
 
-        @Override
-        protected  void onPreExecute(){
-            target="http://203.255.3.92:9000/phpmyadmin/ChatList.php";
-        }
-
-
-        @Override
-        protected String doInBackground(Void... voids) {
-            try{
-                URL url=new URL(target);
-                HttpURLConnection httpURLConnection=(HttpURLConnection) url.openConnection();
-                InputStream inputStream =httpURLConnection.getInputStream();
-                BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(inputStream));
-                String temp;
-                StringBuilder stringBuilder=new StringBuilder();
-                while((temp =bufferedReader.readLine())!=null)
-                {
-                    stringBuilder.append(temp+"\n");
-
-                }
-                bufferedReader.close();
-                inputStream.close();
-                httpURLConnection.disconnect();
-                return stringBuilder.toString().trim();
-            }catch(Exception e){
-            }
-            return null;
-        }
-        @Override
-        public void onProgressUpdate(Void... values){
-            super.onProgressUpdate();
-        }
-        //체크리스트 출력
-        @Override
-        public void onPostExecute(String result){
-            try{
-                JSONObject jsonObject=new JSONObject(result);
-                JSONArray jsonArray=jsonObject.getJSONArray("response");
-                int count=0;
-                String checklist_title;
-                while(count<jsonArray.length()){
-                    JSONObject object=jsonArray.getJSONObject(count);
-                    checklist_title=object.getString("checklist_title");
-                    ExchangeList exchangeList=new ExchangeList(checklist_title);
-                    exchangelist.add(exchangeList);
-                    count++;
-                }
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        }
     }
 }

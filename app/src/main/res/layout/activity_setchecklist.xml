@@ -14,10 +14,11 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/back_btn"
             android:layout_width="60dp"
-            android:layout_height="70dp"
-            app:backgroundTint="@color/black"
-            android:background="@drawable/ic_baseline_arrow_back_24" />
+            android:layout_height="60dp"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            app:backgroundTint="@color/black" />
     </LinearLayout>
 
     <View
@@ -42,7 +43,7 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
 
-        android:layout_height="495dp"
+        android:layout_height="427dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout
@@ -57,13 +58,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="330dp"
                     android:id="@+id/btn_chatitem"
+                    android:layout_width="330dp"
                     android:layout_height="60dp"
-                    android:textColor="@color/black"
-                    android:text="제목"
                     android:background="@color/white"
                     android:gravity="center"
+                    android:text="제목"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
 
@@ -115,11 +116,13 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/black"/>
+
     <Button
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:text="선택완료"
+        android:text="설정완료"
+        android:id="@+id/finish"
         app:backgroundTint="#B3B2B2" />
 
     <View
