@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
 
 
-    private String[] titles = new String[]{"전문분야", "취미", "언어","스포츠"};
+    private String[] titles = new String[]{"전문분야", "취미", "언어", "스포츠"};
 
 
     String code;

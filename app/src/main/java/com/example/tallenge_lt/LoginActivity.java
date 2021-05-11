@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             //로그인 성공
-                            Intent intent = new Intent(LoginActivity.this,ChatActivity.class);//프로필에서 이메일이나 닉네임을 못받아서 임시로 바꿨습니다!
+                            Intent intent = new Intent(LoginActivity.this,MainActivity.class);//프로필에서 이메일이나 닉네임을 못받아서 임시로 바꿨습니다!
                             //임시로 채팅에 이메일값 받아오도록 설정했습니다<언승>
                             intent.putExtra("email",strEmail);
                             startActivity( intent );

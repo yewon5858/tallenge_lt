@@ -129,15 +129,14 @@
         </LinearLayout>
 
         <Spinner
-            android:id="@+id/et_address"
+            android:id="@+id/sp_address"
             android:layout_width="280dp"
-            android:layout_height="55dp"
+            android:layout_height="67dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@color/ta_blue_dark"
-            android:popupBackground="@color/ta_blue_dark"
-            android:entries="@array/address_item">
-        </Spinner>
+            android:entries="@array/address_item"
+            android:popupBackground="@color/ta_blue_dark"></Spinner>
 
         <TextView
             android:id="@+id/tv_result"
