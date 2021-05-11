@@ -1,15 +1,23 @@
 package com.example.tallenge_lt;
 //사용 xml exchangelist.xml / 자바 ExchangeList.java , ExchageAdapter.java (변수중복때문에 오타로했습니다!)
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -24,17 +32,44 @@ import java.util.List;
 
 public class ChooseListActivity extends AppCompatActivity {
     //변수 선언
-    private ListView exchangeListView;
-    private ExchageAdapter adapter;
-    private List<ExchangeList> exchangelist;
-    private DatabaseReference myRef;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<ExchangeList> arrayList;
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_list);
-        //교환리스트 구현
+        recyclerView=findViewById(R.id.listview1);
+        recyclerView.setHasFixedSize(true);
+        layoutManager=new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        arrayList=new ArrayList<>();
+        database=FirebaseDatabase.getInstance();
+        databaseReference=database.getReference("tallenge").child("checklist");
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                arrayList.clear();
+                for(DataSnapshot snapshot:datasnapshot.getChildren()){
+                    ExchangeList exchangeList=snapshot.getValue(ExchangeList.class);
+                    arrayList.add(exchangeList);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("ChooseListActivity",String.valueOf(error.toException()));
+            }
+        });
+        adapter=new ExchageAdapter(arrayList,this);
+        recyclerView.setAdapter(adapter);
+
 
 
 
@@ -71,14 +106,6 @@ public class ChooseListActivity extends AppCompatActivity {
         });
 //        FirebaseDatabase database=FirebaseDatabase.getInstance();
 //        myRef=database.getReference("tallenge").child("checklist");
-        exchangeListView = (ListView) findViewById(R.id.listview1);
-        exchangelist=new ArrayList<ExchangeList>();
-        exchangelist.add(new ExchangeList("중국어"));
-        exchangelist.add(new ExchangeList("C언어"));
-        exchangelist.add(new ExchangeList("영어"));
-        exchangelist.add(new ExchangeList("일본어"));
-        adapter=new ExchageAdapter(getApplicationContext(),exchangelist);
-        exchangeListView.setAdapter(adapter);
 
     }
 }

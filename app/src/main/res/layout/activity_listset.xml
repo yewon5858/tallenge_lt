@@ -45,7 +45,7 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="495dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout
@@ -57,13 +57,15 @@
                 android:layout_width="40dp"
                 android:layout_height="30dp" />
 
-            <ListView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listview2"
                 android:layout_width="365dp"
                 android:layout_height="510dp"
                 android:layout_gravity="center"
                 android:background="@color/ta_blue_dark"
-                android:dividerHeight="4dp"></ListView>
+                android:dividerHeight="4dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
 
             <View
                 android:layout_width="match_parent"
