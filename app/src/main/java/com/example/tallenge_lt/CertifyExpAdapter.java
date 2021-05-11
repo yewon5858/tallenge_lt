@@ -70,6 +70,7 @@ public class CertifyExpAdapter extends RecyclerView.Adapter<CertifyExpAdapter.Cu
         }
     }
 
+
     public static class CustomViewHolder extends RecyclerView.ViewHolder {
 
         protected ImageView iv_profile;
