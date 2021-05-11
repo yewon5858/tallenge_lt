@@ -3,8 +3,11 @@ package com.example.tallenge_lt;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,7 +27,9 @@ public class RegisterActivity extends AppCompatActivity {
     private DatabaseReference mDatabaseRef;
     private EditText mEtEmail, mEtPwd;
     private EditText mnicname;
-    private String maddrass;// -> 닉네임, 주소
+    private Spinner sp_address; //address 관련 드롭다운
+    private TextView tv_result;
+    private String maddrass;//  주소
     private Button mBtmlogin,mBtmRegister; // 로그인 버튼은 intent로 구현
 
 
@@ -32,6 +37,24 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_register );
 
+        // address Spinner 설정
+        sp_address = (Spinner)findViewById( R.id.sp_address );
+        tv_result = (TextView)findViewById( R.id.tv_result );
+
+        sp_address.setOnItemSelectedListener( new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                tv_result.setText(parent.getItemAtPosition( position ).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        } );
+
+
+        //firebase 연결
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("tallenge");
 
@@ -39,7 +62,8 @@ public class RegisterActivity extends AppCompatActivity {
         mEtPwd = findViewById( R.id.et_pwd );
         mBtmRegister = findViewById( R.id.btn_register );
         mBtmlogin = findViewById( R.id.btn_login );
-
+        mnicname = findViewById( R.id.et_nicname );
+       // maddrass = String.valueOf( tv_result ); // address 스피너 선택된 값 가져오기
 
 
         mBtmlogin.setOnClickListener( new View.OnClickListener() {
@@ -57,7 +81,8 @@ public class RegisterActivity extends AppCompatActivity {
                 //회원가입 처리 시작
                 String strEmail = mEtEmail.getText().toString();
                 String strPwd = mEtPwd.getText().toString();
-
+                String strNic = mnicname.getText().toString(); // 닉네임 입력
+                String strAdd =  tv_result.getText().toString();
 
                 //Firebase Auth 진행
                 mFirebaseAuth.createUserWithEmailAndPassword( strEmail, strPwd ).addOnCompleteListener( RegisterActivity.this, new OnCompleteListener<AuthResult>() {
@@ -70,6 +95,8 @@ public class RegisterActivity extends AppCompatActivity {
                             account.setIdToken(firebaseUser.getUid());
                             account.setEmailId( firebaseUser.getEmail()); //FirebaseUser의 getEmail()함수를 통해 이메일 값을 받아 UserAccount 파일에서 이메일 아이디를 넘겨준다.
                             account.setPassword( strPwd );
+                            account.setNicname( strNic ); // 닉네임 set
+                            account.setAddress( strAdd );
 
                             //setValue: database에 insert (삽입) 하는 행위
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);

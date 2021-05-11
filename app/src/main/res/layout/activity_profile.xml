@@ -90,53 +90,47 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout13"
-        android:layout_width="414dp"
-        android:layout_height="60dp"
-
-        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:id = "@+id/linearLayout13"
+        android:paddingTop="1dp"
+        android:background="@color/ta_blue_dark"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-        <Button
-            android:id="@+id/btn_home"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="47dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_home_24"
-            app:backgroundTint="@color/tallengeblue" />
 
-        <Button
-            android:id="@+id/button8"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="66dp"
-            android:layout_height="60dp"
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-            android:backgroundTint="@color/tallengeblue"
-            app:backgroundTint="@color/tallengeblue" />
+            android:background="@color/tallengeblue"
+            android:src="@drawable/ic_baseline_home_24" />
 
-        <Button
-            android:id="@+id/button9"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
+        <ImageButton
+            android:id="@+id/chat"
+            android:layout_width="103dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/ic_baseline_notifications_none_24"
-            app:backgroundTint="@color/tallengeblue" />
+            android:background="@color/tallengeblue"
+            android:src="@drawable/ic_baseline_chat_bubble_outline_24" />
 
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="45dp"
-            android:layout_height="match_parent"
+
+        <ImageButton
+            android:id="@+id/alarm"
+            android:layout_width="103dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/ic_baseline_person_outline_24"
-            android:backgroundTint="@color/tallengeblue"
-            android:gravity="right"
-            android:textColor="#000000" />
+            android:background="@color/tallengeblue"
+            android:src="@drawable/ic_baseline_notifications_none_24" />
+
+        <ImageButton
+            android:id="@+id/mypage"
+            android:layout_width="103dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/tallengeblue"
+            android:src="@drawable/ic_baseline_person_outline_24" />
 
     </LinearLayout>
 

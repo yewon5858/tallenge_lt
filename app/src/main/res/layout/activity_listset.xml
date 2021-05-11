@@ -92,33 +92,46 @@
         android:layout_height="3dp"
         android:background="@color/ta_bar" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:background="@color/tallengeblue"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="1dp"
+        android:background="@color/ta_blue_dark">
 
-        <com.google.android.material.tabs.TabItem
+
+        <ImageButton
             android:id="@+id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_home_24" />
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/tallengeblue"
+            android:src="@drawable/ic_baseline_home_24" />
 
-        <com.google.android.material.tabs.TabItem
+        <ImageButton
             android:id="@+id/chat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_chat_bubble_outline_24" />
+            android:layout_width="103dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/tallengeblue"
+            android:src="@drawable/ic_baseline_chat_bubble_outline_24" />
 
-        <com.google.android.material.tabs.TabItem
+
+        <ImageButton
             android:id="@+id/alarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_notifications_none_24" />
+            android:layout_width="103dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/tallengeblue"
+            android:src="@drawable/ic_baseline_notifications_none_24" />
 
-        <com.google.android.material.tabs.TabItem
+        <ImageButton
             android:id="@+id/mypage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_person_outline_24" />
-    </com.google.android.material.tabs.TabLayout>
+            android:layout_width="103dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/tallengeblue"
+            android:src="@drawable/ic_baseline_person_outline_24" />
+    </LinearLayout>
+
 </LinearLayout>
