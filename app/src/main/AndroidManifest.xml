@@ -20,14 +20,16 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="AllowBackup">
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".SetAlarmActivity" />
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".ExecutionActivity">
+        <activity android:name=".SetAlarmActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".ExecutionActivity">
+
         </activity>
         <activity android:name=".ChatListActivity" />
         <activity android:name=".CertifyExpActivity"></activity>
@@ -47,6 +49,18 @@
         <activity android:name=".InterestActivity" />
         <activity android:name=".ExpActivity" />
         <activity android:name=".MainActivity" />
+        
+        <service android:name=".FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
