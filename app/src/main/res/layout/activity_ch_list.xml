@@ -49,7 +49,7 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="444dp"
+        android:layout_height="509dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout
@@ -63,13 +63,15 @@
                 android:layout_height="40dp" />
             //교환리스트
 
-            <ListView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listview1"
                 android:layout_width="350dp"
                 android:layout_height="450dp"
                 android:background="@color/ta_blue_dark"
                 android:choiceMode="singleChoice"
-                android:dividerHeight="4dp" />
+                android:dividerHeight="4dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
 

@@ -17,7 +17,7 @@ public class SetCheckListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setchecklist);
         TextView textView=(TextView) findViewById(R.id.btn_chatitem);
         Intent intent =getIntent();
-        textView.setText(intent.getStringExtra("title"));
+        textView.setText(intent.getStringExtra("checkTitle"));
         //뒤로가기
         Button back =(Button)findViewById(R.id.back_btn);
         back.setOnClickListener(new View.OnClickListener() {
