@@ -43,7 +43,7 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
 
-        android:layout_height="427dp"
+        android:layout_height="492dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout

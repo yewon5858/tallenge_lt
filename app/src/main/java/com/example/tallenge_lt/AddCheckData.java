@@ -48,7 +48,7 @@ public class AddCheckData {
 
     private String checkitem5;
 
-    private String CheckTitle;
+    private String checkTitle;
     private String Email;
 
     public String getEmail() {
@@ -59,7 +59,7 @@ public class AddCheckData {
         this.Email = email;
     }
     public AddCheckData(String CheckTitle,String checkitem1,String checkitem2,String checkitem3,String checkitem4,String checkitem5){
-        this.CheckTitle=CheckTitle;
+        this.checkTitle=CheckTitle;
         this.checkitem1=checkitem1;
         this.checkitem2=checkitem2;
         this.checkitem3=checkitem3;
@@ -72,10 +72,10 @@ public class AddCheckData {
 
 
     public String getCheckTitle() {
-        return CheckTitle;
+        return checkTitle;
     }
 
     public void setCheckTitle(String checkTitle) {
-        this.CheckTitle = checkTitle;
+        this.checkTitle = checkTitle;
     }
 }

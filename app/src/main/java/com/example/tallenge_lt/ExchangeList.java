@@ -2,14 +2,13 @@ package com.example.tallenge_lt;
 
 public class ExchangeList {
     // 교환리스트 클래스
-    String exchange;
-
-    public ExchangeList(String exchange) {
-        this.exchange =  exchange;
+    String checkTitle;
+    public String getChecktitle() {
+        return checkTitle;
     }
-
-    public String setExchange(){
-        return exchange;
+    public void setChecktitle(String checktitle) {
+        this.checkTitle = checktitle;
     }
+    ExchangeList(){}
 }
 

@@ -51,7 +51,7 @@
 
     <ScrollView
         android:layout_width="350dp"
-        android:layout_height="406dp"
+        android:layout_height="485dp"
         android:layout_gravity="center"
         android:background="@color/tallengeblue">
 
@@ -86,6 +86,7 @@
                 android:background="@color/white"
                 android:gravity="center"
                 android:hint="세부사항을 입력해주세요."
+                android:textColor="@color/black"
                 android:textColorHint="@color/ta_bar" />
 
             <View
@@ -101,6 +102,7 @@
                 android:background="@color/white"
                 android:gravity="center"
                 android:hint="세부사항을 입력해주세요."
+                android:textColor="@color/black"
                 android:textColorHint="@color/ta_bar" />
 
             <View
@@ -116,6 +118,7 @@
                 android:background="@color/white"
                 android:gravity="center"
                 android:hint="세부사항을 입력해주세요."
+                android:textColor="@color/black"
                 android:textColorHint="@color/ta_bar" />
 
             <View
@@ -131,6 +134,7 @@
                 android:background="@color/white"
                 android:gravity="center"
                 android:hint="세부사항을 입력해주세요."
+                android:textColor="@color/black"
                 android:textColorHint="@color/ta_bar" />
 
             <View
@@ -146,6 +150,7 @@
                 android:background="@color/white"
                 android:gravity="center"
                 android:hint="세부사항을 입력해주세요."
+                android:textColor="@color/black"
                 android:textColorHint="@color/ta_bar" />
 
 

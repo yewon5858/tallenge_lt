@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/btn_chatitem"
+        android:id="@+id/checkTitle"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@color/white"
@@ -13,4 +15,98 @@
         android:text="체크리스트 이름"
         android:textSize="16sp"
         android:layout_marginLeft="30dp" />
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:background="@color/ta_bar" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/checkitem_1"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:text="체크리스트 이름"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_weight="1" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/checkitem_2"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:text="체크리스트 이름"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/checkitem_3"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:text="체크리스트 이름"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_weight="1"-->
+<!--             />-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/checkitem_4"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:text="체크리스트 이름"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/checkitem_5"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:text="체크리스트 이름"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_weight="1"-->
+
+<!--            />-->
+<!--    </LinearLayout>-->
+<!--    <View-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="3dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:background="@color/ta_bar" />-->
+
+
 </LinearLayout>
