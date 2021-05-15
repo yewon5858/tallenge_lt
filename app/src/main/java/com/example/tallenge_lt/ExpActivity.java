@@ -6,12 +6,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckedTextView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tallenge_lt.Exp_catagory.Exp_item;
+import com.example.tallenge_lt.Exp_catagory.Hobby_item;
+import com.example.tallenge_lt.Exp_catagory.Lan_item;
+import com.example.tallenge_lt.Exp_catagory.Spo_item;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -100,6 +102,12 @@ public class ExpActivity extends AppCompatActivity {
         IdToken = getIntent().getStringExtra("idToken");
         Expdata expdata = new Expdata();
 
+        Exp_item exp_item = new Exp_item();
+        Hobby_item hobby_item = new Hobby_item();
+        Lan_item lan_item = new Lan_item();
+        Spo_item spo_item = new Spo_item();
+
+
         ArrayList<ListView> View_Menu = new ArrayList<ListView>();
         View_Menu.add(exp_menu);
         View_Menu.add(hobby_menu);
@@ -111,17 +119,6 @@ public class ExpActivity extends AppCompatActivity {
             View_Menu.get(j).setOnItemSelectedListener( new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                  //   ischecked()를 통해서 선택이 되었는지 확인한다.
-                CheckedTextView selected = (CheckedTextView) view;
-                String bool = "";
-
-                if (selected.isChecked()) bool = "true";
-                else bool = "false";
-
-                String s = "isChecked : " + bool + ", text : " +  selected.getText();
-
-                Toast.makeText(getApplicationContext(), s,Toast.LENGTH_SHORT).show();
-                // Toast.makeText(getApplicationContext(),listItem.get(i).toString(),Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -176,77 +173,86 @@ public class ExpActivity extends AppCompatActivity {
                         switch (checked_list) {
                             // 전문분야
                             case "컴퓨터":
-                                expdata.setComputer(View_Menu.get(j).isItemChecked( c ) + "");
+                                exp_item.setComputer(View_Menu.get(j).isItemChecked( c ) + "");
                                 break;
 
                             case "주식":
-                                expdata.setStock( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                exp_item.setStock( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "역사":
-                                expdata.setHistory( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                exp_item.setHistory( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "수학":
-                                expdata.setMath( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                exp_item.setMath( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             // 취미
                             case "음악":
-                                expdata.setMusic( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                hobby_item.setMusic( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "타로":
-                                expdata.setTarot( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                hobby_item.setTarot( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "레진공예":
-                                expdata.setResin( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                hobby_item.setResin( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "그림":
-                                expdata.setDrawing( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                hobby_item.setDrawing( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                                 // 언어
                             case "영어":
-                                expdata.setEng( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                lan_item.setEng( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "중국어":
-                                expdata.setChi( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                lan_item.setChi( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "일본어":
-                                expdata.setJap( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                lan_item.setJap( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "스페인어":
-                                expdata.setSpan( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                lan_item.setSpan( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                                 // 스포츠
                             case "수영":
-                                expdata.setSwim( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                spo_item.setSwim( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "필라테스":
-                                expdata.setPilates( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                spo_item.setPilates( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "홈트":
-                                expdata.setHT( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                spo_item.setHT( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "배드민턴":
-                                expdata.setBadminton( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                spo_item.setBadminton( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
                         }
                     }
                 }
+                // expdata child 안에 세부 item child 4개를 생성한다. (4개를 생성했으므로 데이터베이스 업데이트 때 4개의 child의 값을 업데이트 함)
+                expdata.setExp_item(expdata.getExp_item());
+                expdata.setHobby_item(expdata.getHobby_item());
+                expdata.setLan_item(expdata.getLan_item());
+                expdata.setSpo_item(expdata.getSpo_item());
 
-                //데이터베이스 업데이트(전문분야 카테고리 내용만 변경된다.)
-                mDatabaseRef.child("UserAccount").child(IdToken).child("expdata").setValue(expdata);
+
+                //데이터베이스 업데이트(전문분야 카테고리의 세부 아이템 내용만 변경된다. )
+                mDatabaseRef.child("UserAccount").child(IdToken).child("expdata").child("Exp_item").setValue(exp_item);
+                mDatabaseRef.child("UserAccount").child(IdToken).child("expdata").child("Hobby_item").setValue(hobby_item);
+                mDatabaseRef.child("UserAccount").child(IdToken).child("expdata").child("Lan_item").setValue(lan_item);
+                mDatabaseRef.child("UserAccount").child(IdToken).child("expdata").child("Spo_item").setValue(spo_item);
 
                 //다음 액티비티로의 이동
                 Intent intent = new Intent(ExpActivity.this,InterestActivity.class);
