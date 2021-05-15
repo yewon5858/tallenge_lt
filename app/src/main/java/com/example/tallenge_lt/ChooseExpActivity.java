@@ -1,33 +1,26 @@
 package com.example.tallenge_lt;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class ChooseExpActivity extends AppCompatActivity {
 
     private ArrayList<ChooseExpData> arrayList;
-    //private ChooseExpAdapter chooseExpAdapter;
+    private ChooseExpAdapter chooseExpAdapter;
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
+    //private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     //private LinearLayoutManager linearLayoutManager;
     private DatabaseReference databaseReference;
@@ -54,28 +47,47 @@ public class ChooseExpActivity extends AppCompatActivity {
 
         arrayList = new ArrayList<>();  //객체 담을 어레이 리스트
 
+        chooseExpAdapter = new ChooseExpAdapter(arrayList);
+        recyclerView.setAdapter(chooseExpAdapter);
 
-        database = FirebaseDatabase.getInstance();  //파이어베이스 데이터베이스 연동
-        databaseReference = database.getReference("tallenge").child("exp");   //DB테이블 연결
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                //파이어베이스 데이터베이스의 데이터를 받아오는 곳
-                arrayList.clear();  //기존 배열리스트가 존재하지 않게 초기화
-                for (DataSnapshot snapshot1 : snapshot.getChildren()) {   //반복문으로 데이터 리스트 추출
-                    //오류있음
-                    ChooseExpData chooseExpData = snapshot1.getValue(ChooseExpData.class);// 만들어뒀던 객체에 데이터를 담는다.
-                    arrayList.add(chooseExpData);  //담은 데이터를 배열리스트에 넣고 리사이클러뷰로 보낼 준비
-                }
-                adapter.notifyDataSetChanged();   //리스트 저장 및 새로고침
-            }
-            public void onCancelled(@NonNull DatabaseError error) {
-                //디비를 가져오던중 에러 발생시
-                Log.e("ChooseExpActivity", String.valueOf(error.toException()));  //에러문 출력
-            }
-            });
+        //database = FirebaseDatabase.getInstance();  //파이어베이스 데이터베이스 연동
+        //databaseReference = database.getReference("tallenge").child("certifyexp");   //DB테이블 연결
+        //파이어베이스
+        /*
+        FirebaseDatabase.getInstance().getReference()
+                .child("tallenge")
+                .child("certifyexp")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        AlarmData alarmData1= dataSnapshot.getValue(AlarmData.class);
+
+
+                        /*
+                        if (consumer == null)
+                        {
+                            //data does not exists for the specified key
+                        }
+                        else if(data.checked)
+                        {
+                            //data is checked
+                        }
+                        else {
+                            //data not checked
+                        }
+
+
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+
+                });
         adapter = new ChooseExpAdapter(arrayList,this);   //this가 context 의미
         recyclerView.setAdapter(adapter);  //리사이클러뷰 어뎁터 연결
 
+*/
 
 
 
@@ -83,6 +95,9 @@ public class ChooseExpActivity extends AppCompatActivity {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ChooseExpData chooseExpData = new ChooseExpData(R.drawable.certificated_icon,"언어");
+                arrayList.add(chooseExpData);
+                chooseExpAdapter.notifyDataSetChanged();  //새로고침
             }
         });
 
@@ -94,7 +109,8 @@ public class ChooseExpActivity extends AppCompatActivity {
                 startActivity(intent);  //액티비티 이동
             }
         });
-        //imageView = (ImageView) findViewById(R.id.ex_image);    //갤러리에서 사진 가져오기
+        //
+        // imageView = (ImageView) findViewById(R.id.ex_image);    //갤러리에서 사진 가져오기
        // imageView.setOnClickListener(new View.OnClickListener() {
             //@Override
             //public void onClick(View v) {
