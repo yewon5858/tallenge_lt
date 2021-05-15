@@ -78,7 +78,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="321dp"
+                    android:layout_width="324dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="horizontal">
@@ -96,10 +96,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/white"
-                        android:text="언어"
-                        android:textSize="30dp"
                         android:gravity="center"
-                        android:textColor="@color/black" />
+                        android:text="언어"
+                        android:textColor="@color/black"
+                        android:textSize="30dp" />
 
                 </LinearLayout>
 

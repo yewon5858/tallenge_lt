@@ -10,10 +10,10 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.tallenge_lt.Exp_catagory.Exp_item;
-import com.example.tallenge_lt.Exp_catagory.Hobby_item;
-import com.example.tallenge_lt.Exp_catagory.Lan_item;
-import com.example.tallenge_lt.Exp_catagory.Spo_item;
+import com.example.tallenge_lt.Catagory_item.Exp_item;
+import com.example.tallenge_lt.Catagory_item.Hobby_item;
+import com.example.tallenge_lt.Catagory_item.Lan_item;
+import com.example.tallenge_lt.Catagory_item.Spo_item;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

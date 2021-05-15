@@ -1,4 +1,4 @@
-package com.example.tallenge_lt.Exp_catagory;
+package com.example.tallenge_lt.Catagory_item;
 
 public class Lan_item {
     //언어

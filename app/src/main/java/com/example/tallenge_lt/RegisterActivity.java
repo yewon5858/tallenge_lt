@@ -97,8 +97,9 @@ public class RegisterActivity extends AppCompatActivity {
                             account.setPassword( strPwd );
                             account.setNicname( strNic ); // 닉네임 set
                             account.setAddress( strAdd );
-                            //임시 입력 값 입니다<예원>
+                            //expdata child 생성
                             account.setExpdata( account.getExpdata());
+                            account.setInterestdata( account.getInterestdata());
 
                             //setValue: database에 insert (삽입) 하는 행위
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
@@ -110,10 +111,10 @@ public class RegisterActivity extends AppCompatActivity {
                             startActivity( intent );
 
 
-                            Toast.makeText( RegisterActivity.this, "회원가입에 성공하였습니다.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText( RegisterActivity.this, "회원가입 정보가 정상적으로 저장되었습니다.",Toast.LENGTH_SHORT).show();
 
                         }  else {
-                            Toast.makeText( RegisterActivity.this, "회원가입에 실패하였습니다.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText( RegisterActivity.this, "회원가입에 정보를 다시 입력해주세요.",Toast.LENGTH_SHORT).show();
                         }
                     }
                 } );

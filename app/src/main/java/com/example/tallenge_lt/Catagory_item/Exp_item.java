@@ -1,4 +1,4 @@
-package com.example.tallenge_lt.Exp_catagory;
+package com.example.tallenge_lt.Catagory_item;
 
 public class Exp_item {
     // 전문분야

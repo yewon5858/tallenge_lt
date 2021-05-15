@@ -96,7 +96,7 @@
             android:hint="비밀번호"
             android:inputType="textPassword"
             android:padding="15dp"
-            android:textColor="@color/tallengeblue"
+            android:textColor="@color/ta_blue_dark"
             android:textColorHint="@color/tallengeblue" />
 
         <LinearLayout
@@ -116,7 +116,7 @@
                 android:drawablePadding="7dp"
                 android:hint="닉네임"
                 android:padding="15dp"
-                android:textColor="@color/tallengeblue"
+                android:textColor="@color/ta_blue_dark"
                 android:textColorHint="@color/tallengeblue" />
 
 <!--            <Button-->
