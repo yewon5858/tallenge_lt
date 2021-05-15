@@ -10,6 +10,8 @@ public class UserAccount {
     private String password; // 비밀번호
     private String nicname; // 닉네임
     private String address; // 주소
+    private Expdata expdata; // exp 정보를 받는 클래스
+    private Interestdata interestdata;// interest 정보를 받는 클래스
 
     public UserAccount() { } // 빈 생성자를 선언해줘야 firebase에 값을 가져오고 넣을 때, 오류가 생기지 않음
 
@@ -32,5 +34,15 @@ public class UserAccount {
     public String getAddress(){ return address;}
 
     public void setAddress(String address) {this.address = address;}
+
+    public Expdata getExpdata(){ return expdata;}
+
+    public void setExpdata(Expdata expdata) {this.expdata = expdata;}
+
+    public Interestdata getInterestdata(){ return interestdata;}
+
+    public void setInterestdata(Interestdata interestdata) {this.interestdata = interestdata;}
+
+
 
 }

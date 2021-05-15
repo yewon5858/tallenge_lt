@@ -44,12 +44,15 @@
             ></TextView>
 
         <ListView
+            android:id="@+id/exp_menu"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:entries="@array/exp_item"
             android:listSelector="@color/ta_blue_dark"
-            android:background="@color/ta_bar"/>
+            android:background="@color/ta_bar"
+            android:choiceMode="multipleChoice">
+
+        </ListView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,12 +64,13 @@
             android:textColor="@color/ta_text_main"></TextView>
 
         <ListView
+            android:id="@+id/hobby_menu"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:entries="@array/hob_item"
             android:listSelector="@color/ta_blue_dark"
-            android:background="@color/ta_bar"></ListView>
+            android:background="@color/ta_bar"
+            android:choiceMode="multipleChoice"></ListView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,12 +82,13 @@
             android:textColor="@color/ta_text_main"></TextView>
 
         <ListView
+            android:id="@+id/lan_menu"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:entries="@array/lan_item"
             android:listSelector="@color/ta_blue_dark"
-            android:background="@color/ta_bar"></ListView>
+            android:background="@color/ta_bar"
+            android:choiceMode="multipleChoice"></ListView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,14 +100,16 @@
             android:textColor="@color/ta_text_main"></TextView>
 
         <ListView
+            android:id="@+id/spo_menu"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:entries="@array/spo_item"
             android:listSelector="@color/ta_blue_dark"
-            android:background="@color/ta_bar"></ListView>
+            android:background="@color/ta_bar"
+            android:choiceMode="multipleChoice"></ListView>
 
         <Button
+            android:id="@+id/bt_set"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

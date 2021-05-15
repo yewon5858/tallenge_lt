@@ -64,23 +64,23 @@
 
             <EditText
                 android:id="@+id/et_email"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:background="@color/white"
-                android:drawableStart="@drawable/ic_baseline_perm_identity_24"
                 android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
                 android:hint="이메일"
                 android:padding="15dp"
-                android:textColor="@color/tallengeblue"
+                android:drawablePadding="7dp"
+                android:textColor="@color/ta_blue_dark"
                 android:textColorHint="@color/tallengeblue" />
 
-            <Button
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="@color/ta_blue_dark"
-                android:text="중복확인"></Button>
+<!--            <Button-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:background="@color/ta_blue_dark"-->
+<!--                android:text="중복확인"></Button>-->
 
         </LinearLayout>
 
@@ -91,12 +91,12 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@color/white"
-            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
             android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+            android:drawablePadding="7dp"
             android:hint="비밀번호"
             android:inputType="textPassword"
             android:padding="15dp"
-            android:textColor="@color/tallengeblue"
+            android:textColor="@color/ta_blue_dark"
             android:textColorHint="@color/tallengeblue" />
 
         <LinearLayout
@@ -108,23 +108,23 @@
 
             <EditText
                 android:id="@+id/et_nicname"
-                android:layout_width="220dp"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@color/white"
-                android:drawableStart="@drawable/ic_baseline_perm_identity_24"
                 android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                android:drawablePadding="7dp"
                 android:hint="닉네임"
                 android:padding="15dp"
-                android:textColor="@color/tallengeblue"
+                android:textColor="@color/ta_blue_dark"
                 android:textColorHint="@color/tallengeblue" />
 
-            <Button
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="@color/ta_blue_dark"
-                android:text="중복확인"></Button>
+<!--            <Button-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:background="@color/ta_blue_dark"-->
+<!--                android:text="중복확인"></Button>-->
 
         </LinearLayout>
 

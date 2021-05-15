@@ -93,7 +93,7 @@
 
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/bt_home"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -101,7 +101,7 @@
             android:src="@drawable/ic_baseline_home_24" />
 
         <ImageButton
-            android:id="@+id/chat"
+            android:id="@+id/bt_chat"
             android:layout_width="103dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -110,7 +110,7 @@
 
 
         <ImageButton
-            android:id="@+id/alarm"
+            android:id="@+id/bt_alarm"
             android:layout_width="103dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -118,7 +118,7 @@
             android:src="@drawable/ic_baseline_notifications_none_24" />
 
         <ImageButton
-            android:id="@+id/mypage"
+            android:id="@+id/bt_myinfo"
             android:layout_width="103dp"
             android:layout_height="50dp"
             android:layout_weight="1"
