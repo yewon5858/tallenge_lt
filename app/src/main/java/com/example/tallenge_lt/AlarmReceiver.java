@@ -16,16 +16,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-
 import static android.content.Context.MODE_PRIVATE;
 
 public class AlarmReceiver extends BroadcastReceiver {
+    static String TAG="Alarm";
     @Override
     public void onReceive(Context context, Intent intent) {
 
-
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        Intent notificationIntent = new Intent(context, MainActivity.class);
+        Intent notificationIntent = new Intent(context, SetAlarmActivity.class);
 
         notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
                 | Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -62,8 +61,8 @@ public class AlarmReceiver extends BroadcastReceiver {
                 .setWhen(System.currentTimeMillis())
 
                 .setTicker("{Time to watch some cool stuff!}")
-                .setContentTitle("상태바 드래그시 보이는 타이틀")
-                .setContentText("상태바 드래그시 보이는 서브타이틀")
+                .setContentTitle("탤린지")
+                .setContentText("탤린지 설정한 날입니다.")
                 .setContentInfo("INFO")
                 .setContentIntent(pendingI);
 
@@ -75,7 +74,7 @@ public class AlarmReceiver extends BroadcastReceiver {
             Calendar nextNotifyTime = Calendar.getInstance();
 
             // 내일 같은 시간으로 알람시간 결정
-            nextNotifyTime.add(Calendar.DATE, 1);
+            nextNotifyTime.add(Calendar.DATE, 7);
 
             //  Preference에 설정한 값 저장
             SharedPreferences.Editor editor = context.getSharedPreferences("daily alarm", MODE_PRIVATE).edit();

@@ -6,7 +6,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -18,6 +21,7 @@ import java.util.Objects;
 import static android.content.Context.MODE_PRIVATE;
 
 public class DeviceBootReceiver extends BroadcastReceiver {
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onReceive(Context context, Intent intent) {
         if (Objects.equals(intent.getAction(), "android.intent.action.BOOT_COMPLETED")) {
@@ -38,7 +42,7 @@ public class DeviceBootReceiver extends BroadcastReceiver {
             nextNotifyTime.setTimeInMillis(sharedPreferences.getLong("nextNotifyTime", millis));
 
             if (current_calendar.after(nextNotifyTime)) {
-                nextNotifyTime.add(Calendar.DATE, 1);
+                nextNotifyTime.add(Calendar.DATE, 7);
             }
 
             Date currentDateTime = nextNotifyTime.getTime();
@@ -48,7 +52,7 @@ public class DeviceBootReceiver extends BroadcastReceiver {
 
             if (manager != null) {
                 manager.setRepeating(AlarmManager.RTC_WAKEUP, nextNotifyTime.getTimeInMillis(),
-                        AlarmManager.INTERVAL_DAY, pendingIntent);
+                        AlarmManager.INTERVAL_DAY*7, pendingIntent);
             }
         }
     }
