@@ -1,3 +1,5 @@
+//db 연동 실패
+
 package com.example.tallenge_lt;
 
 import android.content.Intent;

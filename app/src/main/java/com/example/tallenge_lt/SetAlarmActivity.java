@@ -1,3 +1,6 @@
+//List and alarm에 들어가야할 코드
+//현재 문제점: 다중 선택시 알람이 제대로 안감, 교환하는 db만들고 나서 db 이동하기
+
 package com.example.tallenge_lt;
 
 import android.app.AlarmManager;
