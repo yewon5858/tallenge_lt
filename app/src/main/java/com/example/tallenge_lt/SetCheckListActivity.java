@@ -36,22 +36,24 @@ public class SetCheckListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setchecklist);
         EditText editText=(EditText) findViewById(R.id.btn_chatitem);
         Intent intent =getIntent();
-        editText.setText(intent.getStringExtra("checkTitle"));
+        String exp=intent.getStringExtra("checkTitle");
+        editText.setText(exp);
         recyclerView =findViewById(R.id.rvsetcheck);
         recyclerView.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         arrayList=new ArrayList<>();
         database=FirebaseDatabase.getInstance();
-        databaseReference=database.getReference("tallenge").child("checklist");
+        databaseReference=database.getReference("tallenge").child("checklist").child(exp);
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                 arrayList.clear();
-                for(DataSnapshot snapshot:datasnapshot.getChildren()){
-                    SetCheckListData setCheckListData=snapshot.getValue(SetCheckListData.class);
+//                for(DataSnapshot snapshot:datasnapshot.getChildren()){
+                //snapshot->datasnapshot
+                    SetCheckListData setCheckListData=datasnapshot.getValue(SetCheckListData.class);
                     arrayList.add(setCheckListData);
-                }
+//                }
                 adapter.notifyDataSetChanged();
             }
 
