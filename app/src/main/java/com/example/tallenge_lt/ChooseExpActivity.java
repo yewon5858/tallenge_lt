@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -18,10 +19,10 @@ public class ChooseExpActivity extends AppCompatActivity {
 
     int REQUEST_IMAGE_CODE = 1001;
     private Button btn_back;
-    private Button btn_go_home;
-    private Button btn_go_chat_list;
-    private Button btn_go_alarm;
-    private Button btn_go_myinfo;
+    private ImageButton btn_go_home;
+    private ImageButton btn_go_chat_list;
+    private ImageButton btn_go_alarm;
+    private ImageButton btn_go_myinfo;
     private ImageView imageView;
 
     @Override
@@ -37,7 +38,7 @@ public class ChooseExpActivity extends AppCompatActivity {
                 startActivity(intent);  //액티비티 이동
             }
         });
-        btn_go_home = findViewById(R.id.btn_home);
+        btn_go_home = findViewById(R.id.bt_home);
         btn_go_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +46,7 @@ public class ChooseExpActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btn_go_chat_list = findViewById(R.id.btn_chatlist);
+        btn_go_chat_list = findViewById(R.id.bt_chat);
         btn_go_chat_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +54,7 @@ public class ChooseExpActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btn_go_alarm = findViewById(R.id.btn_alarm);
+        btn_go_alarm = findViewById(R.id.bt_alarm);
         btn_go_alarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +62,7 @@ public class ChooseExpActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btn_go_myinfo = findViewById(R.id.btn_myinfo);
+        btn_go_myinfo = findViewById(R.id.bt_myinfo);
         btn_go_myinfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

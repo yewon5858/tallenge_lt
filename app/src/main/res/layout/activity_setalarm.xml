@@ -81,7 +81,7 @@
 
         <ImageButton
             android:id="@+id/alarm"
-            android:layout_width="103dp"
+            android:layout_width="124dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@color/tallengeblue"

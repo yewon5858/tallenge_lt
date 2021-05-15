@@ -7,6 +7,7 @@
         <item>봉곡동</item>
 
     </string-array>
+    // 리스트 값 다 java 코드에서 입력하기로 함
     <string-array name="exp_item">
         <item>컴퓨터</item>
         <item>주식</item>
