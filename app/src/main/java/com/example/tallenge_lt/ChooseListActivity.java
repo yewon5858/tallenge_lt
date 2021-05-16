@@ -95,15 +95,15 @@ public class ChooseListActivity extends AppCompatActivity {
             }
         });
         //설정완료버튼
-        Button finChoice = (Button) findViewById(R.id.finSet);
-        finChoice.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ListAndAlarmActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Button finChoice = (Button) findViewById(R.id.finSet);
+//        finChoice.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(),ListAndAlarmActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 //        FirebaseDatabase database=FirebaseDatabase.getInstance();
 //        myRef=database.getReference("tallenge").child("checklist");
 

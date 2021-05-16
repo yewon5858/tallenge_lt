@@ -1,6 +1,7 @@
 package com.example.tallenge_lt;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,14 @@ public class ExchageAdapter extends RecyclerView.Adapter<ExchageAdapter.CustomVi
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         holder.checktitle.setText(arraylist.get(position).getChecktitle());
+        holder.checktitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(),ListAndAlarmActivity.class);
+                intent.putExtra("Title",arraylist.get(position).getChecktitle());
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

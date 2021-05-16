@@ -63,15 +63,6 @@
             android:background="@color/ta_blue_dark"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/title_al"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:text="과목명"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -80,7 +71,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="250dp" >
+                android:layout_height="300dp"
+                android:id="@+id/rvlistalarm">
 
             </androidx.recyclerview.widget.RecyclerView>
 
