@@ -77,7 +77,7 @@ public class AddCheckList extends AppCompatActivity {
     }
 
     public void AddCheck(String CheckTitle,String checkitem1,String checkitem2,String checkitem3,String checkitem4,String checkitem5){
-        if(CheckTitle!=null &&checkitem1!=null&&checkitem2!=null&&checkitem3!=null&&checkitem4!=null&&checkitem5!=null) {
+        if(CheckTitle.length()!=0 &&(checkitem1.length()!=0||checkitem2.length()!=0||checkitem3.length()!=0||checkitem4.length()!=0||checkitem5.length()!=0)) {
             AddCheckData checkData = new AddCheckData(CheckTitle, checkitem1, checkitem2, checkitem3, checkitem4, checkitem5);
             databaseReference.child("tallenge").child("checklist").child(CheckTitle).setValue(checkData);
         }
