@@ -1,11 +1,11 @@
 package com.example.tallenge_lt;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ListAndAlarmActivity extends AppCompatActivity {
 
@@ -33,16 +33,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //알림설정 버튼
-        Button imageButton = (Button) findViewById(R.id.goAlarm);
-        imageButton.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),SetAlarmActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
     }
 
