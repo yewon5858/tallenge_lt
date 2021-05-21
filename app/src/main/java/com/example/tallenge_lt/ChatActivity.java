@@ -172,7 +172,7 @@ public class ChatActivity extends AppCompatActivity {
         bt_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( getApplicationContext(), ChatActivity.class );
+                Intent intent = new Intent( getApplicationContext(), ChatListActivity.class );
                 startActivity( intent );
             }
         });
