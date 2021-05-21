@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".ModifyInfoActivity">
+    tools:context=".ModifyInfoActivity"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
         android:background="@drawable/textview_border"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <Button
-            android:id="@+id/button11"
-            android:layout_width="73dp"
-            android:layout_height="71dp"
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@drawable/ic_baseline_arrow_back_24"
             android:backgroundTint="@color/black"/>
 
@@ -30,9 +27,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="0dp"
-        android:layout_height="598dp"
-        android:background="@color/tallengeblue"
+        android:layout_width="match_parent"
+        android:layout_height="559dp"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,14 +37,15 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="45dp" />
+            android:layout_height="29dp" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="126dp"
+            android:layout_height="91dp"
+            android:layout_gravity="center"
             android:contentDescription="TODO"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:src="@mipmap/ic_launcher" />
 
         <Space
             android:layout_width="match_parent"
@@ -62,7 +60,7 @@
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="283dp"
                 android:layout_height="47dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/textview_border"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Name" />
@@ -89,7 +87,7 @@
                 android:id="@+id/editTextTextPassword"
                 android:layout_width="281dp"
                 android:layout_height="47dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/textview_border"
                 android:ems="10"
                 android:inputType="textPassword" />
 
@@ -110,7 +108,7 @@
             android:id="@+id/editTextTextPassword2"
             android:layout_width="281dp"
             android:layout_height="45dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/textview_border"
             android:ems="10"
             android:inputType="textPassword" />
 
@@ -122,7 +120,7 @@
             android:id="@+id/editTextTextPassword3"
             android:layout_width="283dp"
             android:layout_height="49dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/textview_border"
             android:ems="10"
             android:inputType="textPassword" />
 
@@ -134,11 +132,10 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/textview_border"
             android:text="TextView" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,7 +145,6 @@
         android:paddingTop="1dp"
         android:background="@color/ta_blue_dark"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
 
         <ImageButton
             android:id="@+id/home"
@@ -162,9 +158,9 @@
             android:id="@+id/chat"
             android:layout_width="103dp"
             android:layout_height="50dp"
-            android:layout_weight="1"
             android:background="@color/tallengeblue"
-            android:src="@drawable/ic_baseline_chat_bubble_outline_24" />
+            android:layout_weight="1"
+            android:src ="@drawable/ic_baseline_chat_bubble_outline_24" />
 
 
         <ImageButton
@@ -185,4 +181,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

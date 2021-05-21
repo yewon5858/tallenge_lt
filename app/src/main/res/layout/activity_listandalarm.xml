@@ -17,7 +17,7 @@
         <Button
             android:id="@+id/btnbk3"
             android:layout_width="53dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="@drawable/ic_baseline_arrow_back_24"
             android:backgroundTint="@color/black" />
 
@@ -30,6 +30,7 @@
             android:id="@+id/Fin"
             android:layout_width="180dp"
             android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
             android:text="재능교환 완료"
             app:backgroundTint="#C5C1C1" />
     </LinearLayout>
@@ -53,7 +54,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="495dp"
+        android:layout_height="433dp"
         android:background="@color/tallengeblue">
 
         <LinearLayout
@@ -63,15 +64,6 @@
             android:background="@color/ta_blue_dark"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/title_al"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:text="과목명"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -79,8 +71,9 @@
                 android:background="@color/ta_bar" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvlistalarm"
                 android:layout_width="match_parent"
-                android:layout_height="250dp" >
+                android:layout_height="300dp">
 
             </androidx.recyclerview.widget.RecyclerView>
 
