@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:usesCleartextTraffic="true"
@@ -20,7 +22,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="AllowBackup">
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".SetAlarmActivity" />
+        <activity android:name=".SetAlarmActivity" >
+
+        </activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".ExecutionActivity">
             <intent-filter>
@@ -31,7 +35,9 @@
         </activity>
         <activity android:name=".ChatListActivity" />
         <activity android:name=".CertifyExpActivity"></activity>
-        <activity android:name=".ChooseExpActivity"></activity>
+        <activity android:name=".ChooseExpActivity">
+
+        </activity>
         <activity android:name=".ModifyInfoActivity" />
         <activity android:name=".MyInfoActivity" />
         <activity android:name=".ProfileActivity" />
@@ -45,6 +51,17 @@
         <activity android:name=".InterestActivity" />
         <activity android:name=".ExpActivity" />
         <activity android:name=".MainActivity" />
+
+
+        <receiver android:name=".DeviceBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".AlarmReceiver" />
+
     </application>
 
 </manifest>

@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/tallengeblue"
     tools:context=".SetCheckListActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:background="@color/white"
         android:orientation="horizontal">
 
         <Button
@@ -31,6 +32,7 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:text="체크리스트 설정"
+        android:background="@color/white"
         android:textColor="@color/black"
         android:textSize="25sp" />
 
@@ -38,92 +40,76 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/black" />
-
-    <ScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-
-        android:layout_height="492dp"
-        android:background="@color/tallengeblue">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/btn_chatitem"
-                    android:layout_width="330dp"
-                    android:layout_height="60dp"
-                    android:background="@color/white"
-                    android:gravity="center"
-                    android:text="제목"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/black" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="272dp"
-                    android:layout_height="60dp"
-                    android:background="@color/white"
-                    android:gravity="center"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:layout_width="55dp"
-                    android:layout_height="65dp"
-                    android:layout_gravity="center"
-                    android:text="-"
-                    android:textSize="25sp"
-                    app:backgroundTint="#B3B2B2" />
-
-
-            </LinearLayout>
-
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_gravity="end"
-                android:layout_marginRight="40dp"
-                android:background="#B3B2B2"
-                android:text="+"
-                android:textSize="16sp"
-                app:backgroundTint="#BCB8B8" />
-
-
-        </LinearLayout>
-    </ScrollView>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:text="제목"
+        android:gravity="center"
+        android:id="@+id/btn_chatitem"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/black"/>
 
-    <Button
-        android:layout_width="250dp"
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="369dp"
+        android:background="@color/tallengeblue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvsetcheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:background="@color/ta_blue_dark">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:text="설정완료"
-        android:id="@+id/finish"
-        app:backgroundTint="#B3B2B2" />
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="리스트 삭제"
+            android:id="@+id/finish"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:backgroundTint="#B3B2B2" />
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="50dp"/>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="설정완료"
+            android:id="@+id/move"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:backgroundTint="#B3B2B2" />
+
+    </LinearLayout>
+
 
     <View
         android:layout_width="match_parent"

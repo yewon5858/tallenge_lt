@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tallengeblue"
-    tools:context=".SetAlarmActivity">
+android:background="@color/white"
+    tools:context=".SetAlarmActivity"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="427dp"
         android:layout_height="75dp"
         android:background="@color/white"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/scroll"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/button"
@@ -29,8 +26,8 @@
 
     <ScrollView
         android:id="@+id/scroll"
-        android:layout_width="0dp"
-        android:layout_height="580dp"
+        android:layout_width="match_parent"
+        android:layout_height="519dp"
         android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,14 +35,117 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ListView
+            <CheckBox
+                android:id="@+id/checkBox"
                 android:layout_width="match_parent"
-                android:layout_height="543dp" />
+                android:layout_height="wrap_content"
+                android:background="@color/tallengeblue"
+                android:text="CheckBox"
+                android:textColor="@color/black"
+                android:textColorHint="#000000"
+                android:textSize="30dp"
+                android:buttonTint="@color/black"/>
 
 
+            <CheckBox
+                android:id="@+id/cb_sun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일요일"
+                android:textColor="@color/black"
+                android:buttonTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cb_mon"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/cb_mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월요일"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cb_tue"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cb_sun"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/cb_tue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="화요일"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cb_wed"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                app:layout_constraintStart_toEndOf="@+id/cb_mon"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/cb_wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수요일"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cb_tue"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/cb_thu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="목요일"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cb_fri"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/cb_fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="금요일"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cb_sat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cb_thu"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/cb_sat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="토요일"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cb_fri"
+                tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/btn_set_alarm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="확인"/>
         </LinearLayout>
 
     </ScrollView>
@@ -95,6 +195,7 @@
             android:background="@color/tallengeblue"
             android:src="@drawable/ic_baseline_person_outline_24" />
 
+
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

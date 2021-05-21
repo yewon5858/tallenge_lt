@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -38,6 +39,11 @@ public class ChooseListActivity extends AppCompatActivity {
     private ArrayList<ExchangeList> arrayList;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
+    ImageButton bt_home;
+    ImageButton bt_chat;
+    ImageButton  bt_alarm;
+    ImageButton bt_mypage;
+
 
 
     @Override
@@ -94,16 +100,50 @@ public class ChooseListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //설정완료버튼
-        Button finChoice = (Button) findViewById(R.id.finSet);
-        finChoice.setOnClickListener(new View.OnClickListener() {
+        // MainActivity로 이동
+        bt_home = (ImageButton) findViewById(R.id.home);
+        bt_chat = (ImageButton) findViewById(R.id.chat);
+        bt_alarm = (ImageButton) findViewById(R.id.alarm);
+        bt_mypage = (ImageButton) findViewById(R.id.mypage);
 
+        bt_home.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ListAndAlarmActivity.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MainActivity.class );
+                startActivity( intent );
             }
         });
+        bt_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), ChatActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), SetAlarmActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MyInfoActivity.class );
+                startActivity( intent );
+            }
+        });
+        //설정완료버튼
+//        Button finChoice = (Button) findViewById(R.id.finSet);
+//        finChoice.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(),ListAndAlarmActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 //        FirebaseDatabase database=FirebaseDatabase.getInstance();
 //        myRef=database.getReference("tallenge").child("checklist");
 
