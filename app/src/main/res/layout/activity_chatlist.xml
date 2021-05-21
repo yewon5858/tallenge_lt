@@ -41,13 +41,103 @@
         android:layout_height="3dp"
         android:background="@color/black"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ScrollView
         android:id="@+id/chatlist"
         android:layout_width="match_parent"
         android:layout_height="486dp"
         android:background="@color/tallengeblue">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="486dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_baseline_perm_identity_24"
+                    android:paddingTop="30dp"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="40dp"
+                    android:text="상대방 닉네임"
+                    android:paddingTop="10dp"
+                    android:textSize="20sp" />
 
-    </androidx.recyclerview.widget.RecyclerView>
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_baseline_send_24"
+                    android:paddingTop="20dp"
+                    android:id="@+id/goChat"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/ta_bar"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_baseline_perm_identity_24"
+                    android:paddingTop="30dp"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="40dp"
+                    android:text="상대방 닉네임"
+                    android:paddingTop="10dp"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_baseline_send_24"
+                    android:paddingTop="20dp"
+                    android:id="@+id/goChat2"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/ta_bar"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_baseline_perm_identity_24"
+                    android:paddingTop="30dp"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="40dp"
+                    android:text="상대방 닉네임"
+                    android:paddingTop="10dp"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_baseline_send_24"
+                    android:paddingTop="20dp"
+                    android:id="@+id/goChat3"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/ta_bar"/>
+        </LinearLayout>
+
+    </ScrollView>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"

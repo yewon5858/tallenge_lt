@@ -3,6 +3,7 @@ package com.example.tallenge_lt;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,6 +50,44 @@ public class ChatListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), MyInfoActivity.class );
                 startActivity( intent );
+            }
+        });
+        //뒤로가기 버튼
+        Button back = (Button) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        //
+        Button gochat = (Button) findViewById(R.id.goChat);
+        gochat.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button gochat2 = (Button) findViewById(R.id.goChat2);
+        gochat2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button gochat3 = (Button) findViewById(R.id.goChat3);
+        gochat3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+                startActivity(intent);
             }
         });
 
