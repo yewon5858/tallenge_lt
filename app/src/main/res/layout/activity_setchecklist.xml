@@ -81,15 +81,34 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/black"/>
-
-    <Button
-        android:layout_width="250dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:text="설정완료"
-        android:id="@+id/finish"
-        android:background="@color/white"
-        app:backgroundTint="#B3B2B2" />
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="리스트 삭제"
+            android:id="@+id/finish"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:backgroundTint="#B3B2B2" />
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="50dp"/>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="설정완료"
+            android:id="@+id/move"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:backgroundTint="#B3B2B2" />
+
+    </LinearLayout>
+
 
     <View
         android:layout_width="match_parent"

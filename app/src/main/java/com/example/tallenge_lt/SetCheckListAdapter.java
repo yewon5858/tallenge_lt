@@ -64,5 +64,10 @@ public class SetCheckListAdapter extends RecyclerView.Adapter<SetCheckListAdapte
             this.checkitem5=itemView.findViewById(R.id.setitem5);
         }
     }
+//    public void SaveCheck(String checkTitle,String checkitem1,String checkitem2,String checkitem3,String checkitem4,String checkitem5){
+//        if(checkTitle.length()!=0 &&(checkitem1.length()!=0||checkitem2.length()!=0||checkitem3.length()!=0||checkitem4.length()!=0||checkitem5.length()!=0)) {
+//
+//        }
+//    }
 
 }

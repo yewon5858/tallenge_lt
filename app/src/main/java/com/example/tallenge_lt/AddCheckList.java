@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,11 @@ public class AddCheckList extends AppCompatActivity {
     private DatabaseReference databaseReference = database.getReference();
     Button complt;
     EditText title, edit1, edit2, edit3, edit4, edit5;
+    ImageButton bt_home;
+    ImageButton bt_chat;
+    ImageButton  bt_alarm;
+    ImageButton bt_mypage;
+
 
 
     @Override
@@ -70,6 +76,40 @@ public class AddCheckList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ListSetActivity.class);
                 startActivity(intent);
+            }
+        });
+        // MainActivity로 이동
+        bt_home = (ImageButton) findViewById(R.id.home);
+        bt_chat = (ImageButton) findViewById(R.id.chat);
+        bt_alarm = (ImageButton) findViewById(R.id.alarm);
+        bt_mypage = (ImageButton) findViewById(R.id.mypage);
+
+        bt_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MainActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), ChatActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), SetAlarmActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MyInfoActivity.class );
+                startActivity( intent );
             }
         });
 
