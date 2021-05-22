@@ -11,4 +11,5 @@
     <color name="ta_blue_dark"> #94baff</color>
     <color name="ta_bar">#c2c2c2</color>
     <color name="ta_text_main">#3a3a3a</color>
+    <color name="ta_item_color">#A6BEEA</color>
 </resources>

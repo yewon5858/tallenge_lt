@@ -111,5 +111,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+    // 뒤로가기 버튼을 눌러 이전 페이지로 이동을 막아줌
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed(); // 이를 추가하게 되면 뒤로가기 버튼 사용이 가능해짐
+    }
 }

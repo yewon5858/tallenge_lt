@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,14 +38,14 @@ public class ListAndAlarmActivity extends AppCompatActivity {
    private ArrayList<ListAlarmData> arrayList;
    private FirebaseDatabase database;
    private DatabaseReference databaseReference;
-
-    ImageButton bt_home,bt_chat,bt_alarm,bt_mypage;
+   ImageButton bt_home;
+   ImageButton bt_chat;
+   ImageButton  bt_alarm;
+   ImageButton bt_mypage;
     AlarmData alarmData = new AlarmData();
     CheckBox sun,mon,tue,wed,thu,fri,sat;
     //    FirebaseDatabase database;
     DatabaseReference myRef;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +100,40 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // MainActivity로 이동
+        bt_home = (ImageButton) findViewById(R.id.home);
+        bt_chat = (ImageButton) findViewById(R.id.chat);
+        bt_alarm = (ImageButton) findViewById(R.id.alarm);
+        bt_mypage = (ImageButton) findViewById(R.id.mypage);
+
+        bt_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MainActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), ChatActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), SetAlarmActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MyInfoActivity.class );
+                startActivity( intent );
+            }
+        });
 
 //알림
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -145,6 +180,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
         //PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, 0);
         Button button = (Button) findViewById(R.id.btn_set_alarm1);
         button.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View arg0) {
                 //alarmData에 요일별로 부울로 넣음(파이어베이스에도)
@@ -368,7 +404,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
     }
 
-    void diaryNotification(Calendar calendar,PendingIntent pendingIntent)
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    void diaryNotification(Calendar calendar, PendingIntent pendingIntent)
     {
 //        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 //        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);

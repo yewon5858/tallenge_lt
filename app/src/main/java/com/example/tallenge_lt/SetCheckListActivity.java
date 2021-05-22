@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,12 @@ public class SetCheckListActivity extends AppCompatActivity {
     private ArrayList<SetCheckListData> arrayList;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
+    ImageButton bt_home;
+    ImageButton bt_chat;
+    ImageButton  bt_alarm;
+    ImageButton bt_mypage;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +52,7 @@ public class SetCheckListActivity extends AppCompatActivity {
         arrayList=new ArrayList<>();
         database=FirebaseDatabase.getInstance();
         databaseReference=database.getReference("tallenge").child("checklist").child(exp);
+
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
@@ -66,7 +74,17 @@ public class SetCheckListActivity extends AppCompatActivity {
         });
         adapter=new SetCheckListAdapter(arrayList,this);
         recyclerView.setAdapter(adapter);
-
+        //리스트(전체) 삭제하기
+        Button finish=findViewById(R.id.finish);
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SetCheckListData setCheckListData=new SetCheckListData();
+                database.getReference("tallenge").child("checklist").child(exp).setValue(setCheckListData);
+                Intent intent= new Intent(getApplicationContext(),ListSetActivity.class);
+                startActivity(intent);
+                }
+        });
 
         //뒤로가기
         Button back =(Button)findViewById(R.id.back_btn);
@@ -78,14 +96,47 @@ public class SetCheckListActivity extends AppCompatActivity {
             }
         });
         //설정완료
-        Button fin =(Button)findViewById(R.id.finish);
-        fin.setOnClickListener(new View.OnClickListener() {
+        Button move =(Button)findViewById(R.id.move);
+        move.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getApplicationContext(),ListSetActivity.class);
                 startActivity(intent);
             }
         });
-    }
+        // MainActivity로 이동
+        bt_home = (ImageButton) findViewById(R.id.home);
+        bt_chat = (ImageButton) findViewById(R.id.chat);
+        bt_alarm = (ImageButton) findViewById(R.id.alarm);
+        bt_mypage = (ImageButton) findViewById(R.id.mypage);
 
+        bt_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MainActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), ChatActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), SetAlarmActivity.class );
+                startActivity( intent );
+            }
+        });
+        bt_mypage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(), MyInfoActivity.class );
+                startActivity( intent );
+            }
+        });
+    }
 }

@@ -51,7 +51,7 @@
 
     <ScrollView
         android:layout_width="350dp"
-        android:layout_height="485dp"
+        android:layout_height="417dp"
         android:layout_gravity="center"
         android:background="@color/tallengeblue">
 
@@ -76,13 +76,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:textColor="@color/black"
+                android:layout_gravity="center"
                 android:text="체크리스트"
-                android:textSize="16sp"
-                android:layout_gravity="center"/>
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
 
             <EditText
