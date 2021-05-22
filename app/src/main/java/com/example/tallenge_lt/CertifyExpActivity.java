@@ -35,7 +35,6 @@ public class CertifyExpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_certifyexp);
 
 
-
         recyclerView = (RecyclerView)findViewById(R.id.rv);
         linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);

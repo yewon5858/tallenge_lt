@@ -1,6 +1,8 @@
 package com.example.tallenge_lt;
 
+import android.content.Context;
 import android.content.Intent;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,16 +12,117 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
-public class ChooseExpAdapter extends RecyclerView.Adapter<ChooseExpAdapter.CustomViewHolder> {
-
+public class ChooseExpAdapter extends RecyclerView.Adapter<ChooseExpAdapter.CustomViewHolder> implements OnIntentReceived{
     private ArrayList<ChooseExpData> arrayList;
+    private Context context;
+    @Override
+    public void onIntent(Intent i, int resultCode) {
+        // //
+        i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
+    }
+    // Somewhere in here, mContext.startActivityForResult(MyActivity.REQUEST_CODE);
+    public interface OnItemClickEventListener {
+        void onItemClick(View a_view, int a_position);
+    }
+    private OnItemClickEventListener mItemClickListener;
+/*
+    public void setOnItemClickListener(OnItemClickEventListener a_listener) {
+        mItemClickListener = a_listener;
+    }
+ */
+
+    //어댑터에서 액티비티 액션을 가져올 때 context가 필요한데 어댑터에는 context가 없다.
+    //선택한 액티비티에 대한 context를 가져올 때 필요하다.
     public ChooseExpAdapter(ArrayList<ChooseExpData> arrayList) {
         this.arrayList = arrayList;
     }
+    @NonNull
+    @Override
+    public ChooseExpAdapter.CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ch_exp_list, parent, false);
+        CustomViewHolder holder = new CustomViewHolder(view);
+        return holder;
+    }
 
+    @Override
+    public void onBindViewHolder(@NonNull ChooseExpAdapter.CustomViewHolder holder, int position) {
+        Glide.with(holder.itemView)
+                .load(arrayList.get(position).getIv_ctf())
+                .into(holder.imageView);
+        holder.tv_bc.setText(arrayList.get(position).getTv_big_category());
+        holder.tv_sc.setText(arrayList.get(position).getTv_small_category());
+        holder.tv_certified.setText(arrayList.get(position).getCertified());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+            }
+        });
+
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        // 삼항 연산자
+        return (arrayList != null ? arrayList.size() : 0);
+    }
+
+    public class CustomViewHolder extends RecyclerView.ViewHolder {
+        ImageView imageView;
+        TextView tv_bc;   //큰 카테고리
+        TextView tv_sc;   //작은 카테고리
+        TextView tv_certified;
+
+
+        public CustomViewHolder(@NonNull View itemView) {
+            super(itemView);
+            this.imageView= itemView.findViewById(R.id.iv_ch_exp);
+            this.tv_bc = itemView.findViewById(R.id.tv_exp);
+            this.tv_sc = itemView.findViewById(R.id.tv_small_exp);
+            this.tv_certified  = itemView.findViewById(R.id.certified);
+
+        }
+    }
+
+}
+/*
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_IMAGE_CODE){
+            Uri image = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),image);
+                //ChooseExpData chooseExpData = new ChooseExpData(BitmapToString(bitmap),"dd","dd","fasle");
+                //ChooseExpData chooseExpData = getIntent().getExtras().getParcelable("computer");
+                //chooseExpData.setIv_ctf(BitmapToString(bitmap));
+                //chooseExpData.setCertified("true");
+                //arrayList.add(chooseExpData);
+                chooseExpAdapter.notifyDataSetChanged();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+ */
+/*
+    private ArrayList<ChooseExpData> arrayList;
+    private Context context;
+
+    public ChooseExpAdapter(ArrayList<ChooseExpData> arrayList,Context context) {
+        this.arrayList = arrayList;
+        this.context = context;
+    }
     @NonNull
     @Override
     public ChooseExpAdapter.CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,9 +134,9 @@ public class ChooseExpAdapter extends RecyclerView.Adapter<ChooseExpAdapter.Cust
 
     @Override
     public void onBindViewHolder(@NonNull ChooseExpAdapter.CustomViewHolder holder, int position) {
-        holder.iv_ctf.setImageResource(arrayList.get(position).getIv_ctf());
-        holder.tv_exp.setText(arrayList.get(position).getTv_exp());
-
+        holder.iv_ctf.setImage//setImageResource(arrayList.get(position).getIv_ctf());
+        //holder.tv_exp.setText(arrayList.get(position).getTv_exp());
+//holder.iv
 
         holder.itemView.setTag(position);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -82,4 +185,5 @@ public class ChooseExpAdapter extends RecyclerView.Adapter<ChooseExpAdapter.Cust
             this.tv_exp = (TextView)itemView.findViewById(R.id.tv_exp);
         }
     }
-}
+
+ */

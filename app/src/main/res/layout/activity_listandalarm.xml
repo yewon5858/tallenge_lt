@@ -148,7 +148,7 @@
                     android:layout_height="1dp" />
 
                 <CheckBox
-                    android:id="cb_thu"
+                    android:id="@+id/cb_thu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
