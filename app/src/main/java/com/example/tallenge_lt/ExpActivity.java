@@ -14,6 +14,8 @@ import com.example.tallenge_lt.Catagory_item.Exp_item;
 import com.example.tallenge_lt.Catagory_item.Hobby_item;
 import com.example.tallenge_lt.Catagory_item.Lan_item;
 import com.example.tallenge_lt.Catagory_item.Spo_item;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -22,6 +24,10 @@ import java.util.ArrayList;
 public class ExpActivity extends AppCompatActivity {
     //데이터베이스 연결
     private DatabaseReference mDatabaseRef;
+    private DatabaseReference myRef;
+    private FirebaseDatabase database;
+    private DatabaseReference categoryRef;
+
     // 전문분야 string 선언을 위한 내용
     ArrayAdapter<String> adapter;
     ArrayList<String> listItem_exp; // 전문분야 카테고리 - 전문분야
@@ -42,6 +48,12 @@ public class ExpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exp);
+
+        //전문분야 파트 연결
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        myRef = database.getReference("tallenge").child("CertifyImg").child(user.getUid());
+        categoryRef = database.getReference("tallenge").child("UserAccount").child(user.getUid()).child("expdata");
+
 
         //firebase 연결
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("tallenge");

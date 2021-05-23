@@ -4,7 +4,9 @@ package com.example.tallenge_lt;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +33,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ChooseExpActivity extends AppCompatActivity {
@@ -131,16 +135,11 @@ public class ChooseExpActivity extends AppCompatActivity {
         String parentCategory[] = {"Exp_item", "Hobby_item", "Lan_item", "Spo_item"};
         String childCategory[] = {"computer", "history", "math", "stock", "drawing", "music", "resin", "tarot", "chi", "eng", "jap", "sapn"
                 , "badminton", "ht", "pilates", "swim"};
-        /*
-        chooseExpAdapter.setOnItemClickListener(new ChooseExpAdapter.OnItemClickEventListener() {
-            @Override
-            public void onItemClick(View a_view, int a_position) {
-                final ChooseExpData item = arrayList.get(a_position);
-                Intent in = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(in, a_position);
-            }
-        });
-         */
+
+        ChooseExpData chooseExpData1 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                , "Exp_item", "computer", "");
+
+
         ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -151,37 +150,35 @@ public class ChooseExpActivity extends AppCompatActivity {
                 //DataSnapshot snapshot = (DataSnapshot) dataSnapshot.getChildren();
 
                 int i = 0;
+
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                   // int x = 0;
                     //Exp_item exp_item = snapshot.getValue(Exp_item.class);
                     //Hobby_item hobby_item = snapshot.getValue(Hobby_item.class);
                     if (i == 0) {
                         Exp_item exp_item = snapshot.getValue(Exp_item.class);
                         assert exp_item != null;
                         if (exp_item.getComputer().equals("true")) {
-                            ChooseExpData chooseExpData1 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
-                                    ,"Exp_item","computer","false");
-                            //
-                            myRef.child("computer").setValue(chooseExpData1);
-                            arrayList.add(chooseExpData1);
-                            //chooseExpAdapter.notifyDataSetChanged();
-                            //mIntentListener = chooseExpAdapter;
+                                myRef.child("computer").setValue(chooseExpData1);
+                                arrayList.add(chooseExpData1);
+                           // if(snapshot.exists() == false())
 
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //x = 1;
                         }
                         if (exp_item.getHistory().equals("true")) {
                             myRef.child("history").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (exp_item.getMath().equals("true")) {
                             myRef.child("math").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (exp_item.getStock().equals("true")) {
                             myRef.child("Stock").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
 
                     }
@@ -191,22 +188,22 @@ public class ChooseExpActivity extends AppCompatActivity {
                         if (hobby_item.getDrawing().equals("true")) {
                             myRef.child("drawing").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (hobby_item.getMusic().equals("true")) {
                             myRef.child("music").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (hobby_item.getResin().equals("true")) {
                             myRef.child("resin").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (hobby_item.getTarot().equals("true")) {
                             myRef.child("tarot").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
 
                     }
@@ -216,22 +213,22 @@ public class ChooseExpActivity extends AppCompatActivity {
                         if (lan_item.getChi().equals("true")) {
                             myRef.child("chi").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (lan_item.getEng().equals("true")) {
                             myRef.child("eng").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (lan_item.getJap().equals("true")) {
                             myRef.child("jap").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (lan_item.getSpan().equals("true")) {
                             myRef.child("span").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
 
                     }
@@ -241,28 +238,29 @@ public class ChooseExpActivity extends AppCompatActivity {
                         if (spo_item.getBadminton().equals("true")) {
                             myRef.child("badminton").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (spo_item.getHT().equals("true")) {
                             myRef.child("ht").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (spo_item.getPilates().equals("true")) {
                             myRef.child("pilates").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (spo_item.getSwim().equals("true")) {
                             myRef.child("swim").setValue(chooseExpData);
                             arrayList.add(chooseExpData);
-                            chooseExpAdapter.notifyDataSetChanged();
+                            //chooseExpAdapter.notifyDataSetChanged();
                         }
 
                     }
                     i++;
 
                 }
+
                 recyclerView.setAdapter(chooseExpAdapter);
                 //Expdata expdata = dataSnapshot.getValue(Expdata.class);
                 //
@@ -309,32 +307,26 @@ public class ChooseExpActivity extends AppCompatActivity {
         //}
         //});
         // }
+/*
+        @Override
+        public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_IMAGE_CODE){
+         Uri image = data.getData();
+        try {
+        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),image);
+        imageView.setImageBitmap(bitmap);
+         } catch (IOException e) {
+        e.printStackTrace();
+        }
+         }
 
-        // @Override
-        //public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        //super.onActivityResult(requestCode, resultCode, data);
-        //if(requestCode == REQUEST_IMAGE_CODE){
-        // Uri image = data.getData();
-        //try {
-        //Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),image);
-        ///imageView.setImageBitmap(bitmap);
-        // } catch (IOException e) {
-        //e.printStackTrace();
-        // }
-        // }
+ */
     }
 
 ImageView image1;
     String test1;
-    @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE) {
-            if (mIntentListener != null) {
-                mIntentListener.onIntent(data, resultCode);
-            }
-        }
-    }
-    /*
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -342,11 +334,6 @@ ImageView image1;
             Uri image = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),image);
-               //ChooseExpData chooseExpData = new ChooseExpData(BitmapToString(bitmap),"dd","dd","fasle");
-                //ChooseExpData chooseExpData = getIntent().getExtras().getParcelable("computer");
-                //chooseExpData.setIv_ctf(BitmapToString(bitmap));
-                //chooseExpData.setCertified("true");
-                //arrayList.add(chooseExpData);
                 chooseExpAdapter.notifyDataSetChanged();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -356,7 +343,7 @@ ImageView image1;
     }
 
 
-     */
+
     public static String BitmapToString(Bitmap bitmap) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 70, baos);
