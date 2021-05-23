@@ -154,71 +154,138 @@ public class InterestActivity extends AppCompatActivity {
                         switch (checked_list) {
                             // 전문분야
                             case "컴퓨터":
-                                exp_item.setComputer(View_Menu.get(j).isItemChecked( c ) + "");
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    exp_item.setComputer( "컴퓨터" );
+                                } else{
+                                    exp_item.setComputer( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "주식":
-                                exp_item.setStock( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    exp_item.setStock( "주식" );
+
+                                } else{
+                                    exp_item.setStock( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "역사":
-                                exp_item.setHistory( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    exp_item.setHistory( "역사" );
+                                } else{
+                                    exp_item.setHistory( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "수학":
-                                exp_item.setMath( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    exp_item.setMath( "수학" );
+                                } else{
+                                    exp_item.setMath( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
-                            // 취미
+
+                                // 취미
                             case "음악":
-                                hobby_item.setMusic( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    hobby_item.setMusic( "음악" );
+                                } else{
+                                    hobby_item.setMusic( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "타로":
-                                hobby_item.setTarot( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    hobby_item.setTarot( "타로" );
+                                } else{
+                                    hobby_item.setTarot( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "레진공예":
-                                hobby_item.setResin( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    hobby_item.setResin( "레진공예" );
+                                } else{
+                                    hobby_item.setResin( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "그림":
-                                hobby_item.setDrawing( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    hobby_item.setDrawing( "그림" );
+                                } else{
+                                    hobby_item.setDrawing( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
-                            // 언어
+                                // 언어
                             case "영어":
-                                lan_item.setEng( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    lan_item.setEng( "영어" );
+                                } else{
+                                    lan_item.setEng( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "중국어":
-                                lan_item.setChi( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    lan_item.setChi( "중국어" );
+                                } else{
+                                    lan_item.setChi( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "일본어":
-                                lan_item.setJap( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    lan_item.setJap( "일본어" );
+                                } else{
+                                    lan_item.setJap( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "스페인어":
-                                lan_item.setSpan( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    lan_item.setSpan( "스페인어" );
+                                } else{
+                                    lan_item.setSpan( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
-                            // 스포츠
+                                // 스포츠
                             case "수영":
-                                spo_item.setSwim( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    spo_item.setSwim( "수영" );
+                                } else{
+                                    spo_item.setSwim( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "필라테스":
-                                spo_item.setPilates( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    spo_item.setPilates( "필라테스" );
+                                } else{
+                                    spo_item.setPilates( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "홈트":
-                                spo_item.setHT( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    spo_item.setHT( "홈트" );
+                                } else{
+                                    spo_item.setHT( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
 
                             case "배드민턴":
-                                spo_item.setBadminton( View_Menu.get( j ).isItemChecked( c ) + "" );
+                                if(View_Menu.get(j).isItemChecked( c )) {
+                                    spo_item.setBadminton( "배드민턴" );
+                                } else {
+                                    spo_item.setBadminton( View_Menu.get(j).isItemChecked( c )+ "" );
+                                }
                                 break;
+
                         }
                     }
                 }

@@ -35,14 +35,28 @@
             android:text="닉네임"
             android:layout_margin="5dp">
         </TextView>
-
-        <TextView
-            android:id="@+id/tv_interest"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="관심분야"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전문분야 : "
             android:layout_margin="5dp">
         </TextView>
+
+            <TextView
+                android:id="@+id/tv_item0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전문분야"
+                android:layout_marginTop="5dp">
+            </TextView>
+
+
+        </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
