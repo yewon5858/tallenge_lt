@@ -25,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
     ImageButton bt_chat;
     ImageButton  bt_alarm;
     ImageButton bt_mypage;
-    String str;
-
+    String emailId; // 로그인한 사용자의 emailId
+    String IdToken; // 로그인한 사용자의 uid
+    String user; // 로그인한 사용자 정보
     private final String TAG = this.getClass().getSimpleName();
     Context mContext;
     private ViewPager2 mViewPager;
@@ -45,12 +46,19 @@ public class MainActivity extends AppCompatActivity {
         // fragment 이동
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
+        // intent를 통해서 회원가입할 때 emailId,uid 전달 받기
+        emailId = getIntent().getStringExtra("emailId");
+        IdToken = getIntent().getStringExtra("idToken");
+        user = getIntent().getStringExtra("user");
+        Log.e("IdToken",IdToken);
+        Log.e("user",user);
         mContext = MainActivity.this;
+
 
         code = "";
         Log.e( TAG, code );
 
-        Fragment frag1 = new expFragment().newInstance(code);
+        Fragment frag1 = new expFragment().newInstance(code,IdToken);
         Fragment frag2 = new hobFragment().newInstance(code);
         Fragment frag3 = new lanFragment().newInstance(code);
         Fragment frag4 = new spoFragment().newInstance(code);
