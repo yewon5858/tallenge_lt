@@ -184,138 +184,71 @@ public class ExpActivity extends AppCompatActivity {
                         switch (checked_list) {
                             // 전문분야
                             case "컴퓨터":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    exp_item.setComputer( "컴퓨터" );
-                                } else{
-                                    exp_item.setComputer( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                exp_item.setComputer(View_Menu.get(j).isItemChecked( c ) + "");
                                 break;
 
                             case "주식":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    exp_item.setStock( "주식" );
-
-                                } else{
-                                    exp_item.setStock( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                exp_item.setStock( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "역사":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    exp_item.setHistory( "역사" );
-                                } else{
-                                    exp_item.setHistory( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                exp_item.setHistory( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "수학":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    exp_item.setMath( "수학" );
-                                } else{
-                                    exp_item.setMath( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                exp_item.setMath( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
-
 
                             // 취미
                             case "음악":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    hobby_item.setMusic( "음악" );
-                                } else{
-                                    hobby_item.setMusic( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                hobby_item.setMusic( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "타로":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    hobby_item.setTarot( "타로" );
-                                } else{
-                                    hobby_item.setTarot( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                hobby_item.setTarot( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "레진공예":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    hobby_item.setResin( "레진공예" );
-                                } else{
-                                    hobby_item.setResin( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                hobby_item.setResin( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "그림":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    hobby_item.setDrawing( "그림" );
-                                } else{
-                                    hobby_item.setDrawing( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                hobby_item.setDrawing( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             // 언어
                             case "영어":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    lan_item.setEng( "영어" );
-                                } else{
-                                    lan_item.setEng( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                lan_item.setEng( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "중국어":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    lan_item.setChi( "중국어" );
-                                } else{
-                                    lan_item.setChi( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                lan_item.setChi( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "일본어":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    lan_item.setJap( "일본어" );
-                                } else{
-                                    lan_item.setJap( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                lan_item.setJap( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "스페인어":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    lan_item.setSpan( "스페인어" );
-                                } else{
-                                    lan_item.setSpan( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                lan_item.setSpan( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             // 스포츠
                             case "수영":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    spo_item.setSwim( "수영" );
-                                } else{
-                                    spo_item.setSwim( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                spo_item.setSwim( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "필라테스":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    spo_item.setPilates( "필라테스" );
-                                } else{
-                                    spo_item.setPilates( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                spo_item.setPilates( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "홈트":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    spo_item.setHT( "홈트" );
-                                } else{
-                                    spo_item.setHT( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                spo_item.setHT( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
 
                             case "배드민턴":
-                                if(View_Menu.get(j).isItemChecked( c )) {
-                                    spo_item.setBadminton( "배드민턴" );
-                                } else {
-                                    spo_item.setBadminton( View_Menu.get(j).isItemChecked( c )+ "" );
-                                }
+                                spo_item.setBadminton( View_Menu.get( j ).isItemChecked( c ) + "" );
                                 break;
-
                         }
                     }
                 }
@@ -345,7 +278,7 @@ public class ExpActivity extends AppCompatActivity {
     // 뒤로가기 버튼을 눌러 이전 페이지로 이동을 막아줌
     @Override
     public void onBackPressed() {
-       //super.onBackPressed(); // 이를 추가하게 되면 뒤로가기 버튼 사용이 가능해짐
+        //super.onBackPressed(); // 이를 추가하게 되면 뒤로가기 버튼 사용이 가능해짐
     }
 
 }

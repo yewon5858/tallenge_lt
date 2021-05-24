@@ -106,9 +106,9 @@ public class expFragment extends Fragment {
                     Log.e(" uid_check",uid_check);
                           if(uid_check.equals( uid )) {
                               String item = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
-                              if(item.equals( "컴퓨터" )) {
+                              if(item.equals( "true" )) {
                                   arrayList.add( user );
-                                  arrayList2.add( item );
+                                  arrayList2.add( "컴퓨터" );
                                   Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
                               }
                              // arrayList2 = exp_item.toString();
