@@ -112,8 +112,10 @@ public class expFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
+
                         String item_my_int = null;
                         String item_my_exp = null;
+
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
@@ -121,8 +123,9 @@ public class expFragment extends Fragment {
                             if(uid_check.equals( "false" )) {
                                 item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
                                 item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
+
                                 Log.e(" item_my_interest",item_my_int);
-                                Log.e(" item_my_interest",item_my_exp);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -205,8 +208,10 @@ public class expFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
+
                         String item_my_int = null;
                         String item_my_exp = null;
+
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
@@ -214,6 +219,8 @@ public class expFragment extends Fragment {
                             if(uid_check.equals( "false" )) {
                                 item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "stock" ).getValue().toString();
                                 item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "stock" ).getValue().toString();
+
+
                                 Log.e(" item_my_interest",item_my_int);
                                 Log.e(" item_my_exp",item_my_exp);
                                 break;
@@ -262,8 +269,11 @@ public class expFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
+
                         String item_my_int = null;
                         String item_my_exp = null;
+
+
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
@@ -271,8 +281,11 @@ public class expFragment extends Fragment {
                             if(uid_check.equals( "false" )) {
                                 item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "history" ).getValue().toString();
                                 item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "history" ).getValue().toString();
+
+
                                 Log.e(" item_my_interest",item_my_int);
                                 Log.e(" item_my_exp",item_my_exp);
+
                                 break;
                             }
                         }
@@ -319,8 +332,11 @@ public class expFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
+
                         String item_my_int = null;
                         String item_my_exp = null;
+
+
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
@@ -328,8 +344,10 @@ public class expFragment extends Fragment {
                             if(uid_check.equals( "false" )) {
                                 item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "math" ).getValue().toString();
                                 item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "math" ).getValue().toString();
+
                                 Log.e(" item_my_interest",item_my_int);
                                 Log.e(" item_my_exp",item_my_exp);
+
                                 break;
                             }
                         }
@@ -373,8 +391,10 @@ public class expFragment extends Fragment {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 arrayList.clear();
                 arrayList2.clear();
+
                 String item_my_int = null;
                 String item_my_exp = null;
+
                 for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                     UserAccount user = dataSnapshot.getValue(UserAccount.class);
                     String uid = user.getIdToken();
@@ -382,8 +402,10 @@ public class expFragment extends Fragment {
                     if(uid_check.equals( "false" )) {
                         item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
                         item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
+
                         Log.e(" item_my_interest",item_my_int);
-                        Log.e(" item_my_interest",item_my_exp);
+                        Log.e(" item_my_exp",item_my_exp);
+
                         break;
                     }
                 }
