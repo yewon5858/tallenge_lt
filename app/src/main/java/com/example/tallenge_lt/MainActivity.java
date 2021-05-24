@@ -92,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), MainActivity.class );
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });
