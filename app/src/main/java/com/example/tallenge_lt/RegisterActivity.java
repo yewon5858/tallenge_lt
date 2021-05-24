@@ -103,6 +103,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                             //setValue: database에 insert (삽입) 하는 행위
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
+                            int finish = 0;
+                            mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(finish);
 
                             // 회원가입에서 전문분야 선택으로 이동
                             Intent intent = new Intent(RegisterActivity.this, ExpActivity.class);

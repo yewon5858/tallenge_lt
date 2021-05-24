@@ -96,7 +96,7 @@ public class ChooseExpAdapter extends RecyclerView.Adapter<ChooseExpAdapter.Cust
                 Intent in = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 v.getContext().startActivity(in);
                 changeImage(holder.getAdapterPosition());
-                notifyItemChanged(holder.getAdapterPosition());
+                notifyDataSetChanged();
 
                 /*
                 requestcode = position;
@@ -118,7 +118,7 @@ public void changeImage(int position){
         ChooseExpData chooseExpData;
         arrayList.get(position).setIv_ctf("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/correct.png?alt=media&token=80df04b7-ad60-4bbe-8000-69704d5a3eff");
         arrayList.get(position).setCertified("인증됨");
-        myRef.child("computer").setValue(arrayList.get(position));
+        myRef.child(arrayList.get(position).getTv_small_category()).setValue(arrayList.get(position));
         //arrayList.remove(arrayList.get(position));
         //arrayList.add(arrayList.get(position),chooseExpData);
         //notifyDataSetChanged(position);

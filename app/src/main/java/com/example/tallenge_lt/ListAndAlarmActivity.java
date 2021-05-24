@@ -21,6 +21,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,6 +42,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
    private ArrayList<ListAlarmData> arrayList;
    private FirebaseDatabase database;
    private DatabaseReference databaseReference;
+   private DatabaseReference getMyRef;
    ImageButton bt_home;
    ImageButton bt_chat;
    ImageButton  bt_alarm;
@@ -46,6 +51,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
     CheckBox sun,mon,tue,wed,thu,fri,sat;
     //    FirebaseDatabase database;
     DatabaseReference myRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +86,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
 
 
+
 //뒤로가기
         Button back_btn3 = (Button) findViewById(R.id.btnbk3);
         back_btn3.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +97,9 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        getMyRef = database.getReference("tallenge").child("UserAccount").child(user.getUid()).child("finish");
 //재능교환완료
         Button Finish_btn = (Button) findViewById(R.id.Fin);
         Finish_btn.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +108,22 @@ public class ListAndAlarmActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
+
+                getMyRef.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (!task.isSuccessful()) {
+                            Log.e("firebase", "Error getting data", task.getException());
+                        }
+                        else {
+                            Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                            Integer integer = task.getResult().getValue(Integer.class);
+                            integer++;
+                            getMyRef.setValue(integer);
+                        }
+                    }
+                });
+
             }
         });
         // MainActivity로 이동
@@ -172,8 +198,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
 
 //시간 설정
-        int hour = 15;
-        int minute = 50;
+        int hour = 9;
+        int minute = 0;
 
         Intent alarmIntent = new Intent(this, AlarmReceiver.class);
 
@@ -377,22 +403,6 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                         sat.setChecked(alarmData.isSat());
 
 
-
-
-                        /*
-                        if (consumer == null)
-                        {
-                            //data does not exists for the specified key
-                        }
-                        else if(data.checked)
-                        {
-                            //data is checked
-                        }
-                        else {
-                            //data not checked
-                        }
-
-                        */
                     }
 
                     @Override

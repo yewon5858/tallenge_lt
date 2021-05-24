@@ -159,25 +159,35 @@ public class ChooseExpActivity extends AppCompatActivity {
                         Exp_item exp_item = snapshot.getValue(Exp_item.class);
                         assert exp_item != null;
                         if (exp_item.getComputer().equals("true")) {
-                                myRef.child("computer").setValue(chooseExpData1);
-                                arrayList.add(chooseExpData1);
-                           // if(snapshot.exists() == false())
+                            ChooseExpData chooseExpData1 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "전문분야", "컴퓨터", "");
+                            myRef.child("컴퓨터").setValue(chooseExpData1);
+                            arrayList.add(chooseExpData1);
 
                             //x = 1;
                         }
                         if (exp_item.getHistory().equals("true")) {
-                            myRef.child("history").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData2 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "전문분야", "역사", "");;
+                            arrayList.add(chooseExpData2);
+                            myRef.child("역사").setValue(chooseExpData2);
+                            //arrayList.add(chooseExpData2);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (exp_item.getMath().equals("true")) {
-                            myRef.child("math").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData3 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "전문분야", "수학", "");;
+                            arrayList.add(chooseExpData3);
+                            myRef.child("수학").setValue(chooseExpData3);
+                            //arrayList.add(chooseExpData3);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (exp_item.getStock().equals("true")) {
-                            myRef.child("Stock").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData4 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "전문분야", "주식", "");;
+                            arrayList.add(chooseExpData4);
+                            myRef.child("주식").setValue(chooseExpData4);
+                            //arrayList.add(chooseExpData4);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
 
@@ -186,23 +196,35 @@ public class ChooseExpActivity extends AppCompatActivity {
                         Hobby_item hobby_item = snapshot.getValue(Hobby_item.class);
                         assert hobby_item != null;
                         if (hobby_item.getDrawing().equals("true")) {
-                            myRef.child("drawing").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData5 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "취미", "그림", "");;
+                            arrayList.add(chooseExpData5);
+                            myRef.child("그림").setValue(chooseExpData5);
+                            //arrayList.add(chooseExpData5);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (hobby_item.getMusic().equals("true")) {
-                            myRef.child("music").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData6 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "취미", "음약", "");;
+                            arrayList.add(chooseExpData6);
+                            myRef.child("수학").setValue(chooseExpData6);
+                            //arrayList.add(chooseExpData6);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (hobby_item.getResin().equals("true")) {
-                            myRef.child("resin").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData7 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "취미", "레진공예", "");;
+                            arrayList.add(chooseExpData7);
+                            myRef.child("레진공예").setValue(chooseExpData7);
+                            //arrayList.add(chooseExpData7);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (hobby_item.getTarot().equals("true")) {
-                            myRef.child("tarot").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData8 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "취미", "타로", "");;
+                            arrayList.add(chooseExpData8);
+                            myRef.child("타로").setValue(chooseExpData8);
+                            //arrayList.add(chooseExpData8);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
 
@@ -211,23 +233,35 @@ public class ChooseExpActivity extends AppCompatActivity {
                         Lan_item lan_item = snapshot.getValue(Lan_item.class);
                         assert lan_item != null;
                         if (lan_item.getChi().equals("true")) {
-                            myRef.child("chi").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData9 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "언어", "중국어", "");;
+                            arrayList.add(chooseExpData9);
+                            myRef.child("중국어").setValue(chooseExpData9);
+                            //arrayList.add(chooseExpData9);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (lan_item.getEng().equals("true")) {
-                            myRef.child("eng").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData10 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "언어", "영어", "");;
+                            arrayList.add(chooseExpData10);
+                            myRef.child("영어").setValue(chooseExpData10);
+                            //arrayList.add(chooseExpData10);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (lan_item.getJap().equals("true")) {
-                            myRef.child("jap").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData11 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "언어", "일본어", "");;
+                            arrayList.add(chooseExpData11);
+                            myRef.child("일본어").setValue(chooseExpData11);
+                            //arrayList.add(chooseExpData11);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (lan_item.getSpan().equals("true")) {
-                            myRef.child("span").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData12 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "언어", "스페인어", "");;
+                            arrayList.add(chooseExpData12);
+                            myRef.child("스페인어").setValue(chooseExpData12);
+                            //arrayList.add(chooseExpData12);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
 
@@ -236,23 +270,35 @@ public class ChooseExpActivity extends AppCompatActivity {
                         Spo_item spo_item = snapshot.getValue(Spo_item.class);
                         assert spo_item != null;
                         if (spo_item.getBadminton().equals("true")) {
-                            myRef.child("badminton").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData13 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "스포츠", "배드민턴", "");;
+                            arrayList.add(chooseExpData13);
+                            myRef.child("배드민턴").setValue(chooseExpData13);
+                            //arrayList.add(chooseExpData13);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (spo_item.getHT().equals("true")) {
-                            myRef.child("ht").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData14 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "스포츠", "홈트", "");;
+                            arrayList.add(chooseExpData14);
+                            myRef.child("홈트").setValue(chooseExpData14);
+                            //arrayList.add(chooseExpData14);
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (spo_item.getPilates().equals("true")) {
-                            myRef.child("pilates").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData14 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "스포츠", "필라테스", "");;
+                            arrayList.add(chooseExpData14);
+                            myRef.child("필라테스").setValue(chooseExpData14);
+                            //arrayList.add(chooseExpData14);;
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
                         if (spo_item.getSwim().equals("true")) {
-                            myRef.child("swim").setValue(chooseExpData);
-                            arrayList.add(chooseExpData);
+                            ChooseExpData chooseExpData15 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                    , "스포츠", "수영", "");;
+                            arrayList.add(chooseExpData15);
+                            myRef.child("수영").setValue(chooseExpData15);
+                            //arrayList.add(chooseExpData15);;
                             //chooseExpAdapter.notifyDataSetChanged();
                         }
 

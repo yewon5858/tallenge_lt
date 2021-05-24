@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
         emailId = getIntent().getStringExtra("emailId");
         IdToken = getIntent().getStringExtra("idToken");
         user = getIntent().getStringExtra("user");
-        Log.e("IdToken",IdToken);
-        Log.e("user",user);
+        //Log.e("IdToken",IdToken);
+        //Log.e("user",user);
         mContext = MainActivity.this;
 
 

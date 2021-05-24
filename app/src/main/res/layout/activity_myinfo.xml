@@ -52,12 +52,15 @@
                 android:background="@mipmap/ic_launcher" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/id"
                 android:layout_width="212dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
-                android:text="TextView" />
+                android:gravity="center_horizontal|top|center_vertical"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="30dp"/>
 
         </LinearLayout>
 
