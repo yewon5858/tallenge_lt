@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -55,7 +56,7 @@ public class ChatActivity extends AppCompatActivity {
     ImageButton bt_chat;
     ImageButton  bt_alarm;
     ImageButton bt_mypage;
-
+    TextView nick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,11 @@ public class ChatActivity extends AppCompatActivity {
         push_btn=findViewById(R.id.push_btn);
         inputText=findViewById(R.id.inputText);
         email=getIntent().getStringExtra("email");
+        nick=findViewById(R.id.nickname);
+        Intent intent=getIntent();
+        String nick1=intent.getStringExtra("emaill");
+        nick.setText("E-mail: "+nick1);
+
 //        <-->//에러나면 위에 각주되어있는 String nick="nick1"쓰시고 email변수 들어간 곳 다 nick으로 바꾸시고 테스트하시면됩니다.
         //버튼 클릭
         push_btn.setOnClickListener(new View.OnClickListener() {

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/tallengeblue">
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_baseline_perm_identity_24"
+        android:paddingTop="30dp"
+        android:id="@+id/image_icon"
+        />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="25dp"
+        android:text="상대방 닉네임"
+        android:textSize="20sp"
+        android:id="@+id/othernick"/>
+
+    <Button
+        android:id="@+id/goChat"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_baseline_send_24"
+        android:paddingTop="20dp"
+        />
+</LinearLayout>

@@ -63,6 +63,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         Log.e("arrayList로 받은 유저 정보",user.toString());
         holder.tv_id.setText( user.getEmailId() );
         holder.tv_nickname.setText( user.getNicname() );
+        String emaill=user.getEmailId();
         Log.e("arrayList2로 받은 유저 정보",user_item.equals( "false" )+"입니다");
 
         if (user_item.equals( "false" ) != true) {
@@ -90,6 +91,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             public void onClick(View v) {
                 Intent in = new Intent(v.getContext(), ChatActivity.class);
                 in.putExtra("email",email);
+                in.putExtra("emaill",emaill);
                 v.getContext().startActivity(in);
             }
 

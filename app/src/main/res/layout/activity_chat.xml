@@ -46,22 +46,18 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
         //등급
-        <TextView
-            android:id="@+id/tier"
-            android:layout_width="227dp"
-            android:text="등급: "
-            android:textColor="@color/black"
-            android:layout_height="match_parent"
-            android:textSize="16sp" />
+
         //닉네임
+
         <TextView
-            android:layout_width="180dp"
-            android:layout_height="match_parent"
-            android:text="상대방 닉네임:"
-            android:gravity="left"
-            android:textColor="@color/black"
             android:id="@+id/nickname"
-            android:textSize="16sp" />
+            android:layout_width="327dp"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="상대방 닉네임:"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <View
