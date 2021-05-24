@@ -21,8 +21,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -99,7 +97,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
         });
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        getMyRef = database.getReference("tallenge").child("UserAccount").child(user.getUid()).child("finish");
+        //getMyRef = database.getReference("tallenge").child("UserAccount").child(user.getUid()).child("finish");
 //재능교환완료
         Button Finish_btn = (Button) findViewById(R.id.Fin);
         Finish_btn.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +106,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
-
+/*
                 getMyRef.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DataSnapshot> task) {
@@ -123,6 +121,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+ */
 
             }
         });

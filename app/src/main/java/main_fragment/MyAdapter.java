@@ -1,6 +1,7 @@
 package main_fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +11,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tallenge_lt.ChatActivity;
 import com.example.tallenge_lt.R;
 import com.example.tallenge_lt.UserAccount;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -21,6 +30,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private ArrayList<UserAccount> arrayList; // user의 정보를 받은 배열 리스트 [user1(의 사용자 정보),user2,...]
     private Context context;
     private  ArrayList<String> arrayList2;
+
+
+    //추가
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference("tallenge").child("UserAccount").child(user.getUid());
+    String email;
+
+
 
     public MyAdapter(ArrayList<UserAccount> arrayList, Context context,ArrayList<String> arrayList2){
         this.arrayList = arrayList;
@@ -50,6 +68,32 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         if (user_item.equals( "false" ) != true) {
             holder.tv_item0.setText( user_item );
         }else{ holder.tv_item0.setText( "nodata" );}
+
+
+        //추가
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                email = dataSnapshot.child("emailId").getValue( String.class );
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(v.getContext(), ChatActivity.class);
+                in.putExtra("email",email);
+                v.getContext().startActivity(in);
+            }
+
+        });
 
         // if (exp_item.getComputer().toString() == "컴퓨터") {
         //            holder.tv_item0.setText( exp_item.getComputer() );
@@ -83,6 +127,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             tv_nickname = itemView.findViewById( R.id.tv_nickname );
             tv_item0 = itemView.findViewById( R.id.tv_item0 );
 
+            /* 아이템뷰 클릭시 해당 액티비티로 넘어감(필요하시면 주식풀고 사용하세요)
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in = new Intent(v.getContext(), ChatActivity.class);
+                    v.getContext().startActivity(in);
+                }
+            });
+
+             */
 
         }
     }
