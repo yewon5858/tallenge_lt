@@ -65,6 +65,11 @@
                 android:text="스페인어"
                 android:textColor="@color/black" />
         </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ta_bar"></androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 

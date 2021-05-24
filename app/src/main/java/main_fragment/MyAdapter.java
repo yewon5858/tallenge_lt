@@ -75,19 +75,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tv_id;
         TextView tv_nickname;
-        TextView tv_item0; //전문분야-컴퓨터
-        //TextView tv_item1;
-        //TextView tv_item2;
-        //TextView tv_item3;
+        TextView tv_item0; //해당 카테고리의 전문분야 중 1개만
+
         public MyViewHolder(@NonNull @NotNull View itemView) {
             super( itemView );
 
             tv_id = itemView.findViewById( R.id.tv_id );
             tv_nickname = itemView.findViewById( R.id.tv_nickname );
             tv_item0 = itemView.findViewById( R.id.tv_item0 );
-           // tv_item1 = itemView.findViewById( R.id.tv_item1 );
-          //  tv_item2 = itemView.findViewById( R.id.tv_item2 );
-          //  tv_item3 = itemView.findViewById( R.id.tv_item3 );
+
 
         }
     }

@@ -7,14 +7,6 @@
     tools:context="main_fragment.hobFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hob 프래그먼트"
-        android:layout_gravity="center"
-        android:textColor="@color/purple_700">
-
-    </TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,6 +66,11 @@
                 android:text="그림"
                 android:textColor="@color/black" />
         </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ta_bar"></androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
 </FrameLayout>
