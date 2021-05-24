@@ -113,14 +113,17 @@ public class hobFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -133,9 +136,11 @@ public class hobFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "음악" );
 
@@ -167,14 +172,17 @@ public class hobFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "tarot" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "tarot" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "tarot" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -187,9 +195,11 @@ public class hobFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "tarot" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "tarot" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "tarot" ).getValue().toString();
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "타로" );
 
@@ -222,14 +232,17 @@ public class hobFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "resin" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "resin" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "resin" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -242,9 +255,11 @@ public class hobFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "resin" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "resin" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "resin" ).getValue().toString();
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "레진공예" );
 
@@ -276,14 +291,17 @@ public class hobFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "drawing" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "drawing" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "drawing" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -296,9 +314,11 @@ public class hobFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "drawing" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "drawing" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "drawing" ).getValue().toString();
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "그림" );
 
@@ -329,14 +349,17 @@ public class hobFragment extends Fragment {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 arrayList.clear();
                 arrayList2.clear();
-                String item_my_interest = null;
+                String item_my_int = null;
+                String item_my_exp = null;
                 for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                     UserAccount user = dataSnapshot.getValue(UserAccount.class);
                     String uid = user.getIdToken();
                     String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                     if(uid_check.equals( "false" )) {
-                        item_my_interest = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
-                        Log.e(" item_my_interest",item_my_interest);
+                        item_my_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
+                        item_my_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
+                        Log.e(" item_my_interest",item_my_int);
+                        Log.e(" item_my_exp",item_my_exp);
                         break;
                     }
                 }
@@ -349,9 +372,11 @@ public class hobFragment extends Fragment {
                     Log.e(" uid_check",uid_check);
 
                     if(uid_check.equals( uid )) {
-                        String item = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
-                        Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                        if(item.equals( item_my_interest )) {
+                        String item_exp = dataSnapshot.child( "expdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
+                        String item_int = dataSnapshot.child( "interestdata" ).child( "Hobby_item" ).child( "music" ).getValue().toString();
+                        Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                        Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+                        if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                             arrayList.add( user );
                             arrayList2.add( "음악" );
 

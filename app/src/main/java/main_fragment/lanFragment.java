@@ -24,11 +24,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link lanFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class lanFragment extends Fragment {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -51,13 +47,6 @@ public class lanFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @return A new instance of fragment lanFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static lanFragment newInstance(String param1,String IdToken) {
         lanFragment fragment = new lanFragment();
@@ -112,14 +101,17 @@ public class lanFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -132,9 +124,11 @@ public class lanFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "영어" );
 
@@ -166,14 +160,17 @@ public class lanFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "chi" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "chi" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "chi" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -186,9 +183,13 @@ public class lanFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "chi" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "chi" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "chi" ).getValue().toString();
+
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "중국어" );
 
@@ -219,14 +220,17 @@ public class lanFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "jap" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "jap" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "jap" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -239,9 +243,13 @@ public class lanFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "jap" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "jap" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "jap" ).getValue().toString();
+
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "일본어" );
 
@@ -272,14 +280,17 @@ public class lanFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "span" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "span" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "span" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -292,9 +303,13 @@ public class lanFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "span" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "span" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "span" ).getValue().toString();
+
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "스페인어" );
 
@@ -323,14 +338,17 @@ public class lanFragment extends Fragment {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 arrayList.clear();
                 arrayList2.clear();
-                String item_my_interest = null;
+                String item_my_int = null;
+                String item_my_exp = null;
                 for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                     UserAccount user = dataSnapshot.getValue(UserAccount.class);
                     String uid = user.getIdToken();
                     String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                     if(uid_check.equals( "false" )) {
-                        item_my_interest = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
-                        Log.e(" item_my_interest",item_my_interest);
+                        item_my_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
+                        item_my_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
+                        Log.e(" item_my_interest",item_my_int);
+                        Log.e(" item_my_exp",item_my_exp);
                         break;
                     }
                 }
@@ -343,9 +361,11 @@ public class lanFragment extends Fragment {
                     Log.e(" uid_check",uid_check);
 
                     if(uid_check.equals( uid )) {
-                        String item = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
-                        Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                        if(item.equals( item_my_interest )) {
+                        String item_exp = dataSnapshot.child( "expdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
+                        String item_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
+                        Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                        Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+                        if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                             arrayList.add( user );
                             arrayList2.add( "영어" );
 

@@ -106,14 +106,17 @@ public class spoFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -126,9 +129,13 @@ public class spoFragment extends Fragment {
                             Log.e(" uid_check",uid_check);
 
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
+
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "수영" );
 
@@ -161,14 +168,17 @@ public class spoFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "pilates" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "pilates" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "pilates" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -180,9 +190,13 @@ public class spoFragment extends Fragment {
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             Log.e(" uid_check",uid_check);
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "pilates" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "pilates" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "pilates" ).getValue().toString();
+
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "필라테스" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -213,14 +227,16 @@ public class spoFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
-                        String item_my_interest = null;
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "ht" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "ht" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "ht" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
                                 break;
                             }
                         }
@@ -232,9 +248,13 @@ public class spoFragment extends Fragment {
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             Log.e(" uid_check",uid_check);
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "ht" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "ht" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "ht" ).getValue().toString();
+
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "홈트" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -263,14 +283,18 @@ public class spoFragment extends Fragment {
                     @Override
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
-                        arrayList2.clear();String item_my_interest = null;
+                        arrayList2.clear();
+                        String item_my_int = null;
+                        String item_my_exp = null;
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             if(uid_check.equals( "false" )) {
-                                item_my_interest = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "badminton" ).getValue().toString();
-                                Log.e(" item_my_interest",item_my_interest);
+                                item_my_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "badminton" ).getValue().toString();
+                                item_my_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "badminton" ).getValue().toString();
+                                Log.e(" item_my_interest",item_my_int);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -282,9 +306,13 @@ public class spoFragment extends Fragment {
                             String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                             Log.e(" uid_check",uid_check);
                             if(uid_check.equals( uid )) {
-                                String item = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "badminton" ).getValue().toString();
-                                Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                                if(item.equals( item_my_interest )) {
+                                String item_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "badminton" ).getValue().toString();
+                                String item_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "badminton" ).getValue().toString();
+
+                                Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                                Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+
+                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                                     arrayList.add( user );
                                     arrayList2.add( "배드민턴" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -313,14 +341,17 @@ public class spoFragment extends Fragment {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 arrayList.clear();
                 arrayList2.clear();
-                String item_my_interest = null;
+                String item_my_int = null;
+                String item_my_exp = null;
                 for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                     UserAccount user = dataSnapshot.getValue(UserAccount.class);
                     String uid = user.getIdToken();
                     String uid_check = getIdToken.equals( uid ) ? "false" : uid;
                     if(uid_check.equals( "false" )) {
-                        item_my_interest = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
-                        Log.e(" item_my_interest",item_my_interest);
+                        item_my_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
+                        item_my_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
+                        Log.e(" item_my_interest",item_my_int);
+                        Log.e(" item_my_exp",item_my_exp);
                         break;
                     }
                 }
@@ -333,9 +364,13 @@ public class spoFragment extends Fragment {
                     Log.e(" uid_check",uid_check);
 
                     if(uid_check.equals( uid )) {
-                        String item = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
-                        Log.e( "item.equals()", item.equals( item_my_interest ) + "입니다" );
-                        if(item.equals( item_my_interest )) {
+                        String item_exp = dataSnapshot.child( "expdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
+                        String item_int = dataSnapshot.child( "interestdata" ).child( "Spo_item" ).child( "swim" ).getValue().toString();
+
+                        Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
+                        Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
+
+                        if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
                             arrayList.add( user );
                             arrayList2.add( "수영" );
 
