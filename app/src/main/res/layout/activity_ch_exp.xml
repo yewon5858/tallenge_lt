@@ -61,23 +61,14 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/ch_exp_rv"
                 android:layout_width="362dp"
-                android:layout_height="363dp"
+                android:layout_height="412dp"
                 android:layout_gravity="center"
                 android:background="@color/white"
                 android:scrollbarFadeDuration="0"
                 android:scrollbarSize="5dp"
                 android:scrollbarThumbVertical="@android:color/darker_gray"
-                android:scrollbars="vertical"
-                />
+                android:scrollbars="vertical" />
 
-
-
-            <Button
-                android:id="@+id/btn_ch_exp_add"
-                android:layout_width="118dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="추가버튼" />
 
         </LinearLayout>
 

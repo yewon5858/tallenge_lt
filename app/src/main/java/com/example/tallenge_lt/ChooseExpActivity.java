@@ -205,7 +205,7 @@ public class ChooseExpActivity extends AppCompatActivity {
                         }
                         if (hobby_item.getMusic().equals("true")) {
                             ChooseExpData chooseExpData6 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
-                                    , "취미", "음약", "");;
+                                    , "취미", "음악", "");;
                             arrayList.add(chooseExpData6);
                             myRef.child("수학").setValue(chooseExpData6);
                             //arrayList.add(chooseExpData6);
@@ -324,16 +324,6 @@ public class ChooseExpActivity extends AppCompatActivity {
 
         categoryRef.addValueEventListener(postListener);
 
-
-        Button btn_add = (Button) findViewById(R.id.btn_ch_exp_add);
-        btn_add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //ChooseExpData chooseExpData = new ChooseExpData(R.drawable.certificated_icon,"언어");
-                //arrayList.add(chooseExpData);
-                //chooseExpAdapter.notifyDataSetChanged();  //새로고침
-            }
-        });
 
         btn_back = findViewById(R.id.btn_move);   //화면 이동 버튼
         btn_back.setOnClickListener(new View.OnClickListener() {

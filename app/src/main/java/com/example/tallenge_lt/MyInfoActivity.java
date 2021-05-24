@@ -26,7 +26,7 @@ public class MyInfoActivity extends AppCompatActivity {
     Button btn_back, btn_exp, btn_checklist, btn_interest, btn_modifyinfo;
     TextView textView;
 
-    FirebaseDatabase firebaseDatabase;
+    FirebaseDatabase firebaseDatabase= FirebaseDatabase.getInstance();;
 
     DatabaseReference databaseRef;
 
@@ -115,7 +115,7 @@ public class MyInfoActivity extends AppCompatActivity {
 
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        //databaseRef= firebaseDatabase.getReference("tallenge").child("UserAccount").child(user.getUid());
+        databaseRef= firebaseDatabase.getReference("tallenge").child("UserAccount").child(user.getUid());
         textView = (TextView)findViewById(R.id.id);
         databaseRef.addValueEventListener(new ValueEventListener() {
             @Override
