@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class ChooseExpAdapter extends RecyclerView.Adapter<ChooseExpAdapter.CustomViewHolder> implements OnIntentReceived{
+public class ChooseExpAdapter extends RecyclerView.Adapter<ChooseExpAdapter.CustomViewHolder>{
     private static final Object RESULT_LOAD_IMAGE = 1001;
     private ArrayList<ChooseExpData> arrayList;
     private Context context;
@@ -29,14 +29,7 @@ public class ChooseExpAdapter extends RecyclerView.Adapter<ChooseExpAdapter.Cust
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("tallenge").child("CertifyImg").child(user.getUid());
 
-    @Override
-    public void onIntent(Intent i, int resultCode) {
 
-    }
-
-    public interface OnClickImageListener{
-        void onClick();
-    }
 
     /*
     @Override

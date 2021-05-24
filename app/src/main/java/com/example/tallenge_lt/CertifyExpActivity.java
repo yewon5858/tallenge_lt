@@ -55,7 +55,6 @@ public class CertifyExpActivity extends AppCompatActivity {
         });
 
 
-
         Button btn_add = (Button)findViewById(R.id.btn_add);
         btn_add.setOnClickListener(new View.OnClickListener(){
 

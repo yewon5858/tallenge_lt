@@ -74,7 +74,8 @@
         android:id="@+id/rvmessage"
         android:layout_width="match_parent"
         android:layout_height="436dp"
-        android:background="@color/tallengeblue">
+        android:background="@color/tallengeblue"
+        android:layout_weight="1">
 
     </androidx.recyclerview.widget.RecyclerView>
 

@@ -12,7 +12,7 @@ android:background="@color/white"
         android:id="@+id/linearLayout"
         android:layout_width="427dp"
         android:layout_height="75dp"
-        android:background="@color/white"
+        android:background="@drawable/textview_border"
         android:orientation="vertical">
 
         <Button
@@ -24,12 +24,123 @@ android:background="@color/white"
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="466dp">
+        android:layout_height=""
+        android:layout_weight = "1">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수학 ↔  컴퓨터"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:layout_gravity="center"/>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="96dp"
+                android:layout_height="77dp" />
+
+            <Switch
+                android:layout_width="104dp"
+                android:layout_height="13dp"
+                android:checked="true"
+                android:switchMinWidth="56dp"
+                android:layout_gravity="center"
+                android:gravity="right"/>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="필라테스 ↔ 영어"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_gravity="center"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="70dp"
+            android:layout_height="57dp" />
+
+        <Switch
+            android:layout_width="104dp"
+            android:layout_height="13dp"
+            android:checked="true"
+            android:switchMinWidth="56dp"
+            android:layout_gravity="center"
+            android:gravity="right"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="타로 ↔ 스페인어"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_gravity="center"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="72dp"
+            android:layout_height="58dp" />
+
+        <Switch
+            android:layout_width="104dp"
+            android:layout_height="13dp"
+            android:checked="true"
+            android:switchMinWidth="56dp"
+            android:layout_gravity="center"
+            android:gravity="right"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주식 ↔ 그림"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_gravity="center"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="129dp"
+            android:layout_height="89dp" />
+
+        <Switch
+            android:layout_width="104dp"
+            android:layout_height="13dp"
+            android:checked="true"
+            android:switchMinWidth="56dp"
+            android:layout_gravity="center"
+            android:gravity="right"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>
 
 
-    </androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="match_parent"
