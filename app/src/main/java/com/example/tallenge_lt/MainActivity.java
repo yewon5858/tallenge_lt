@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
         Log.e( TAG, code );
 
         Fragment frag1 = new expFragment().newInstance(code,IdToken);
-        Fragment frag2 = new hobFragment().newInstance(code);
-        Fragment frag3 = new lanFragment().newInstance(code);
-        Fragment frag4 = new spoFragment().newInstance(code);
+        Fragment frag2 = new hobFragment().newInstance(code,IdToken);
+        Fragment frag3 = new lanFragment().newInstance(code,IdToken);
+        Fragment frag4 = new spoFragment().newInstance(code,IdToken);
 
 
         mViewPager = findViewById(R.id.viewPager2_container);
