@@ -142,7 +142,8 @@ public class expFragment extends Fragment {
                                 String item_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
                                 Log.e( "item.equals(int)", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+
+                                if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "컴퓨터" );
 
@@ -238,7 +239,7 @@ public class expFragment extends Fragment {
                                 String item_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "stock" ).getValue().toString();
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "주식" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -302,7 +303,7 @@ public class expFragment extends Fragment {
                                 Log.e( "item.equals()", item_int.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals()", item_int.equals( item_my_int ) + "입니다" );
 
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "역사" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -362,7 +363,7 @@ public class expFragment extends Fragment {
                                 String item_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "math" ).getValue().toString();
                                 String item_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "math" ).getValue().toString();
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "수학" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -422,7 +423,7 @@ public class expFragment extends Fragment {
                         String item_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
                         Log.e( "item.equals(int)", item_exp.equals( item_my_int ) + "입니다" );
                         Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
-                        if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                        if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
                             arrayList.add( user );
                             arrayList2.add( "컴퓨터" );
 
