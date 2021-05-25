@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="@color/white"
+    android:background="@color/white"
     tools:context=".SetAlarmActivity"
     android:orientation="vertical">
 
@@ -12,7 +12,7 @@ android:background="@color/white"
         android:id="@+id/linearLayout"
         android:layout_width="427dp"
         android:layout_height="75dp"
-        android:background="@color/white"
+        android:background="@drawable/textview_border"
         android:orientation="vertical">
 
         <Button
@@ -25,130 +25,122 @@ android:background="@color/white"
     </LinearLayout>
 
     <ScrollView
-        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="519dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
+        android:layout_height="wrap_content"
+        android:layout_weight = "1">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <CheckBox
-                android:id="@+id/checkBox"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/tallengeblue"
-                android:text="CheckBox"
-                android:textColor="@color/black"
-                android:textColorHint="#000000"
-                android:textSize="30dp"
-                android:buttonTint="@color/black"/>
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수학 ↔  컴퓨터"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"/>
 
-            <CheckBox
-                android:id="@+id/cb_sun"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="일요일"
-                android:textColor="@color/black"
-                android:buttonTint="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cb_mon"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
+                <androidx.legacy.widget.Space
+                    android:layout_width="96dp"
+                    android:layout_height="77dp" />
 
-            <CheckBox
-                android:id="@+id/cb_mon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="월요일"
-                android:buttonTint="@color/black"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cb_tue"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/cb_sun"
-                tools:ignore="MissingConstraints" />
+                <Switch
+                    android:layout_width="104dp"
+                    android:layout_height="13dp"
+                    android:checked="true"
+                    android:switchMinWidth="56dp"
+                    android:layout_gravity="center"
+                    android:gravity="right"/>
 
-            <CheckBox
-                android:id="@+id/cb_tue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="화요일"
-                android:buttonTint="@color/black"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cb_wed"
-                app:layout_constraintHorizontal_bias="0.5"
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal">
 
-                app:layout_constraintStart_toEndOf="@+id/cb_mon"
-                tools:ignore="MissingConstraints" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="필라테스 ↔ 영어"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"/>
 
-            <CheckBox
-                android:id="@+id/cb_wed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="수요일"
-                android:buttonTint="@color/black"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/cb_tue"
-                tools:ignore="MissingConstraints" />
+                <androidx.legacy.widget.Space
+                    android:layout_width="70dp"
+                    android:layout_height="57dp" />
 
-            <CheckBox
-                android:id="@+id/cb_thu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="목요일"
-                android:buttonTint="@color/black"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cb_fri"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
+                <Switch
+                    android:layout_width="104dp"
+                    android:layout_height="13dp"
+                    android:checked="true"
+                    android:switchMinWidth="56dp"
+                    android:layout_gravity="center"
+                    android:gravity="right"/>
 
-            <CheckBox
-                android:id="@+id/cb_fri"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="금요일"
-                android:buttonTint="@color/black"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cb_sat"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/cb_thu"
-                tools:ignore="MissingConstraints" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal">
 
-            <CheckBox
-                android:id="@+id/cb_sat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="토요일"
-                android:buttonTint="@color/black"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/cb_fri"
-                tools:ignore="MissingConstraints" />
-            <Button
-                android:id="@+id/btn_set_alarm1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="확인"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="타로 ↔ 스페인어"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"/>
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="72dp"
+                    android:layout_height="58dp" />
+
+                <Switch
+                    android:layout_width="104dp"
+                    android:layout_height="13dp"
+                    android:checked="true"
+                    android:switchMinWidth="56dp"
+                    android:layout_gravity="center"
+                    android:gravity="right"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주식 ↔ 그림"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"/>
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="129dp"
+                    android:layout_height="89dp" />
+
+                <Switch
+                    android:layout_width="104dp"
+                    android:layout_height="13dp"
+                    android:checked="true"
+                    android:switchMinWidth="56dp"
+                    android:layout_gravity="center"
+                    android:gravity="right"/>
+
+            </LinearLayout>
+
         </LinearLayout>
-
     </ScrollView>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"

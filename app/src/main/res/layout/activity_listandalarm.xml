@@ -55,7 +55,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="433dp"
-        android:background="@color/tallengeblue">
+        android:background="@color/tallengeblue"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="350dp"
@@ -119,6 +120,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
+                    android:id="@+id/cb_mon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
@@ -128,6 +130,7 @@
                     android:layout_height="1dp" />
 
                 <CheckBox
+                    android:id="@+id/cb_tue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
@@ -137,6 +140,7 @@
                     android:layout_height="1dp" />
 
                 <CheckBox
+                    android:id="@+id/cb_wed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
@@ -146,6 +150,7 @@
                     android:layout_height="1dp" />
 
                 <CheckBox
+                    android:id="@+id/cb_thu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
@@ -155,6 +160,7 @@
                     android:layout_height="1dp" />
 
                 <CheckBox
+                    android:id="@+id/cb_fri"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
@@ -164,6 +170,7 @@
                     android:layout_height="1dp" />
 
                 <CheckBox
+                    android:id="@+id/cb_sat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
@@ -173,6 +180,7 @@
                     android:layout_height="1dp" />
 
                 <CheckBox
+                    android:id="@+id/cb_sun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/tallengeblue" />
@@ -186,7 +194,7 @@
         android:layout_height="3dp"
         android:background="@color/black"/>
     <Button
-        android:id="@+id/goAlarm"
+        android:id="@+id/btn_set_alarm1"
         android:layout_width="180dp"
         android:layout_height="50dp"
         android:layout_gravity="center"

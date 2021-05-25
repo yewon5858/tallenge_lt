@@ -45,7 +45,7 @@
             android:layout_height="91dp"
             android:layout_gravity="center"
             android:contentDescription="TODO"
-            tools:src="@mipmap/ic_launcher" />
+            android:background="@drawable/ic_baseline_perm_identity_24" />
 
         <Space
             android:layout_width="match_parent"

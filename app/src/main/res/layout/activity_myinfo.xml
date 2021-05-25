@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +37,8 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,17 +48,19 @@
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@drawable/ic_baseline_perm_identity_24" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/id"
                 android:layout_width="212dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:background="@drawable/textview_border"
-                android:text="TextView" />
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="30dp"/>
 
         </LinearLayout>
 
@@ -90,7 +93,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="313dp"
+            android:layout_height="396dp"
             android:orientation="vertical">
 
             <Space
@@ -108,7 +111,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="17dp" />
+                android:layout_height="42dp" />
 
             <Button
                 android:id="@+id/btn_go_itr"
@@ -121,7 +124,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="17dp" />
+                android:layout_height="48dp" />
 
             <Button
                 android:id="@+id/btn_go_checklist"
@@ -134,7 +137,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="17dp" />
+                android:layout_height="45dp" />
 
             <Button
                 android:id="@+id/btn_go_modifyinfo"
