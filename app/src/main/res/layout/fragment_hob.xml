@@ -27,7 +27,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/button_pressed"
                 android:text="음악"
                 android:textColor="@color/black" />
 
@@ -40,7 +40,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/button_pressed"
                 android:text="타로"
                 android:textColor="@color/black" />
 
@@ -52,7 +52,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/button_pressed"
                 android:text="레진공예"
                 android:textColor="@color/black" />
 
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/button_pressed"
                 android:text="그림"
                 android:textColor="@color/black" />
         </LinearLayout>
@@ -70,7 +70,7 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/ta_bar"></androidx.recyclerview.widget.RecyclerView>
+            ></androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
 </FrameLayout>

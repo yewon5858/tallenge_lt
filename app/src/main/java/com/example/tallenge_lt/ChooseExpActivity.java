@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,8 +34,7 @@ public class ChooseExpActivity extends AppCompatActivity {
     private Button btn_go_alarm;
     private Button btn_go_myinfo;
     private ImageView imageView;
-<<<<<<< HEAD
-=======
+
     private TextView bc, sc, ctf;
 
 
@@ -54,7 +54,6 @@ public class ChooseExpActivity extends AppCompatActivity {
 //mountainsRef.getName().equals(mountainImagesRef.getName());    // true
 //mountainsRef.getPath().equals(mountainImagesRef.getPath());    // false
 
->>>>>>> 3eb75e09232ac57d0e0f5667e2a311d96fff63c9
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
