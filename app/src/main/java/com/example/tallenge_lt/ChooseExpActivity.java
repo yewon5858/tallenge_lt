@@ -33,6 +33,28 @@ public class ChooseExpActivity extends AppCompatActivity {
     private Button btn_go_alarm;
     private Button btn_go_myinfo;
     private ImageView imageView;
+<<<<<<< HEAD
+=======
+    private TextView bc, sc, ctf;
+
+
+
+    //private OnIntentReceived mIntentListener;
+    // Create a storage reference from our app
+    //StorageReference storageRef = storage.getReference();
+
+    // Create a reference to "mountains.jpg"
+    //StorageReference mountainsRef = storageRef.child("mountains.jpg");
+    //StorageReference mStorageRef = FirebaseStorage.getInstance().getReference(); //스토리지
+    // Create a reference to 'images/mountains.jpg'
+    //StorageReference mountainImagesRef = storageRef.child("images/mountains.jpg");
+    //StorageReference mExpRef = mStorageRef.child("expImage"); //프로필 스토리지 저장이름은 사용자 고유토큰과 스트링섞어서 만들었다.
+
+// While the file names are the same, the references point to different files
+//mountainsRef.getName().equals(mountainImagesRef.getName());    // true
+//mountainsRef.getPath().equals(mountainImagesRef.getPath());    // false
+
+>>>>>>> 3eb75e09232ac57d0e0f5667e2a311d96fff63c9
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
