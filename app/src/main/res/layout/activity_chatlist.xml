@@ -53,7 +53,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="486dp"
-                android:id="@+id/rvchatlist">
+                android:id="@+id/rvchatlist"
+                >
 
             </androidx.recyclerview.widget.RecyclerView>
 <!--            <LinearLayout-->
