@@ -45,8 +45,7 @@
         android:id="@+id/chatlist"
         android:layout_width="match_parent"
         android:layout_height="486dp"
-        android:background="@color/tallengeblue"
-        android:layout_weight="1">
+        android:background="@color/tallengeblue">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="486dp"

@@ -22,8 +22,6 @@ import java.util.ArrayList;
 public class ExpActivity extends AppCompatActivity {
     //데이터베이스 연결
     private DatabaseReference mDatabaseRef;
-    private DatabaseReference myRef;
-
     // 전문분야 string 선언을 위한 내용
     ArrayAdapter<String> adapter;
     ArrayList<String> listItem_exp; // 전문분야 카테고리 - 전문분야
@@ -44,7 +42,6 @@ public class ExpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exp);
-
 
         //firebase 연결
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("tallenge");

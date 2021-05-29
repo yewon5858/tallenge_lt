@@ -50,8 +50,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NotNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-            View v = LayoutInflater.from(parent.getContext()).inflate( R.layout.catagory_item,parent,false);
-            MyViewHolder holder = new MyViewHolder( v );
+        View v = LayoutInflater.from(parent.getContext()).inflate( R.layout.catagory_item,parent,false);
+        MyViewHolder holder = new MyViewHolder( v );
 
         return holder;
     }

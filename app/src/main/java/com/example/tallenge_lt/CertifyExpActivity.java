@@ -35,6 +35,7 @@ public class CertifyExpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_certifyexp);
 
 
+
         recyclerView = (RecyclerView)findViewById(R.id.rv);
         linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -53,6 +54,7 @@ public class CertifyExpActivity extends AppCompatActivity {
                 startActivity(intent);  //액티비티 이동
             }
         });
+
 
 
         Button btn_add = (Button)findViewById(R.id.btn_add);

@@ -19,7 +19,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.annotations.NotNull;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -111,8 +112,10 @@ public class expFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
+
                         String item_my_int = null;
                         String item_my_exp = null;
+
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
@@ -120,8 +123,9 @@ public class expFragment extends Fragment {
                             if(uid_check.equals( "false" )) {
                                 item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
                                 item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
+
                                 Log.e(" item_my_interest",item_my_int);
-                                Log.e(" item_my_interest",item_my_exp);
+                                Log.e(" item_my_exp",item_my_exp);
                                 break;
                             }
                         }
@@ -138,7 +142,7 @@ public class expFragment extends Fragment {
                                 String item_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
                                 Log.e( "item.equals(int)", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "컴퓨터" );
 
@@ -204,8 +208,10 @@ public class expFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
+
                         String item_my_int = null;
                         String item_my_exp = null;
+
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
@@ -213,6 +219,8 @@ public class expFragment extends Fragment {
                             if(uid_check.equals( "false" )) {
                                 item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "stock" ).getValue().toString();
                                 item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "stock" ).getValue().toString();
+
+
                                 Log.e(" item_my_interest",item_my_int);
                                 Log.e(" item_my_exp",item_my_exp);
                                 break;
@@ -230,7 +238,7 @@ public class expFragment extends Fragment {
                                 String item_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "stock" ).getValue().toString();
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "주식" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -261,8 +269,11 @@ public class expFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
+
                         String item_my_int = null;
                         String item_my_exp = null;
+
+
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
@@ -270,8 +281,11 @@ public class expFragment extends Fragment {
                             if(uid_check.equals( "false" )) {
                                 item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "history" ).getValue().toString();
                                 item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "history" ).getValue().toString();
+
+
                                 Log.e(" item_my_interest",item_my_int);
                                 Log.e(" item_my_exp",item_my_exp);
+
                                 break;
                             }
                         }
@@ -288,7 +302,7 @@ public class expFragment extends Fragment {
                                 Log.e( "item.equals()", item_int.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals()", item_int.equals( item_my_int ) + "입니다" );
 
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "역사" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -318,8 +332,11 @@ public class expFragment extends Fragment {
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         arrayList.clear();
                         arrayList2.clear();
+
                         String item_my_int = null;
                         String item_my_exp = null;
+
+
                         for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                             UserAccount user = dataSnapshot.getValue(UserAccount.class);
                             String uid = user.getIdToken();
@@ -327,8 +344,10 @@ public class expFragment extends Fragment {
                             if(uid_check.equals( "false" )) {
                                 item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "math" ).getValue().toString();
                                 item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "math" ).getValue().toString();
+
                                 Log.e(" item_my_interest",item_my_int);
                                 Log.e(" item_my_exp",item_my_exp);
+
                                 break;
                             }
                         }
@@ -343,7 +362,7 @@ public class expFragment extends Fragment {
                                 String item_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "math" ).getValue().toString();
                                 String item_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "math" ).getValue().toString();
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "수학" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -372,8 +391,10 @@ public class expFragment extends Fragment {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 arrayList.clear();
                 arrayList2.clear();
+
                 String item_my_int = null;
                 String item_my_exp = null;
+
                 for(DataSnapshot dataSnapshot :snapshot.getChildren()){
                     UserAccount user = dataSnapshot.getValue(UserAccount.class);
                     String uid = user.getIdToken();
@@ -381,8 +402,10 @@ public class expFragment extends Fragment {
                     if(uid_check.equals( "false" )) {
                         item_my_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
                         item_my_exp = dataSnapshot.child( "expdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
+
                         Log.e(" item_my_interest",item_my_int);
-                        Log.e(" item_my_interest",item_my_exp);
+                        Log.e(" item_my_exp",item_my_exp);
+
                         break;
                     }
                 }
@@ -399,7 +422,7 @@ public class expFragment extends Fragment {
                         String item_int = dataSnapshot.child( "interestdata" ).child( "Exp_item" ).child( "computer" ).getValue().toString();
                         Log.e( "item.equals(int)", item_exp.equals( item_my_int ) + "입니다" );
                         Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
-                        if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                        if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                             arrayList.add( user );
                             arrayList2.add( "컴퓨터" );
 

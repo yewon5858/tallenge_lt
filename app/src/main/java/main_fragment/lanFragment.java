@@ -19,7 +19,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.annotations.NotNull;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -127,7 +128,8 @@ public class lanFragment extends Fragment {
                                 String item_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "영어" );
 
@@ -188,7 +190,7 @@ public class lanFragment extends Fragment {
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
 
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "중국어" );
 
@@ -248,7 +250,7 @@ public class lanFragment extends Fragment {
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
 
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "일본어" );
 
@@ -308,7 +310,7 @@ public class lanFragment extends Fragment {
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
 
-                                if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "스페인어" );
 
@@ -364,7 +366,8 @@ public class lanFragment extends Fragment {
                         String item_int = dataSnapshot.child( "interestdata" ).child( "Lan_item" ).child( "eng" ).getValue().toString();
                         Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                         Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
-                        if(item_exp.equals( item_my_int ) && item_int.equals( item_my_exp )) {
+
+                        if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                             arrayList.add( user );
                             arrayList2.add( "영어" );
 
