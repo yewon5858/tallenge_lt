@@ -135,7 +135,7 @@ public class spoFragment extends Fragment {
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
 
-                                if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "수영" );
 
@@ -196,7 +196,7 @@ public class spoFragment extends Fragment {
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
 
-                                if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "필라테스" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -254,7 +254,7 @@ public class spoFragment extends Fragment {
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
 
-                                if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "홈트" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -312,7 +312,7 @@ public class spoFragment extends Fragment {
                                 Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                                 Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
 
-                                if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
+                                if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                                     arrayList.add( user );
                                     arrayList2.add( "배드민턴" );
                                     Log.e( "arrayList2로 받은 유저 정보", arrayList2 + "입니다" );
@@ -370,7 +370,7 @@ public class spoFragment extends Fragment {
                         Log.e( "item.equals()", item_exp.equals( item_my_int ) + "입니다" );
                         Log.e( "item.equals(exp)", item_int.equals( item_my_exp ) + "입니다" );
 
-                        if(item_my_int.equals("false") & item_exp.equals( item_my_int )) {
+                        if(item_my_int.equals("true") & item_exp.equals( item_my_int )) {
                             arrayList.add( user );
                             arrayList2.add( "수영" );
 
