@@ -159,8 +159,10 @@ public class ChooseExpActivity extends AppCompatActivity {
                         Exp_item exp_item = snapshot.getValue(Exp_item.class);
                         assert exp_item != null;
                         if (exp_item.getComputer().equals("true")) {
-                            ChooseExpData chooseExpData1 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
-                                    , "전문분야", "컴퓨터", "");
+                            if(myRef.child("컴퓨터").child("tv_small_category").equals("")) {
+                                ChooseExpData chooseExpData1 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
+                                        , "전문분야", "컴퓨터", "");
+                            }
                             myRef.child("컴퓨터").setValue(chooseExpData1);
                             arrayList.add(chooseExpData1);
 
