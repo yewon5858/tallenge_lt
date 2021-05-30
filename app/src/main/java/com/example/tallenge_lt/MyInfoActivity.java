@@ -49,15 +49,13 @@ public class MyInfoActivity extends AppCompatActivity {
         IdToken = getIntent().getStringExtra("idToken");
         user = getIntent().getStringExtra("user");
 
-
-
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MyInfoActivity.this, MainActivity.class) ;
-                emailId = getIntent().getStringExtra("emailId");
-                IdToken = getIntent().getStringExtra("idToken");
-                user = getIntent().getStringExtra("user");
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });
@@ -65,9 +63,7 @@ public class MyInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MyInfoActivity.this, ChooseExpActivity.class) ;
-                emailId = getIntent().getStringExtra("emailId");
-                IdToken = getIntent().getStringExtra("idToken");
-                user = getIntent().getStringExtra("user");
+
                 startActivity( intent );
             }
         });
@@ -75,9 +71,7 @@ public class MyInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MyInfoActivity.this, SetCheckListActivity.class) ;
-                emailId = getIntent().getStringExtra("emailId");
-                IdToken = getIntent().getStringExtra("idToken");
-                user = getIntent().getStringExtra("user");
+
                 startActivity( intent );
             }
         });
@@ -85,6 +79,7 @@ public class MyInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MyInfoActivity.this, InterestActivity.class) ;
+
                 startActivity( intent );
             }
         });
@@ -111,9 +106,9 @@ public class MyInfoActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent( getApplicationContext(), MainActivity.class );
-                emailId = getIntent().getStringExtra("emailId");
-                IdToken = getIntent().getStringExtra("idToken");
-                user = getIntent().getStringExtra("user");
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });
@@ -121,9 +116,9 @@ public class MyInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), ChatActivity.class );
-                emailId = getIntent().getStringExtra("emailId");
-                IdToken = getIntent().getStringExtra("idToken");
-                user = getIntent().getStringExtra("user");
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });
@@ -131,9 +126,9 @@ public class MyInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), SetAlarmActivity.class );
-                emailId = getIntent().getStringExtra("emailId");
-                IdToken = getIntent().getStringExtra("idToken");
-                user = getIntent().getStringExtra("user");
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });
@@ -141,9 +136,9 @@ public class MyInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), MyInfoActivity.class );
-                emailId = getIntent().getStringExtra("emailId");
-                IdToken = getIntent().getStringExtra("idToken");
-                user = getIntent().getStringExtra("user");
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });

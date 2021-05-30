@@ -102,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), ChatActivity.class );
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });
@@ -109,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), SetAlarmActivity.class );
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });
@@ -116,6 +122,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( getApplicationContext(), MyInfoActivity.class );
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity( intent );
             }
         });

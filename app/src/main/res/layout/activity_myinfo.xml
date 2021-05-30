@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="vertical"
+        android:background="@drawable/textview_border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,13 +33,13 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="563dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:layout_weight="1">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,13 +61,13 @@
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="@color/black"
-                android:textSize="30dp"/>
+                android:textSize="30dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="117dp"
+            android:layout_height="82dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +77,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="71dp"
                     android:background="@drawable/textview_border"
                     android:hint="hint" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -92,9 +93,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="396dp"
-            android:orientation="vertical">
+            android:layout_width="350dp"
+            android:layout_height="362dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
             <Space
                 android:layout_width="match_parent"
@@ -104,7 +107,7 @@
                 android:id="@+id/btn_go_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/textview_border"
+                android:background="@color/tallengeblue"
                 android:text="전문분야 인증 및 선택"
                 android:textColor="#000000"
                 android:textSize="18sp" />
@@ -117,33 +120,33 @@
                 android:id="@+id/btn_go_itr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/textview_border"
+                android:background="@color/tallengeblue"
                 android:text="관심분야 선택"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="48dp" />
+                android:layout_height="42dp" />
 
             <Button
                 android:id="@+id/btn_go_checklist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/textview_border"
+                android:background="@color/tallengeblue"
                 android:text="교환 체크리스트 설정"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="45dp" />
+                android:layout_height="42dp" />
 
             <Button
                 android:id="@+id/btn_go_modifyinfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/textview_border"
+                android:background="@color/tallengeblue"
                 android:text="내 정보 수정"
                 android:textColor="#000000"
                 android:textSize="18sp" />

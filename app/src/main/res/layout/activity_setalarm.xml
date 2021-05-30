@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_back"
             android:layout_width="69dp"
             android:layout_height="70dp"
             android:background="@drawable/ic_baseline_arrow_back_24"
