@@ -25,7 +25,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black" />
+        android:background="@color/tallengeblue" />
 
     <TextView
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black" />
+        android:background="@color/tallengeblue" />
     <EditText
         android:layout_width="300dp"
         android:layout_height="60dp"
@@ -52,7 +52,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/tallengeblue"/>
 
     <ScrollView
         android:id="@+id/scroll"
@@ -82,7 +82,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/tallengeblue"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -115,7 +115,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/tallengeblue"/>
 
     <LinearLayout
         android:layout_width="match_parent"

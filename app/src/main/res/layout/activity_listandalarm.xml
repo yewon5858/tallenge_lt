@@ -38,7 +38,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/tallengeblue"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -50,7 +50,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/ta_blue_dark"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -96,7 +96,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/black" />
+                android:background="@color/tallengeblue" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -110,7 +110,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/black" />
+                android:background="@color/tallengeblue" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -192,7 +192,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/tallengeblue"/>
     <Button
         android:id="@+id/btn_set_alarm1"
         android:layout_width="180dp"
@@ -205,7 +205,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/black"/>
+        android:background="@color/tallengeblue"/>
 
     <LinearLayout
         android:layout_width="match_parent"
