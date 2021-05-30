@@ -50,6 +50,9 @@ public class ListAndAlarmActivity extends AppCompatActivity {
     //    FirebaseDatabase database;
     DatabaseReference myRef;
 
+    String emailId;
+    String IdToken;
+    String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +86,9 @@ public class ListAndAlarmActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
 
-
+        emailId = getIntent().getStringExtra("emailId");
+        IdToken = getIntent().getStringExtra("idToken");
+        user = getIntent().getStringExtra("user");
 
 //뒤로가기
         Button back_btn3 = (Button) findViewById(R.id.btnbk3);
@@ -105,6 +110,9 @@ public class ListAndAlarmActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                intent.putExtra( "idToken",IdToken );
+                intent.putExtra( "emailId",emailId);
+                intent.putExtra(  "user",user);
                 startActivity(intent);
 /*
                 getMyRef.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
