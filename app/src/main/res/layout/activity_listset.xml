@@ -23,6 +23,12 @@
             app:backgroundTint="@color/black" />
     </LinearLayout>
 
+    //리니어 레이아웃 추가(weight 추가를 위해)
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
@@ -42,15 +48,20 @@
         android:layout_height="3dp"
         android:background="@color/tallengeblue" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="435dp"
+        android:layout_height="match_parent"
         android:background="@color/tallengeblue">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <Space
@@ -73,26 +84,28 @@
 
         </LinearLayout>
     </ScrollView>
+    </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/ta_bar" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/ta_bar" />
 
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_gravity="end"
-        android:id="@+id/add_list"
-        android:text="+"
-        app:backgroundTint="#B3B2B2"
-        android:background="@color/tallengeblue"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:id="@+id/add_list"
+            android:text="+"
+            app:backgroundTint="#B3B2B2"
+            android:background="@color/tallengeblue"/>
 
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/ta_bar" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/ta_bar" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

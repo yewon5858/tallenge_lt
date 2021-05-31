@@ -24,6 +24,13 @@
 
 
     </LinearLayout>
+    //리니어로 묶음(weight 설정을 위해)
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
@@ -227,6 +234,8 @@
             />
 
     </LinearLayout>
+    </LinearLayout>
+
 
     <View
         android:layout_width="match_parent"

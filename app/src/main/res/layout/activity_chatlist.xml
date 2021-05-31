@@ -40,11 +40,16 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/ta_blue_dark"/>
-
+    //리니어 레이아웃 추가(weight 추가를 위해)
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
     <ScrollView
         android:id="@+id/chatlist"
         android:layout_width="match_parent"
-        android:layout_height="486dp"
+        android:layout_height="match_parent"
         android:background="@color/tallengeblue">
         <LinearLayout
             android:layout_width="match_parent"
@@ -145,6 +150,7 @@
         </LinearLayout>
 
     </ScrollView>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
