@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -109,11 +110,12 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                intent.putExtra( "idToken",IdToken );
-                intent.putExtra( "emailId",emailId);
-                intent.putExtra(  "user",user);
-                startActivity(intent);
+                Toast.makeText(ListAndAlarmActivity.this, "재능교환이 완료되었습니다!", Toast.LENGTH_LONG).show();
+//                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+//                intent.putExtra( "idToken",IdToken );
+//                intent.putExtra( "emailId",emailId);
+//                intent.putExtra(  "user",user);
+//                startActivity(intent);
 /*
                 getMyRef.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
