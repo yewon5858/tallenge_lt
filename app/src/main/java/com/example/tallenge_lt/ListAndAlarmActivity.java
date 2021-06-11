@@ -219,6 +219,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View arg0) {
+                Toast.makeText(ListAndAlarmActivity.this, "알람이 설정되었습니다.", Toast.LENGTH_LONG).show();
                 //alarmData에 요일별로 부울로 넣음(파이어베이스에도)
                 alarmData.setSun(sun.isChecked());
                 myRef.setValue(alarmData);
