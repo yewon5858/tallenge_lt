@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-
+//사용 x
 public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.CustomViewHolder> {
     private ArrayList<ChatListData> arrayList;
     private Context context;

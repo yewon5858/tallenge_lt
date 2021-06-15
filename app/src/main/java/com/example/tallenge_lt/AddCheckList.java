@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 //새로운 체크리스트 추가 UI
 public class AddCheckList extends AppCompatActivity {
-
+    //변수선언
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = database.getReference();
     Button complt;
@@ -39,7 +39,7 @@ public class AddCheckList extends AppCompatActivity {
         edit3 = findViewById(R.id.edit3);
         edit4 = findViewById(R.id.edit4);
         edit5 = findViewById(R.id.edit5);
-
+        //저장버튼 클릭
         complt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +47,7 @@ public class AddCheckList extends AppCompatActivity {
                 Toast.makeText(AddCheckList.this, "저장되었습니다!", Toast.LENGTH_LONG).show();
             }
         });
-
+        //설정완료 버튼 클릭
         Button end=(Button) findViewById(R.id.end);
         end.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +103,7 @@ public class AddCheckList extends AppCompatActivity {
 
 
     }
-
+    //생성 체크리스트를 DB에 저장
     public void AddCheck(String CheckTitle,String checkitem1,String checkitem2,String checkitem3,String checkitem4,String checkitem5){
         if(CheckTitle.length()!=0 &&(checkitem1.length()!=0||checkitem2.length()!=0||checkitem3.length()!=0||checkitem4.length()!=0||checkitem5.length()!=0)) {
             AddCheckData checkData = new AddCheckData(CheckTitle, checkitem1, checkitem2, checkitem3, checkitem4, checkitem5);

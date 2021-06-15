@@ -57,6 +57,7 @@ public class ChooseListActivity extends AppCompatActivity {
         arrayList=new ArrayList<>();
         database=FirebaseDatabase.getInstance();
         databaseReference=database.getReference("tallenge").child("checklist");
+        //DB데이터 갱신 후 출력
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {

@@ -68,6 +68,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
         arrayList=new ArrayList<>();
         database=FirebaseDatabase.getInstance();
         databaseReference=database.getReference("tallenge").child("checklist").child(title);
+        //체크리스트 항목 출력
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {

@@ -1,5 +1,3 @@
-
-
 package com.example.tallenge_lt;
 
 import android.content.Context;
@@ -49,6 +47,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
         ChatData chat=mDataset.get(position);
         holder.TextView_nickname.setText(chat.getNickname());
         holder.TextView_msg.setText(chat.getMsg());
+        //나의 채팅->오른쪽 상대 채팅 왼쪽 정렬
         if(chat.getNickname()!=null &&this.myNickName!=null && chat.getNickname().equals(this.myNickName)) {
             holder.TextView_msg.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
             holder.TextView_nickname.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);

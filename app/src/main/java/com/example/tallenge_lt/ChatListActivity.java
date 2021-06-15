@@ -35,6 +35,7 @@ public class ChatListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //미구현으로 recyclerview 변수 사용 x
         setContentView(R.layout.activity_chatlist);
         recyclerView=findViewById(R.id.rvchatlist);
         recyclerView.setHasFixedSize(true);

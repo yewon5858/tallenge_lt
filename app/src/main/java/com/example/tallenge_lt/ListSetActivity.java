@@ -60,6 +60,7 @@ public class ListSetActivity extends AppCompatActivity {
         arrayList=new ArrayList<>();
         database=FirebaseDatabase.getInstance();
         databaseReference= database.getReference("tallenge").child("checklist");
+        //DB내용 출력 및 변경 저장
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
@@ -80,35 +81,7 @@ public class ListSetActivity extends AppCompatActivity {
         });
         adapter=new ListSetAdapter(arrayList,this);
         recyclerView.setAdapter(adapter);
-//        recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent=new Intent(getApplicationContext(),SetCheckListActivity.class);
-//                intent.putExtra("title",arrayList.get(position).checkTitle);
-//                startActivity(intent);
-//            }
-//        });
 
-
-
-
-//        set.add(new Set("중국어"));
-//        set.add(new Set("C언어"));
-//        set.add(new Set("영어"));
-//        set.add(new Set("일본어"));
-//
-//        ListSetAdapter adapter=new ListSetAdapter(getApplicationContext(),R.layout.settitlelist,set);
-//        ListView listView=(ListView)findViewById(R.id.listview2);
-//        listView.setAdapter(adapter);
-//
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent=new Intent(getApplicationContext(),SetCheckListActivity.class);
-//                intent.putExtra("title",set.get(position).title);
-//                startActivity(intent);
-//            }
-//        });
 
         //뒤로가기버튼
         Button bck_btn = (Button) findViewById(R.id.bck_btn);
