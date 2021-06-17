@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
+//사용 안함!!!!!
 public class CertifyExpActivity extends AppCompatActivity {
     private ArrayList<CertifyExpData> arrayList;
     private CertifyExpAdapter certifyExpAdapter;

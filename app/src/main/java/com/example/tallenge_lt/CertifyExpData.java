@@ -1,7 +1,7 @@
 package com.example.tallenge_lt;
 
 import android.graphics.Bitmap;
-
+//사용 안함
 public class CertifyExpData {
     private Bitmap iv_profile;
     private String tv_name;

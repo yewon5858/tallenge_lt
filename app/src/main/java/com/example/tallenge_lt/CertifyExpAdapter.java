@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-
+//사용 안함
 public class CertifyExpAdapter extends RecyclerView.Adapter<CertifyExpAdapter.CustomViewHolder> {
 
     private ArrayList<CertifyExpData> arrayList;

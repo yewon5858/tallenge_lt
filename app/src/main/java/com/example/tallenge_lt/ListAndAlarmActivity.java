@@ -172,7 +172,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
             }
         });
 
-//알림
+//푸시 알림 부분
+        //DB 연결
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("tallenge").child("alarm");
         // 앞서 설정한 값으로 보여주기
@@ -208,7 +209,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
 
 
-//시간 설정
+        //시간 설정
         int hour = 9;
         int minute = 0;
 
