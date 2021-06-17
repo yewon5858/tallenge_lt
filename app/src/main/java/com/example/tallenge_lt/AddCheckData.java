@@ -1,5 +1,5 @@
 package com.example.tallenge_lt;
-
+//firebase에 저장될 DB명 선언
 public class AddCheckData {
     private String checkitem1;
     private String checkitem2;

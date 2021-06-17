@@ -19,7 +19,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 import static android.content.Context.MODE_PRIVATE;
-
+//디바이스 재부팅시에도 푸시 알림 가도록 함
 public class DeviceBootReceiver extends BroadcastReceiver {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override

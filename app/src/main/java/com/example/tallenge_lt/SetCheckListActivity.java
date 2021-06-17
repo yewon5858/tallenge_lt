@@ -43,6 +43,7 @@ public class SetCheckListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setchecklist);
         EditText editText=(EditText) findViewById(R.id.btn_chatitem);
         Intent intent =getIntent();
+        //intent시 체크리스트 제목 값 가져오기
         String exp=intent.getStringExtra("checkTitle");
         editText.setText(exp);
         recyclerView =findViewById(R.id.rvsetcheck);
@@ -52,7 +53,7 @@ public class SetCheckListActivity extends AppCompatActivity {
         arrayList=new ArrayList<>();
         database=FirebaseDatabase.getInstance();
         databaseReference=database.getReference("tallenge").child("checklist").child(exp);
-
+        //리싸이클러뷰에 데이터 출력
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {

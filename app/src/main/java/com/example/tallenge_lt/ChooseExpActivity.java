@@ -7,7 +7,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,7 +31,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -90,7 +88,7 @@ public class ChooseExpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ch_exp);
 
 
-
+        //리사이클러뷰 생성
         recyclerView = (RecyclerView)findViewById(R.id.ch_exp_rv);
         recyclerView.setHasFixedSize(true);  //리사이클러뷰 성능 강화
         layoutManager = new LinearLayoutManager(this);
@@ -118,7 +116,7 @@ public class ChooseExpActivity extends AppCompatActivity {
  */
 
 
-
+        //유저 토큰 받기
         String IdToken;
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
@@ -127,6 +125,8 @@ public class ChooseExpActivity extends AppCompatActivity {
         } else {
             // No user is signed in
         }
+
+        //DB 연결
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("tallenge").child("CertifyImg").child(user.getUid());
         categoryRef = database.getReference("tallenge").child("UserAccount").child(user.getUid()).child("expdata");
@@ -139,7 +139,7 @@ public class ChooseExpActivity extends AppCompatActivity {
         ChooseExpData chooseExpData1 = new ChooseExpData("https://firebasestorage.googleapis.com/v0/b/tallenge-lt.appspot.com/o/images.png?alt=media&token=4ae189ff-76f9-4c11-b0ce-9bc6621a9704"
                 , "Exp_item", "computer", "");
 
-
+        //DB 변경
         ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -361,7 +361,7 @@ public class ChooseExpActivity extends AppCompatActivity {
 
  */
     }
-
+    //갤러리 이동동
     ImageView image1;
     String test1;
 
@@ -381,6 +381,7 @@ public class ChooseExpActivity extends AppCompatActivity {
     }
 
 
+    /*
 
     public static String BitmapToString(Bitmap bitmap) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -389,6 +390,7 @@ public class ChooseExpActivity extends AppCompatActivity {
         String temp = Base64.encodeToString(bytes, Base64.DEFAULT);
         return temp;
     }
+    */
 
 }
 

@@ -24,7 +24,7 @@ public class ListSetAdapter extends RecyclerView.Adapter<ListSetAdapter.CustomVi
         this.arrayList = arrayList;
         this.context = context;
     }
-
+    // 뷰홀더 선언
     public class CustomViewHolder extends RecyclerView.ViewHolder {
         TextView checktitle;
 //        TextView checkitem1;
@@ -50,7 +50,7 @@ public class ListSetAdapter extends RecyclerView.Adapter<ListSetAdapter.CustomVi
         CustomViewHolder holder=new CustomViewHolder(view);
         return holder;
     }
-
+    //체크리스트 제목 출력 및 터치시 화면 전환
     @Override
     public void onBindViewHolder(@NonNull ListSetAdapter.CustomViewHolder holder, int position) {
         holder.checktitle.setText(arrayList.get(position).getChecktitle());

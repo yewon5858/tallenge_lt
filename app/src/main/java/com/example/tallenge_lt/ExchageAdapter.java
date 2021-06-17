@@ -30,7 +30,7 @@ public class ExchageAdapter extends RecyclerView.Adapter<ExchageAdapter.CustomVi
         CustomViewHolder holder=new CustomViewHolder(view);
         return holder;
     }
-
+    //체크리스트 제목만 출력+제목 클릭시 화면 전환
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         holder.checktitle.setText(arraylist.get(position).getChecktitle());

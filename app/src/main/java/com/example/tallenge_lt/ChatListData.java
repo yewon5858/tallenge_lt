@@ -1,5 +1,5 @@
 package com.example.tallenge_lt;
-
+//사용 x
 public class ChatListData {
     private String roomID;
     private String nickname;//사용자

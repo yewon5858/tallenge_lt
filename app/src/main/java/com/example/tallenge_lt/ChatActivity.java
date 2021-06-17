@@ -1,6 +1,5 @@
 package com.example.tallenge_lt;
-//채팅 남은과제: 채팅방 아이디, 보낸시간 구현, 프로필리스트에서 닉네임intent값 받도록 바꾸기
-// (현재 로그인액티비티에서 받아서 로그인 액티비티로 바로 넘어가도록 변경)
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 //ChatAdapter.java ,ChatData.java, chatview.xml
 public class ChatActivity extends AppCompatActivity {
+    //변수 선언
     private RecyclerView mRecyclerView;
     public RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -53,23 +53,16 @@ public class ChatActivity extends AppCompatActivity {
         String nick1=intent.getStringExtra("emaill");
         nick.setText("E-mail: "+nick1);
 
-//        <-->//에러나면 위에 각주되어있는 String nick="nick1"쓰시고 email변수 들어간 곳 다 nick으로 바꾸시고 테스트하시면됩니다.
-        //버튼 클릭
+        //채팅 전송버튼 누를 시
         push_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Calendar c=Calendar.getInstance();
-//                SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM--DD hh:mm:ss");
-//                String datetime =dateFormat.format(c.getTime());
-//                FirebaseDatabase database = FirebaseDatabase.getInstance();
-//                myRef = database.getReference("tallenge").child("message").child(datetime);
-
                 String msg= inputText.getText().toString(); //메세지 값 받기
-                if(msg.length()!=0) {
+                if(msg.length()!=0) {//널체크
                     ChatData chat = new ChatData();
-                    chat.setNickname(email);
-                    chat.setMsg(msg);
-                    myRef.push().setValue(chat);
+                    chat.setNickname(email);//email출력
+                    chat.setMsg(msg);//메시지 출력
+                    myRef.push().setValue(chat);//firebase저장
                 }
             }
         });
@@ -93,28 +86,18 @@ public class ChatActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //리싸이클러뷰 선언
+        //리싸이클러뷰 선언-> 채팅 화면 출력
         mRecyclerView=findViewById(R.id.rvmessage);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager=new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-
         chatList=new ArrayList<>();
-        //이메일로 되어있음->나중에 닉네임으로
         mAdapter=new ChatAdapter(chatList,ChatActivity.this,email);
-
         mRecyclerView.setAdapter(mAdapter);
 
-        // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("tallenge").child("message");
-
-
-//        ChatData chat= new ChatData();
-//        chat.setNickname(nick);
-//        chat.setMsg("hi");
-//        myRef.setValue("Hello, World!");
-
+        //데이터 갱신
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {

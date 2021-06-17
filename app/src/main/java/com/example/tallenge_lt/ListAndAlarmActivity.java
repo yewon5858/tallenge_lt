@@ -68,6 +68,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
         arrayList=new ArrayList<>();
         database=FirebaseDatabase.getInstance();
         databaseReference=database.getReference("tallenge").child("checklist").child(title);
+        //체크리스트 항목 출력
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
@@ -171,7 +172,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
             }
         });
 
-//알림
+//푸시 알림 부분
+        //DB 연결
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("tallenge").child("alarm");
         // 앞서 설정한 값으로 보여주기
@@ -207,7 +209,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
 
 
-//시간 설정
+        //시간 설정
         int hour = 9;
         int minute = 0;
 
@@ -219,6 +221,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View arg0) {
+                Toast.makeText(ListAndAlarmActivity.this, "알람이 설정되었습니다.", Toast.LENGTH_LONG).show();
                 //alarmData에 요일별로 부울로 넣음(파이어베이스에도)
                 alarmData.setSun(sun.isChecked());
                 myRef.setValue(alarmData);
