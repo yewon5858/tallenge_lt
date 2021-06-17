@@ -59,16 +59,15 @@ public class MainActivity extends AppCompatActivity {
 
         code = "";
         Log.e( TAG, code );
-
+        // fragment 이동구현
         Fragment frag1 = new expFragment().newInstance(code,IdToken);
         Fragment frag2 = new hobFragment().newInstance(code,IdToken);
         Fragment frag3 = new lanFragment().newInstance(code,IdToken);
         Fragment frag4 = new spoFragment().newInstance(code,IdToken);
 
-
+        // Viewpager2를 이용한 recyclerView 구현
         mViewPager = findViewById(R.id.viewPager2_container);
         tabLayout = findViewById(R.id.tabLayout);
-
 
         myPagerAdapter = new MyViewPagerAdapter(this);
         myPagerAdapter.addFrag(frag1);
@@ -82,9 +81,7 @@ public class MainActivity extends AppCompatActivity {
         new TabLayoutMediator(tabLayout, mViewPager, (tab, position) -> tab.setText(titles[position])).attach();
 
 
-
-
-        // MainActivity로 이동
+        // MainActivity에서 main,chat리스트(미구현), 알람 on/off(일부구현), mypage(일부구현)으로 이동
         bt_home = (ImageButton) findViewById(R.id.home);
         bt_chat = (ImageButton) findViewById(R.id.chat);
         bt_alarm = (ImageButton) findViewById(R.id.alarm);

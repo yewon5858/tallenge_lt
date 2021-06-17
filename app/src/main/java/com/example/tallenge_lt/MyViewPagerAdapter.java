@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+// fragment 이동 구현(전문분야,취미,언어,스포츠 tablayout 이동)
 public class MyViewPagerAdapter extends FragmentStateAdapter {
     private final List<Fragment> mFragmentList = new ArrayList<>();
 

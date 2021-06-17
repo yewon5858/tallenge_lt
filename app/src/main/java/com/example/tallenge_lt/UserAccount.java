@@ -15,6 +15,7 @@ public class UserAccount {
 
     public UserAccount() { } // 빈 생성자를 선언해줘야 firebase에 값을 가져오고 넣을 때, 오류가 생기지 않음
 
+    //get : firebase에서 값을 받아옴, set : firebase에 값을 넣음
     public String getIdToken() {return idToken;}
 
     public void setIdToken(String idToken) {this.idToken =idToken;}
@@ -35,13 +36,13 @@ public class UserAccount {
 
     public void setAddress(String address) {this.address = address;}
 
-    public Expdata getExpdata(){ return expdata;}
+    public Expdata getExpdata(){ return expdata;} // Expdata 클래스의 메소드를 통해 접근한 값을 받아옴
 
-    public void setExpdata(Expdata expdata) {this.expdata = expdata;}
+    public void setExpdata(Expdata expdata) {this.expdata = expdata;} // Expdata 클래스의 메소드를 통해 expdata 하위에 데이터 저장
 
-    public Interestdata getInterestdata(){ return interestdata;}
+   public Interestdata getInterestdata(){ return interestdata;} // Interestdata 클래스의 메소드를 통해 접근한 값을 받아옴
 
-    public void setInterestdata(Interestdata interestdata) {this.interestdata = interestdata;}
+    public void setInterestdata(Interestdata interestdata) {this.interestdata = interestdata;} // Interestdata 클래스의 메소드를 통해 interestdata 하위에 데이터 저장
 
 
 

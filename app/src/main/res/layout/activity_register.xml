@@ -146,25 +146,13 @@
             android:text="드롭다운 결과"></TextView>
 
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@color/tallengeblue"
-            android:text="로그인"
-            android:textColor="@color/ta_blue_dark"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:backgroundTint="@color/white" />
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@color/tallengeblue"
             android:text="회원가입"
             android:textColor="@color/ta_blue_dark"

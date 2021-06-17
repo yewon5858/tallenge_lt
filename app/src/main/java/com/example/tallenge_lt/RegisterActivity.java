@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mnicname;
     private Spinner sp_address; //address 관련 드롭다운
     private TextView tv_result;//maddrass(주소) 대신 이용
-    private Button mBtmlogin,mBtmRegister; // 로그인 버튼은 intent로 구현
+    private Button mBtmRegister;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +40,14 @@ public class RegisterActivity extends AppCompatActivity {
         sp_address = (Spinner)findViewById( R.id.sp_address ); //address 스피너
         tv_result = (TextView)findViewById( R.id.tv_result ); // address 스피너 안의 값 보여주는 textview
 
+        // 주소 스피너 아이템 클릭 시,
         sp_address.setOnItemSelectedListener( new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //선택한 주소의 아이템을 TextView에 보여줌
                 tv_result.setText(parent.getItemAtPosition( position ).toString());
-            }
 
+            }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -57,21 +59,13 @@ public class RegisterActivity extends AppCompatActivity {
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("tallenge");
 
+        // 이메일 아이디, 비밀번호, 닉네임 입력 및 회원가입 완료 버튼
         mEtEmail = findViewById( R.id.et_email );
         mEtPwd = findViewById( R.id.et_pwd );
-        mBtmRegister = findViewById( R.id.btn_register );
-        mBtmlogin = findViewById( R.id.btn_login );
         mnicname = findViewById( R.id.et_nicname );
+        mBtmRegister = findViewById( R.id.btn_register );
 
-        mBtmlogin.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //로그인 화면으로 이동
-                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity( intent );
-            }
-        } );
-
+        //회원가입 완료 버튼 클릭 시,
         mBtmRegister.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,12 +73,12 @@ public class RegisterActivity extends AppCompatActivity {
                 String strEmail = mEtEmail.getText().toString();
                 String strPwd = mEtPwd.getText().toString();
                 String strNic = mnicname.getText().toString(); // 닉네임 입력
-                String strAdd =  tv_result.getText().toString();
-                //임시 입력 값 입니다<예원>
-                String mExp = ""; // 내 전문 분야
-                String mInterest = ""; // 내 관심 분야
+                String strAdd =  tv_result.getText().toString(); // 주소 선택한 값 보여주기
+//                //임시 입력 값 입니다<예원>
+//                String mExp = ""; // 내 전문 분야
+//                String mInterest = ""; // 내 관심 분야
 
-                //Firebase Auth 진행
+                //Firebase Auth 진행(사용자 데이터 생성)
                 mFirebaseAuth.createUserWithEmailAndPassword( strEmail, strPwd ).addOnCompleteListener( RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -96,7 +90,7 @@ public class RegisterActivity extends AppCompatActivity {
                             account.setEmailId( firebaseUser.getEmail()); //FirebaseUser의 getEmail()함수를 통해 이메일 값을 받아 UserAccount 파일에서 이메일 아이디를 넘겨준다.
                             account.setPassword( strPwd );
                             account.setNicname( strNic ); // 닉네임 set
-                            account.setAddress( strAdd );
+                            account.setAddress( strAdd ); // 주소 set
                             //expdata child 생성
                             account.setExpdata( account.getExpdata());
                             account.setInterestdata( account.getInterestdata());

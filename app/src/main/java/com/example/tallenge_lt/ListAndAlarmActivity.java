@@ -235,10 +235,10 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                 alarmData.setSat(sat.isChecked());
                 myRef.setValue(alarmData);
 
-
+                ArrayList<String> alarm_list = new ArrayList<>();
                 //요일별로 체크되어있으면 푸시 알람
                 if(sun.isChecked()){
-
+                    alarm_list.add("일");
                     Calendar calendarSun = Calendar.getInstance();
                     calendarSun.setTimeInMillis(System.currentTimeMillis());
                     calendarSun.set(Calendar.DAY_OF_WEEK,Calendar.SUNDAY);
@@ -263,6 +263,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
                 }
                 if(mon.isChecked()){
+                    alarm_list.add("월");
                     Calendar calendarMon = Calendar.getInstance();
                     calendarMon.setTimeInMillis(System.currentTimeMillis());
                     calendarMon.set(Calendar.DAY_OF_WEEK,Calendar.MONDAY);
@@ -285,6 +286,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
                 }
                 if(tue.isChecked()){
+                    alarm_list.add(" 화");
                     Calendar calendarTue = Calendar.getInstance();
                     calendarTue.setTimeInMillis(System.currentTimeMillis());
                     calendarTue.set(Calendar.DAY_OF_WEEK,Calendar.TUESDAY);
@@ -303,6 +305,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
                 }
                 if(wed.isChecked()){
+                    alarm_list.add(" 수");
                     Calendar calendarWed = Calendar.getInstance();
                     calendarWed.setTimeInMillis(System.currentTimeMillis());
                     calendarWed.set(Calendar.DAY_OF_WEEK,Calendar.WEDNESDAY);
@@ -328,7 +331,7 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                     calendarThu.set(Calendar.HOUR_OF_DAY, hour);
                     calendarThu.set(Calendar.MINUTE, minute);
                     calendarThu.set(Calendar.SECOND, 0);
-
+                    alarm_list.add(" 목");
 
                     // 이미 지난 시간을 지정했다면 7일 후 같은 시간으로 설정
                     if (calendarThu.before(Calendar.getInstance())) {
@@ -355,6 +358,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                     calendarFri.set(Calendar.MINUTE, minute);
                     calendarFri.set(Calendar.SECOND, 0);
 
+                    alarm_list.add(" 금");
+
                     if (calendarFri.before(Calendar.getInstance())) {
                         calendarFri.add(Calendar.DATE, 7);
                     }
@@ -373,6 +378,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
                     calendarSat.set(Calendar.MINUTE, minute);
                     calendarSat.set(Calendar.SECOND, 0);
 
+                    alarm_list.add(" 토");
+                    
                     if (calendarSat.before(Calendar.getInstance())) {
                         calendarSat.add(Calendar.DATE, 7);
                     }
@@ -384,6 +391,8 @@ public class ListAndAlarmActivity extends AppCompatActivity {
 
 
                 }
+
+                Toast.makeText(ListAndAlarmActivity.this, "알람 설정이 완료되었습니다!"+alarm_list+"의 날짜에 9시에 알람이 울립니다.", Toast.LENGTH_LONG).show();
             }
 
         });

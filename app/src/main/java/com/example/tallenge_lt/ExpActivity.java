@@ -168,7 +168,7 @@ public class ExpActivity extends AppCompatActivity {
 
                         String checked_list = (List_Menu.get( j )).get( c ).toString();
 
-                        //전문분야 카테고리의 전문분야 속성 입력
+                        //전문분야 카테고리의 전문분야 속성 입력(true or false 값으로 저장됨)
                         switch (checked_list) {
                             // 전문분야
                             case "컴퓨터":
